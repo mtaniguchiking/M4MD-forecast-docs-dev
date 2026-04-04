@@ -36,8 +36,8 @@ jobs: # =======================================================================
 
     strategy:
       matrix:
-        likelihood: [ poisson, 
-                      negative-binomial-simple, negative-binomial, 
+        likelihood: [ poisson,
+                      negative-binomial-simple, negative-binomial,
                       gen-pois,
                       zero-inflated-poisson, zero-inflated-negative-binomial ]
         link: [ linear, exponential ]
@@ -54,10 +54,12 @@ jobs: # =======================================================================
           - likelihood: gen-pois
             link: linear
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     # if: ${{ github.event.workflow_run.conclusion == 'success' }}
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5 # v2
       - name: Pull model API from GitLab
         run: |
           git submodule update --init --remote model-api
@@ -76,7 +78,7 @@ jobs: # =======================================================================
       # multiple times in the same workflow can overwrite and append to already
       # uploaded files.
       - name: Upload tmp directory as an artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@82c141cc518b40d92cc801eee768e7aafc9c2fa2 # v2
         with:
           name: artifact-${{ github.sha }}
           path: tmp
@@ -98,9 +100,11 @@ jobs: # =======================================================================
             demo: true
 
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5 # v2
       - name: Pull model API from GitLab
         run: |
           git submodule update --init --remote model-api
@@ -115,7 +119,7 @@ jobs: # =======================================================================
           demo: ${{ matrix.demo }}
 
       - name: Upload tmp directory as an artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@82c141cc518b40d92cc801eee768e7aafc9c2fa2 # v2
         with:
           name: artifact-${{ github.sha }}
           path: tmp
@@ -124,7 +128,7 @@ jobs: # =======================================================================
   # ---------------------------------------------------------------------------
   nonnegative-continuous-vars: # template models for non-zero continuous data
   # ---------------------------------------------------------------------------
-  
+
     strategy:
       matrix:
         likelihood: [ lognormal, gamma ] #, beta-binomial
@@ -135,18 +139,20 @@ jobs: # =======================================================================
             link: linear
             gle: b0-b1
             demo: true
-  
+
     runs-on: ubuntu-latest
-  
+    permissions:
+      contents: read
+
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5 # v2
         # with:
         #   submodules: true  # fetch model and data API submodules
         #   fetch-depth: 0    # fetch all history for .GitInfo and .Lastmod
       - name: Pull model API from GitLab
         run: |
           git submodule update --init --remote model-api
-  
+
       - name: Build model
         uses: ./.github/actions/build-model # composite action to create model
         with:
@@ -155,9 +161,9 @@ jobs: # =======================================================================
           link: ${{ matrix.link }}
           gle: ${{ matrix.gle }}
           demo: ${{ matrix.demo }}
-  
+
       - name: Upload tmp directory as an artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@82c141cc518b40d92cc801eee768e7aafc9c2fa2 # v2
         with:
           name: artifact-${{ github.sha }}
           path: tmp
@@ -169,12 +175,14 @@ jobs: # =======================================================================
 
     needs: [ count-vars, binomial-vars, nonnegative-continuous-vars ]
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # needed to commit model files to main
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5 # v2
 
       - name: Download file share
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@cbed621e49e4c01b044d60f6c80ea4ed6328b281 # v2
         with:
           name: artifact-${{ github.sha }}
           path: tmp
@@ -195,7 +203,7 @@ jobs: # =======================================================================
 
       # Push changes made to the repo during a workflow run
       - name: Commit changes
-        uses: EndBug/add-and-commit@v7
+        uses: EndBug/add-and-commit@8c12ff729a98cfbcd3fe38b49f55eceb98a5ec02 # v7
         with:
           default_author: github_actions
           branch: main
@@ -211,6 +219,8 @@ jobs: # =======================================================================
 
     needs: [ define-jags-model-matrix ]
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
 
     strategy:
       matrix:
@@ -218,13 +228,13 @@ jobs: # =======================================================================
         options: [ --seed=123 ]
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5 # v2
       - name: Pull model API from GitLab
         run: |
           git submodule update --init --remote model-api
 
       - name: Download file share
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@cbed621e49e4c01b044d60f6c80ea4ed6328b281 # v2
         with:
           name: artifact-${{ github.sha }}
           path: tmp
@@ -241,7 +251,7 @@ jobs: # =======================================================================
         run: echo "The exit status was ${{ steps.verify.outputs.code }}"
 
       - name: Upload tmp directory as an artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@82c141cc518b40d92cc801eee768e7aafc9c2fa2 # v2
         with:
           name: artifact-${{ github.sha }}
           path: tmp
@@ -253,15 +263,17 @@ jobs: # =======================================================================
 
     needs: [ use-jags-models-to-sim-data ]
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # needed to commit demo data to main
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5 # v2
       - name: Pull model API from GitLab
         run: |
           git submodule update --init --remote model-api
 
       - name: Download file share
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@cbed621e49e4c01b044d60f6c80ea4ed6328b281 # v2
         with:
           name: artifact-${{ github.sha }}
           path: tmp
@@ -284,7 +296,7 @@ jobs: # =======================================================================
 
       # Push changes made to the repo during a workflow run
       - name: Commit changes
-        uses: EndBug/add-and-commit@v7
+        uses: EndBug/add-and-commit@8c12ff729a98cfbcd3fe38b49f55eceb98a5ec02 # v7
         with:
           default_author: github_actions
           branch: main
@@ -306,6 +318,8 @@ jobs: # =======================================================================
 
     needs: [ cleanup ]
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
 
     strategy:
       matrix:
@@ -313,13 +327,13 @@ jobs: # =======================================================================
         # options: [ --n-adapt=1000 --n-update=5000 --n-iter=2500 --n-cores=1 --rm-dqs ]
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5 # v2
       - name: Pull model API from GitLab
         run: |
           git submodule update --init --remote model-api
 
       - name: Download file share
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@cbed621e49e4c01b044d60f6c80ea4ed6328b281 # v2
         with:
           name: artifact-${{ github.sha }}
           path: tmp
@@ -339,7 +353,7 @@ jobs: # =======================================================================
 
       - run: sudo mv assets/_output tmp/test-fits
       - name: Upload tmp directory as an artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@82c141cc518b40d92cc801eee768e7aafc9c2fa2 # v2
         with:
           name: artifact-${{ github.sha }}
           path: tmp
