@@ -1,5 +1,5 @@
 googleAnalytics = "G-W93Y6ZYE7X"
-baseURL = "https://lzachmann.github.io/models-for-missing-data/"
+baseURL = "https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/"
 languageCode = "en-us"
 title = "Models for missing data"
 theme = ['book', 'hugo-cite', 'hugo-notice']
