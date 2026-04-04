@@ -1,2 +1,40 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Data on Models for missing data</title><link>https://lzachmann.github.io/models-for-missing-data/docs/1-guide/a-data/</link><description>Recent content in Data on Models for missing data</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://lzachmann.github.io/models-for-missing-data/docs/1-guide/a-data/index.xml" rel="self" type="application/rss+xml"/><item><title>Response data</title><link>https://lzachmann.github.io/models-for-missing-data/docs/1-guide/a-data/i-y-info/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lzachmann.github.io/models-for-missing-data/docs/1-guide/a-data/i-y-info/</guid><description>Response data # The response data include the observations we are trying to model, as well as columns with identifiers (indices, IDs, datetime strings) for all relevant sampling design information. Elements of the sampling design often seen in long-term monitoring data include the following:
-Design element Examples observational units transect, quadrat, plot sampling units plot, site stratification stratum date / event times MM/DD/YYYY, YYYY Format # The response data are stored as flat files.</description></item><item><title>Covariate data</title><link>https://lzachmann.github.io/models-for-missing-data/docs/1-guide/a-data/ii-x-info/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lzachmann.github.io/models-for-missing-data/docs/1-guide/a-data/ii-x-info/</guid><description>Covariate data # Covariates are variables that are expected to change with the response variable &amp;ndash; they covary in some way with the observations we seek to model. The definition of covariates varies widely online and in the literature. For our purposes, we use the term covariate to describe any variable (whether continuous or discrete) that might influence the mean of the response variable we are interested in. In many cases their effects are of direct interest in the analysis (weather or terrain, for instance).</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Data on Models for missing data</title><link>https://lzachmann.github.io/models-for-missing-data/docs/1-guide/a-data/</link><description>Recent content in Data on Models for missing data</description><generator>Hugo</generator><language>en-us</language><atom:link href="https://lzachmann.github.io/models-for-missing-data/docs/1-guide/a-data/index.xml" rel="self" type="application/rss+xml"/><item><title>Response data</title><link>https://lzachmann.github.io/models-for-missing-data/docs/1-guide/a-data/i-y-info/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lzachmann.github.io/models-for-missing-data/docs/1-guide/a-data/i-y-info/</guid><description>&lt;h1 id="response-data"&gt;
+ Response data
+ &lt;a class="anchor" href="#response-data"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;The response data include the observations we are trying to model, as well as columns with identifiers (indices, IDs, datetime strings) for all relevant sampling design information. Elements of the sampling design often seen in long-term monitoring data include the following:&lt;/p&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th style="text-align: left"&gt;Design element&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;Examples&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;observational units&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;transect, quadrat, plot&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;sampling units&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;plot, site&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;stratification&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;stratum&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;date / event times&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;MM/DD/YYYY&lt;/code&gt;, &lt;code&gt;YYYY&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="format"&gt;
+ Format
+ &lt;a class="anchor" href="#format"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;The response data are stored as flat files. The key characteristic of a flat file is that each row represents a single observation, while the columns describe values associated with the observation and the design features described above. These files are typically text files with no special word processing or markup. The file can be CSV, XLS, XLSX, GZ, or RDS. For ease of use, readability, and other reasons, we generally recommend CSV.&lt;/p&gt;</description></item><item><title>Covariate data</title><link>https://lzachmann.github.io/models-for-missing-data/docs/1-guide/a-data/ii-x-info/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lzachmann.github.io/models-for-missing-data/docs/1-guide/a-data/ii-x-info/</guid><description>&lt;h1 id="covariate-data"&gt;
+ Covariate data
+ &lt;a class="anchor" href="#covariate-data"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;Covariates are variables that are expected to change with the response variable &amp;ndash; they &lt;em&gt;covary&lt;/em&gt; in some way with the observations we seek to model. The definition of covariates varies widely online and in the literature. For our purposes, we use the term &lt;em&gt;covariate&lt;/em&gt; to describe any variable (whether continuous or discrete) that might influence the mean of the response variable we are interested in. In many cases their effects are of direct interest in the analysis (weather or terrain, for instance). In other cases, a covariate might be &amp;ldquo;nuisance variable&amp;rdquo; &amp;ndash; a fact or feature that is of no particular interest in itself, but nonetheless might be necessary to build a proper model and develop robust inference. Examples of nuisances include sudden changes in protocol or observers.&lt;/p&gt;</description></item></channel></rss>

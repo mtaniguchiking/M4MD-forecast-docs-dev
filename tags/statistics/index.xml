@@ -1,6 +1,94 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>statistics on Models for missing data</title><link>https://lzachmann.github.io/models-for-missing-data/tags/statistics/</link><description>Recent content in statistics on Models for missing data</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://lzachmann.github.io/models-for-missing-data/tags/statistics/index.xml" rel="self" type="application/rss+xml"/><item><title>Non-ignorable missingness</title><link>https://lzachmann.github.io/models-for-missing-data/posts/non-ignorable-missingness/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lzachmann.github.io/models-for-missing-data/posts/non-ignorable-missingness/</guid><description>Statistics is basically a missing data problem!
-&amp;ndash; Little 2013
-Nearly all samples &amp;ndash; whether by design or by accident &amp;ndash; are incomplete. We very rarely make a complete census of all individuals in a population or all sites on a landscape. Sometimes we don&amp;rsquo;t collect, or can&amp;rsquo;t collect, complete information for individual samples or measures. For instance, we might know an animal was alive when it was last seen, so we know it survived at least that long, but know nothing about its current status.</description></item><item><title>Sampling and populations</title><link>https://lzachmann.github.io/models-for-missing-data/posts/sampling-and-populations/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lzachmann.github.io/models-for-missing-data/posts/sampling-and-populations/</guid><description>We sample for a very practical reason. It&amp;rsquo;s usually impossible to get information on the whole population, so we use a sample to make inferences about the population. In our case, the population is typically all sites in a stratum or all sites &amp;ndash; in all strata &amp;ndash; at the scale of an entire park. Typically, the inference we seek entails three questions.
-What&amp;rsquo;s the best estimate of the population mean?</description></item><item><title>Stratum-varying fixed effects</title><link>https://lzachmann.github.io/models-for-missing-data/posts/stratum-varying-fixed-effects/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lzachmann.github.io/models-for-missing-data/posts/stratum-varying-fixed-effects/</guid><description>Assume we have three strata, \(s_0\) , \(s_1\) , and \(s_2\) , where \(s_0\) is the &amp;ldquo;reference&amp;rdquo; stratum – in other words, \(s_0\) is the stratum for which the 0/1 indicator is 0 across the board in the indicator matrix below (the first row):
-\[\begin{bmatrix} 1 &amp;amp; 0 &amp;amp; 0 \\ 1 &amp;amp; 1 &amp;amp; 0 \\ 1 &amp;amp; 0 &amp;amp; 1 \end{bmatrix}\] B_0 + (B_1 + B_1_s1_offset * s1 + B_1_s2_offset * s2) * x_1 # in stratum s0 B_0 + (B_1) * x_1 # in stratum s1 B_0 + (B_1 + B_1_s1_offset * s1) * x_1 # in stratum s2 B_0 + (B_1 + B_1_s2_offset * s2) * x_1 # lm(y~x1*x2) model.</description></item><item><title>The offset term</title><link>https://lzachmann.github.io/models-for-missing-data/posts/offsets/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lzachmann.github.io/models-for-missing-data/posts/offsets/</guid><description>Counts of things naturally scale with the length or duration of observation, the area sampled, and sampling intensity ( Citation: McElreath,&amp;#32;2018 McElreath,&amp;#32; R.&amp;#32; (2018). &amp;#32; Statistical rethinking: A bayesian course with examples in r and stan. &amp;#32; Chapman; Hall/CRC. ) . For instance, the longer the river stretch we survey, the more fish we&amp;rsquo;ll tend to find.
-Offset terms are used to model rates &amp;ndash; e.g., counts per unit area or time.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Statistics on Models for missing data</title><link>https://lzachmann.github.io/models-for-missing-data/tags/statistics/</link><description>Recent content in Statistics on Models for missing data</description><generator>Hugo</generator><language>en-us</language><atom:link href="https://lzachmann.github.io/models-for-missing-data/tags/statistics/index.xml" rel="self" type="application/rss+xml"/><item><title>Non-ignorable missingness</title><link>https://lzachmann.github.io/models-for-missing-data/posts/non-ignorable-missingness/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lzachmann.github.io/models-for-missing-data/posts/non-ignorable-missingness/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;Statistics is basically a missing data problem!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&amp;ndash; Little 2013&lt;/p&gt;
+&lt;p&gt;Nearly all samples &amp;ndash; whether by design or by accident &amp;ndash; are incomplete. We very rarely make a complete census of all individuals in a population or all sites on a landscape. Sometimes we don&amp;rsquo;t collect, or can&amp;rsquo;t collect, complete information for individual samples or measures. For instance, we might know an animal was alive when it was last seen, so we know it survived &lt;em&gt;at least&lt;/em&gt; that long, but know nothing about its current status. Or we might have information on the coverage of an invasive species down to a certain patch size, beyond which patches are too small or numerous to survey.&lt;/p&gt;</description></item><item><title>Sampling and populations</title><link>https://lzachmann.github.io/models-for-missing-data/posts/sampling-and-populations/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lzachmann.github.io/models-for-missing-data/posts/sampling-and-populations/</guid><description>&lt;p&gt;We sample for a very practical reason. It&amp;rsquo;s usually impossible to get information on the whole population, so we use a sample to make inferences about the population. In our case, the population is typically all sites in a stratum or all sites &amp;ndash; in all strata &amp;ndash; at the scale of an entire park. Typically, the inference we seek entails three questions.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;What&amp;rsquo;s the best estimate of the population mean?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;We can generate a sample mean, 
+&lt;link rel="stylesheet" href="https://lzachmann.github.io/models-for-missing-data/katex/katex.min.css" /&gt;
+&lt;script defer src="https://lzachmann.github.io/models-for-missing-data/katex/katex.min.js"&gt;&lt;/script&gt;
+&lt;script defer src="https://lzachmann.github.io/models-for-missing-data/katex/auto-render.min.js" onload="renderMathInElement(document.body);"&gt;&lt;/script&gt;&lt;span&gt;
+ \(\bar{x}\)
+&lt;/span&gt;
+, from our sample. This is the best estimate of the population mean.&lt;/p&gt;</description></item><item><title>Stratum-varying fixed effects</title><link>https://lzachmann.github.io/models-for-missing-data/posts/stratum-varying-fixed-effects/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lzachmann.github.io/models-for-missing-data/posts/stratum-varying-fixed-effects/</guid><description>&lt;p&gt;Assume we have three strata, 
+&lt;link rel="stylesheet" href="https://lzachmann.github.io/models-for-missing-data/katex/katex.min.css" /&gt;
+&lt;script defer src="https://lzachmann.github.io/models-for-missing-data/katex/katex.min.js"&gt;&lt;/script&gt;
+&lt;script defer src="https://lzachmann.github.io/models-for-missing-data/katex/auto-render.min.js" onload="renderMathInElement(document.body);"&gt;&lt;/script&gt;&lt;span&gt;
+ \(s_0\)
+&lt;/span&gt;
+, &lt;span&gt;
+ \(s_1\)
+&lt;/span&gt;
+, and &lt;span&gt;
+ \(s_2\)
+&lt;/span&gt;
+, where &lt;span&gt;
+ \(s_0\)
+&lt;/span&gt;
+ is the &amp;ldquo;reference&amp;rdquo; stratum – in other words, &lt;span&gt;
+ \(s_0\)
+&lt;/span&gt;
+ is the stratum for which the 0/1 indicator is 0 across the board in the indicator matrix below (the first row):&lt;/p&gt;
+&lt;span&gt;
+ \[\begin{bmatrix}
+1 &amp;amp; 0 &amp;amp; 0 \\
+1 &amp;amp; 1 &amp;amp; 0 \\
+1 &amp;amp; 0 &amp;amp; 1
+\end{bmatrix}\]
+&lt;/span&gt;
+
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-R" data-lang="R"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;B_0 &lt;span style="color:#f92672"&gt;+&lt;/span&gt; (B_1 &lt;span style="color:#f92672"&gt;+&lt;/span&gt; B_1_s1_offset &lt;span style="color:#f92672"&gt;*&lt;/span&gt; s1 &lt;span style="color:#f92672"&gt;+&lt;/span&gt; B_1_s2_offset &lt;span style="color:#f92672"&gt;*&lt;/span&gt; s2) &lt;span style="color:#f92672"&gt;*&lt;/span&gt; x_1 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# in stratum s0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;B_0 &lt;span style="color:#f92672"&gt;+&lt;/span&gt; (B_1) &lt;span style="color:#f92672"&gt;*&lt;/span&gt; x_1 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# in stratum s1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;B_0 &lt;span style="color:#f92672"&gt;+&lt;/span&gt; (B_1 &lt;span style="color:#f92672"&gt;+&lt;/span&gt; B_1_s1_offset &lt;span style="color:#f92672"&gt;*&lt;/span&gt; s1) &lt;span style="color:#f92672"&gt;*&lt;/span&gt; x_1 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# in stratum s2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;B_0 &lt;span style="color:#f92672"&gt;+&lt;/span&gt; (B_1 &lt;span style="color:#f92672"&gt;+&lt;/span&gt; B_1_s2_offset &lt;span style="color:#f92672"&gt;*&lt;/span&gt; s2) &lt;span style="color:#f92672"&gt;*&lt;/span&gt; x_1 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# lm(y~x1*x2)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a6e22e"&gt;model.matrix&lt;/span&gt;(&lt;span style="color:#f92672"&gt;~&lt;/span&gt;x1&lt;span style="color:#f92672"&gt;*&lt;/span&gt;x2, &lt;span style="color:#a6e22e"&gt;tibble&lt;/span&gt;(x1 &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;runif&lt;/span&gt;(&lt;span style="color:#ae81ff"&gt;5&lt;/span&gt;), x2 &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;runif&lt;/span&gt;(&lt;span style="color:#ae81ff"&gt;5&lt;/span&gt;)))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>The offset term</title><link>https://lzachmann.github.io/models-for-missing-data/posts/offsets/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lzachmann.github.io/models-for-missing-data/posts/offsets/</guid><description>&lt;p&gt;Counts of things naturally scale with the length or duration of observation, the area sampled, and sampling intensity 
+
+
+
+
+&lt;span class="hugo-cite-intext"
+ itemprop="citation"&gt;(&lt;span class="hugo-cite-group"&gt;
+
+ &lt;a href="#mcelreath2018statistical"&gt;&lt;span class="visually-hidden"&gt;Citation: &lt;/span&gt;&lt;span itemprop="author" itemscope itemtype="https://schema.org/Person"&gt;&lt;meta itemprop="givenName" content="Richard"&gt;&lt;span itemprop="familyName"&gt;McElreath&lt;/span&gt;&lt;/span&gt;,&amp;#32;&lt;span itemprop="datePublished"&gt;2018&lt;/span&gt;&lt;/a&gt;&lt;span class="hugo-cite-citation"&gt; 
+
+
+
+
+
+
+
+
+
+
+&lt;span itemscope 
+ itemtype="https://schema.org/Book"
+ data-type="book"&gt;&lt;span itemprop="author" itemscope itemtype="https://schema.org/Person"&gt;&lt;span itemprop="familyName"&gt;McElreath&lt;/span&gt;,&amp;#32;
+ &lt;meta itemprop="givenName" content="Richard" /&gt;
+ R.&lt;/span&gt;&amp;#32;
+ (&lt;span itemprop="datePublished"&gt;2018&lt;/span&gt;).
+ &amp;#32;&lt;span itemprop="name"&gt;
+ &lt;i&gt;Statistical rethinking: A bayesian course with examples in r and stan&lt;/i&gt;&lt;/span&gt;.
+ &amp;#32;
+ &lt;span itemprop="publisher"
+ itemtype="http://schema.org/Organization"
+ itemscope=""&gt;
+ &lt;span itemprop="name"&gt;Chapman; Hall/CRC&lt;/span&gt;&lt;/span&gt;.&lt;/span&gt;
+
+
+
+
+&lt;/span&gt;&lt;/span&gt;)&lt;/span&gt;
+. For instance, the longer the river stretch we survey, the more fish we&amp;rsquo;ll tend to find.&lt;/p&gt;
+&lt;p&gt;Offset terms are used to model rates &amp;ndash; e.g., counts per unit area or time. In the context of the model, the offset term transforms the response variable from a rate to a count.&lt;/p&gt;</description></item></channel></rss>

@@ -1,2 +1,41 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>parameterizations on Models for missing data</title><link>https://lzachmann.github.io/models-for-missing-data/tags/parameterizations/</link><description>Recent content in parameterizations on Models for missing data</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://lzachmann.github.io/models-for-missing-data/tags/parameterizations/index.xml" rel="self" type="application/rss+xml"/><item><title>Stratum-varying fixed effects</title><link>https://lzachmann.github.io/models-for-missing-data/posts/stratum-varying-fixed-effects/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lzachmann.github.io/models-for-missing-data/posts/stratum-varying-fixed-effects/</guid><description>Assume we have three strata, \(s_0\) , \(s_1\) , and \(s_2\) , where \(s_0\) is the &amp;ldquo;reference&amp;rdquo; stratum – in other words, \(s_0\) is the stratum for which the 0/1 indicator is 0 across the board in the indicator matrix below (the first row):
-\[\begin{bmatrix} 1 &amp;amp; 0 &amp;amp; 0 \\ 1 &amp;amp; 1 &amp;amp; 0 \\ 1 &amp;amp; 0 &amp;amp; 1 \end{bmatrix}\] B_0 + (B_1 + B_1_s1_offset * s1 + B_1_s2_offset * s2) * x_1 # in stratum s0 B_0 + (B_1) * x_1 # in stratum s1 B_0 + (B_1 + B_1_s1_offset * s1) * x_1 # in stratum s2 B_0 + (B_1 + B_1_s2_offset * s2) * x_1 # lm(y~x1*x2) model.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Parameterizations on Models for missing data</title><link>https://lzachmann.github.io/models-for-missing-data/tags/parameterizations/</link><description>Recent content in Parameterizations on Models for missing data</description><generator>Hugo</generator><language>en-us</language><atom:link href="https://lzachmann.github.io/models-for-missing-data/tags/parameterizations/index.xml" rel="self" type="application/rss+xml"/><item><title>Stratum-varying fixed effects</title><link>https://lzachmann.github.io/models-for-missing-data/posts/stratum-varying-fixed-effects/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lzachmann.github.io/models-for-missing-data/posts/stratum-varying-fixed-effects/</guid><description>&lt;p&gt;Assume we have three strata, 
+&lt;link rel="stylesheet" href="https://lzachmann.github.io/models-for-missing-data/katex/katex.min.css" /&gt;
+&lt;script defer src="https://lzachmann.github.io/models-for-missing-data/katex/katex.min.js"&gt;&lt;/script&gt;
+&lt;script defer src="https://lzachmann.github.io/models-for-missing-data/katex/auto-render.min.js" onload="renderMathInElement(document.body);"&gt;&lt;/script&gt;&lt;span&gt;
+ \(s_0\)
+&lt;/span&gt;
+, &lt;span&gt;
+ \(s_1\)
+&lt;/span&gt;
+, and &lt;span&gt;
+ \(s_2\)
+&lt;/span&gt;
+, where &lt;span&gt;
+ \(s_0\)
+&lt;/span&gt;
+ is the &amp;ldquo;reference&amp;rdquo; stratum – in other words, &lt;span&gt;
+ \(s_0\)
+&lt;/span&gt;
+ is the stratum for which the 0/1 indicator is 0 across the board in the indicator matrix below (the first row):&lt;/p&gt;
+&lt;span&gt;
+ \[\begin{bmatrix}
+1 &amp;amp; 0 &amp;amp; 0 \\
+1 &amp;amp; 1 &amp;amp; 0 \\
+1 &amp;amp; 0 &amp;amp; 1
+\end{bmatrix}\]
+&lt;/span&gt;
+
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-R" data-lang="R"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;B_0 &lt;span style="color:#f92672"&gt;+&lt;/span&gt; (B_1 &lt;span style="color:#f92672"&gt;+&lt;/span&gt; B_1_s1_offset &lt;span style="color:#f92672"&gt;*&lt;/span&gt; s1 &lt;span style="color:#f92672"&gt;+&lt;/span&gt; B_1_s2_offset &lt;span style="color:#f92672"&gt;*&lt;/span&gt; s2) &lt;span style="color:#f92672"&gt;*&lt;/span&gt; x_1 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# in stratum s0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;B_0 &lt;span style="color:#f92672"&gt;+&lt;/span&gt; (B_1) &lt;span style="color:#f92672"&gt;*&lt;/span&gt; x_1 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# in stratum s1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;B_0 &lt;span style="color:#f92672"&gt;+&lt;/span&gt; (B_1 &lt;span style="color:#f92672"&gt;+&lt;/span&gt; B_1_s1_offset &lt;span style="color:#f92672"&gt;*&lt;/span&gt; s1) &lt;span style="color:#f92672"&gt;*&lt;/span&gt; x_1 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# in stratum s2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;B_0 &lt;span style="color:#f92672"&gt;+&lt;/span&gt; (B_1 &lt;span style="color:#f92672"&gt;+&lt;/span&gt; B_1_s2_offset &lt;span style="color:#f92672"&gt;*&lt;/span&gt; s2) &lt;span style="color:#f92672"&gt;*&lt;/span&gt; x_1 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# lm(y~x1*x2)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a6e22e"&gt;model.matrix&lt;/span&gt;(&lt;span style="color:#f92672"&gt;~&lt;/span&gt;x1&lt;span style="color:#f92672"&gt;*&lt;/span&gt;x2, &lt;span style="color:#a6e22e"&gt;tibble&lt;/span&gt;(x1 &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;runif&lt;/span&gt;(&lt;span style="color:#ae81ff"&gt;5&lt;/span&gt;), x2 &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;runif&lt;/span&gt;(&lt;span style="color:#ae81ff"&gt;5&lt;/span&gt;)))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item></channel></rss>
