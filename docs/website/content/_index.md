@@ -1,7 +1,7 @@
 ---
 title: Welcome
 type: docs
-image: /static/3D98AD77-CBC4-0963-8EFBF00EA361C5DDOriginal.jpg
+image: /images/3D98AD77-CBC4-0963-8EFBF00EA361C5DDOriginal.jpg
 bibFile: content/posts/bib.json
 ---
 

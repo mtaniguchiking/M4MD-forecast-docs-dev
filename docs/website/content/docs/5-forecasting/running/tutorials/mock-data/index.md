@@ -64,15 +64,17 @@ Three climate trajectories (continued decline, flat, and increasing), each with 
 
 Vegetation hit rate tracks precipitation closely, with stratum A starting at a higher baseline (~65%) than stratum B (~35%). Both strata decline as precipitation falls.
 
-![Vegetation hit rate by stratum over time, with precipitation overlaid](/images/01-training-hits.png)
+![Vegetation hit rate by stratum over time, with precipitation overlaid](01-training-hits.png)
 
 The precipitation–vegetation relationship is what the model learns and uses to generate forecasts.
 
-![Hit rate vs. precipitation scatter plot](/images/02-hits-vs-ppt.png)
+<div style="text-align: center;">
+<img src="02-hits-vs-ppt.png" alt="Hit rate vs. precipitation scatter plot" width="500">
+</div>
 
 The three future scenarios bracket the range of plausible climate outcomes. Each has three GCM model runs (small offsets representing ensemble spread).
 
-![Climate scenarios: historical and three future trajectories](/images/03-climate-scenarios.png)
+![Climate scenarios: historical and three future trajectories](03-climate-scenarios.png)
 
 ## Step 1: Fit the Model
 
