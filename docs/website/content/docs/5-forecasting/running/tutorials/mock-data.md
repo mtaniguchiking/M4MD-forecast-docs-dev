@@ -6,15 +6,13 @@ bookToc: true
 
 # Your First Forecast (Mock Data)
 
-This is the simpliest path to perform a forecast. All data is pre-committed, so there's nothing to download or prepare. The walkthrough has three steps.
-
 ## Prerequisites
 
 A working M4MD repo. [TODO: formalize this]
 
 ## Step 0: Understand the mock data
 
-The mock dataset represents a single park unit (**ELDO**) with two vegetation strata (**A** and **B**), three sites per stratum, and three transects per site — surveyed annually from **2000 to 2025**. Each transect records how many of 100 sample points hit a plant (`y_hits` out of `n_points = 100`). A single climate covariate, **precipitation (ppt)**, declines gradually over the training period and drives the vegetation response.
+This mock dataset represents a park unit (ELDO) with two vegetation strata (A and B), three sites per stratum, and three transects per site — surveyed annually from 2000 to 2025. Each transect records how many of 100 sample points hit a plant (`y_hits` out of `n_points = 100`). A single climate covariate, precipitation (ppt), declines gradually over the training period and drives the vegetation response.
 
 There are three files, all pre-committed to `assets/_data/`:
 
@@ -28,7 +26,7 @@ There are three files, all pre-committed to `assets/_data/`:
 You don't need to generate the data — it's already in the repo. The script that created it is at `forecasting/getting-started/generate-mock-data.R` if you want to see exactly how it was built or regenerate it.
 {{< /hint >}}
 
-### Training observations (`pg-hits.csv`)
+### Trainingg observations (`pg-hits.csv`)
 
 Each row is one transect in one year. The model fits to `y_hits` as a binomial outcome.
 
@@ -37,11 +35,12 @@ Each row is one transect in one year. The model fits to `y_hits` as a binomial o
 | A | ELDO | 2000 | 1 | A1 | 100 | 65 |
 | A | ELDO | 2000 | 2 | A1 | 100 | 64 |
 | A | ELDO | 2000 | 3 | A1 | 100 | 57 |
+| A | ELDO | 2001 | 3 | A1 | 100 | 60 |
 | … | … | … | … | … | … | … |
 
 ### Climate covariates (`pg-covariates.csv`)
 
-One precipitation value per site per year — shared across all transects at that site.
+One precipitation value (mm) per site per year — shared across all transects at that site.
 
 | park_unit | stratum | site | event_year | ppt |
 |-----------|---------|------|------------|-----|
@@ -52,7 +51,7 @@ One precipitation value per site per year — shared across all transects at tha
 
 ### Future scenarios (`pg-covariates-scenarios.csv`)
 
-Three climate trajectories (continued decline, flat, increasing), each with three GCM model runs, covering 2026–2040.
+Three climate trajectories (continued decline, flat, and increasing), each with three "GCM" model runs, covering 2026–2040.
 
 | scenario_name | model_run_name | park_unit | stratum | site | event_year | ppt |
 |---------------|----------------|-----------|---------|------|------------|-----|
@@ -63,7 +62,7 @@ Three climate trajectories (continued decline, flat, increasing), each with thre
 
 ### What the data looks like
 
-Vegetation hit rate tracks precipitation closely, with stratum A starting at a higher baseline (~73%) than stratum B (~35%). Both strata decline as precipitation falls.
+Vegetation hit rate tracks precipitation closely, with stratum A starting at a higher baseline (~65%) than stratum B (~35%). Both strata decline as precipitation falls.
 
 ![Vegetation hit rate by stratum over time, with precipitation overlaid](/images/01-training-hits.png)
 

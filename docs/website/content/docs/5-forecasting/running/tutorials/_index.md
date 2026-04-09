@@ -1,29 +1,29 @@
 ---
-title: Guides
+title: Tutorials
 bookCollapseSection: true
-weight: 1
+weight: 2
 ---
 
 # Running a Forecast
 
-There are three sets of instructions for running a forecast, depending on your familiarity with the pipeline and the data you're starting with.
+There are three tutorials for running a forecast, depending on your familiarity with the pipeline and the data you're starting with.
 
 {{< hint info >}}
 **Mock data (your first time forecasting)**
 
 - If you want to perform your first forecast, you can start here. It provides simple mock data
-and teaches you how to fit a model for forecasting, how to forecasting, and how to interpret the results.
+and teaches you how to fit a model for forecasting, how to forecast, and how to interpret the results.
 
-→ [Mock data walkthrough](mock-data)
+→ [Mock data walkthrough](guides/mock-data)
 {{< /hint >}}
 
 {{< hint warning >}}
 **Climate futures data**
 
 - If you have your own model fitting data but *not* your own future scenario data,
-you can get some here. It details how to forecast using simple CCRP climate futures covariate data.
+you can follow this tutorial. It details how to forecast using simple CCRP climate futures covariate data.
 
-→ [Climate futures data tutorial](climate-futures-data)
+→ [Climate futures data tutorial](guides/climate-futures-data)
 {{< /hint >}}
 
 {{< hint danger >}}
@@ -33,7 +33,7 @@ you can get some here. It details how to forecast using simple CCRP climate futu
 can learn how to forecast here. This details the configuration options and outputs you
 should know about.
 
-→ [Your own data guide](custom-data)
+→ [Your own data guide](guides/custom-data)
 {{< /hint >}}
 
 

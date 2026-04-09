@@ -12,7 +12,7 @@ There are three sets of instructions for running a forecast, depending on your f
 **Mock data (your first time forecasting)**
 
 - If you want to perform your first forecast, you can start here. It provides simple mock data
-and teaches you how to fit a model for forecasting, how to forecasting, and how to interpret the results.
+and teaches you how to fit a model for forecasting, how to forecast, and how to interpret the results.
 
 → [Mock data walkthrough](guides/mock-data)
 {{< /hint >}}
@@ -21,7 +21,7 @@ and teaches you how to fit a model for forecasting, how to forecasting, and how 
 **Climate futures data**
 
 - If you have your own model fitting data but *not* your own future scenario data,
-you can get some here. It details how to forecast using simple CCRP climate futures covariate data.
+you can follow this tutorial. It details how to forecast using simple CCRP climate futures covariate data.
 
 → [Climate futures data tutorial](guides/climate-futures-data)
 {{< /hint >}}

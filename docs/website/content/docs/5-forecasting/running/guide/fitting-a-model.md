@@ -1,11 +1,11 @@
 ---
-title: Model fitting
+title: Fitting for forecasting
 weight: 1
 ---
 
 # Fitting a model for forecasting
 
-Before forecasting, you must fit a Bayesian hierarchical model that is configured with forecasting in mind. This page covers the key considerations and configurations for doing so. It assumes familiarity with the model fitting pipeline (detailed the other model fitting guide).
+Before forecasting, you must fit a Bayesian hierarchical model that is configured with forecasting in mind. This page covers some key considerations and configurations for doing so. It assumes familiarity with the model fitting pipeline (detailed in the model fitting guide).
 
 ## `analysis-pipeline.R` command-line arguments
 
@@ -15,7 +15,7 @@ Also be mindful of the model scenario(s) you are selecting. This is determined b
 
 ## YAML configurations
 
-*I may move parts of these YAML configuration explanations to the model fitting guide, but I'll keep them here for now*
+[TODO: I may move parts of these YAML configuration explanations to the model fitting guide, but I'll keep them here for now]
 
 ### Per-stratum covariate responses
 
