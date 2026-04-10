@@ -60,9 +60,9 @@ These interaction terms allow the model to learn separate per-stratum slopes for
 
 Another important decision is whether to include a linear time term in your model. A linear time term captures residual temporal trend — the portion of change in your response variable over time that your covariates don't explain. You might include it when you believe there are drivers of change not already captured by your covariates.
 
-Including a time term for forecasting carries a strong assumption: **the linear trend continues at the same rate into the future.** This creates several problems:
+Including a time term for forecasting carries a strong assumption: **the linear trend continues at the same rate into the future.** This creates several potential problems:
 
-- **Unbounded extrapolation** — a time trend projected 50 years forward may push vegetation cover toward 0% (or 100%) and stay there.
+- **Unrealistic extrapolation** — a time trend projected 50 years forward may push vegetation cover toward 0% (or 100%) and stay there.
 - **Collinearity with climate** — if a covariate is also trending (e.g., warming or drying), the model cannot cleanly attribute change to covariate versus time.
 - **Mechanism conflated with trend** — a climate-covariate forecast may be designed to isolate a specific question: "how does vegetation respond to a climatic trend?" A time term undermines this by attributing part of the projected change to a continuation of historical trend rather than to climate forcing.
 
