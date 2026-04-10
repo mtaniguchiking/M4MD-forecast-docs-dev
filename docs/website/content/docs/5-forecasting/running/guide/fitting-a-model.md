@@ -11,6 +11,21 @@ Before forecasting, you must fit a Bayesian hierarchical model that is configure
 
 You must set the `save_forecast_inputs` argument to `TRUE`. This saves the model metadata and full posterior draws, which are the required inputs to the forecasting pipeline.
 
+If running non-interactively via the command line:
+```sh
+./model-api/analysis-pipeline.R \
+    # pass other arguments here
+    --save_forecast_inputs
+```
+
+If running interactively via RStudio:
+```R
+# assign other arguments here
+save_forecast_inputs <- TRUE
+```
+
+If you're fitting a model without the intention of forecasting, keep `save_forecast_inputs` at `FALSE` to avoid storing additional model data.
+
 Also be mindful of the model scenario(s) you are selecting. This is determined by the `this_slice` variable and the `excl_null_mods` argument. For example, if you want to forecast with a non-null model containing a specific set of covariates, ensure your `this_slice` variable correctly selects that model.
 
 ## YAML configurations
@@ -25,7 +40,7 @@ For covariates that you believe affect different strata to different degrees, ad
 
 **Example — per-stratum climate coefficients**
 
-Suppose you want to fit and forecast a model with precipitation (`ppt`) as a covariate, and your response variable has two strata (defined in the stratum column `stratum_column`) where one responds to precipitation much stronger than the other. To capture this difference, add an interaction term in your model fitting YAML.
+Suppose you want to fit and forecast a model with precipitation (`ppt`) as a covariate. Your response variable has two strata (defined in the stratum column `stratum_column`) where one responds to precipitation much stronger than the other. To capture this difference, add an interaction term in your model fitting YAML.
 
 ```yaml
 additional covariates:
@@ -47,8 +62,8 @@ Another important decision is whether to include a linear time term in your mode
 
 Including a time term for forecasting carries a strong assumption: **the linear trend continues at the same rate into the future.** This creates several problems:
 
-- **Unbounded extrapolation** — a time trend projected 50 years forward may predict vegetation cover above 100% or below 0%.
+- **Unbounded extrapolation** — a time trend projected 50 years forward may push vegetation cover toward 0% (or 100%) and stay there.
 - **Collinearity with climate** — if a covariate is also trending (e.g., warming or drying), the model cannot cleanly attribute change to covariate versus time.
 - **Mechanism conflated with trend** — a climate-covariate forecast may be designed to isolate a specific question: "how does vegetation respond to a climatic trend?" A time term undermines this by attributing part of the projected change to a continuation of historical trend rather than to climate forcing.
 
-Thus, when fitting a model for forecasting, you should include the time term only if there is a known secular process that will continue through the forecast horizon. For example, if your system is demonstrably not at equilibrium and has/will grow linearly over both the historical training *and* forecast periods.
+Thus, when fitting a model for forecasting, you should include the time term if there is a known secular process that will continue through the forecast horizon. For example, if your system is demonstrably not at equilibrium and has/will grow linearly over both the historical training *and* forecast periods.
