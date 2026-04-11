@@ -14,7 +14,7 @@ There are three tutorials for running a forecast, depending on your familiarity 
 - If you want to perform your first forecast, you can start here. It provides simple mock data
 and teaches you how to fit a model for forecasting, how to forecast, and how to interpret the results.
 
-→ [Mock data walkthrough](guides/mock-data)
+→ [Mock data walkthrough]({{< ref "/docs/5-forecasting/running/tutorials/mock-data" >}})
 {{< /hint >}}
 
 {{< hint warning >}}
@@ -23,7 +23,7 @@ and teaches you how to fit a model for forecasting, how to forecast, and how to 
 - If you have your own model fitting data but *not* your own future scenario data,
 you can follow this tutorial. It details how to forecast using simple CCRP climate futures covariate data.
 
-→ [Climate futures data tutorial](guides/climate-futures-data)
+→ [Climate futures data tutorial]({{< ref "/docs/5-forecasting/running/tutorials/climate-futures-data" >}}) 
 {{< /hint >}}
 
 {{< hint danger >}}
@@ -33,7 +33,7 @@ you can follow this tutorial. It details how to forecast using simple CCRP clima
 can learn how to forecast here. This details the configuration options and outputs you
 should know about.
 
-→ [Your own data guide](guides/custom-data)
+→ [Your own data guide]({{< ref "/docs/5-forecasting/running/tutorials/custom-data" >}})
 {{< /hint >}}
 
 

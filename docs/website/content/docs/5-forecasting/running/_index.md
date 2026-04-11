@@ -35,12 +35,3 @@ should know about.
 
 → [Your own data guide](guides/custom-data)
 {{< /hint >}}
-
-
-<!-- TODO: Brief intro paragraph explaining the three paths:
-     1.1 Mock data — lowest barrier, all data pre-committed, best for first-timers
-     1.2 Real-world data via notebooks repo — moderate lift, uses external tool
-     1.3 Fully custom — all data user-provided, full config reference
-
-     Suggest starting with 1.1 if the user is new to the forecasting pipeline.
--->
