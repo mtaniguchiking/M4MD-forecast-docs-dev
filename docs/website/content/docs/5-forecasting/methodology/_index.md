@@ -6,9 +6,4 @@ weight: 3
 
 # Methodology
 
-<!-- TODO: Intro paragraph — this track is for users who want to understand
-     what the forecasting pipeline is actually doing, either statistically
-     or at the code level. Recommend reading the original paper first
-     (link to paper). Two pages: (1) the big-picture math, (2) a step-by-step
-     annotation of forecast-pipeline.R.
--->
+This section will detail the specific calculations being performed, etc. It's currently empty and will be filled in soon.
