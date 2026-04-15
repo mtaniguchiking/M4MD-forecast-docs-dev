@@ -8,7 +8,7 @@ bookToc: true
 
 This tutorial walks through combining your own response data with climate data to run the forecast pipeline. You'll use a companion repo to pull together observed and projected climate covariates for your park unit, then run those through the M4MD pipeline to generate forecasts under different climate futures.
 
-If you haven't run a forecast before, the [mock data tutorial]({{< ref "/docs/5-forecasting/running/tutorials/mock-data" >}}) is a great place to start — it covers the same pipeline steps with a simpler synthetic dataset.
+If you haven't run a forecast before, the [mock data tutorial]({{< ref "/docs/5-forecasting/tutorials/mock-data" >}}) is a great place to start — it covers the same pipeline steps with a simpler synthetic dataset.
 
 ## Prerequisites
 
@@ -58,7 +58,7 @@ The same guidance from the mock data tutorial applies here — add your covariat
 
 <!-- [TODO: note any differences from the mock data case — e.g. if real data requires extra YAML config] -->
 
-For more on these options, see [fitting a model for forecasting]({{< ref "/docs/5-forecasting/running/guide/fitting-a-model" >}}).
+For more on these options, see [fitting a model for forecasting]({{< ref "/docs/5-forecasting/guide/fitting-a-model" >}}).
 
 Run the analysis pipeline interactively:
 
@@ -91,7 +91,7 @@ covariates:
 
 <!-- [TODO: add any notes about how scenario names in the CSV map to output folder names] -->
 
-For a full reference of the config options, see [config files]({{< ref "/docs/5-forecasting/running/guide/config-files" >}}).
+For a full reference of the config options, see [config files]({{< ref "/docs/5-forecasting/guide/config-files" >}}).
 
 Run the forecast pipeline interactively:
 
@@ -112,7 +112,7 @@ Forecast plots are written to the `04-forecast/` subfolder inside your fitted mo
 
 <!-- [TODO: any notes on interpreting ensemble spread or comparing across real climate scenarios] -->
 
-For a complete reference of all output plots, see the [forecast outputs reference]({{< ref "/docs/5-forecasting/running/guide/outputs" >}}).
+For a complete reference of all output plots, see the [forecast outputs reference]({{< ref "/docs/5-forecasting/guide/outputs" >}}).
 
 ## Summary
 

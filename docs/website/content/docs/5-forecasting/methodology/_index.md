@@ -1,10 +1,10 @@
 ---
-title: Understanding a Forecast
+title: Methodology
 bookCollapseSection: true
-weight: 2
+weight: 3
 ---
 
-# Understanding a Forecast
+# Methodology
 
 <!-- TODO: Intro paragraph — this track is for users who want to understand
      what the forecasting pipeline is actually doing, either statistically

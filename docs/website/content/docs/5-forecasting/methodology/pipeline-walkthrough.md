@@ -1,8 +1,6 @@
 ---
 title: Pipeline Walkthrough
 weight: 2
-bookToc: true
-draft: true
 ---
 
 # Pipeline Walkthrough: `forecast-pipeline.R`

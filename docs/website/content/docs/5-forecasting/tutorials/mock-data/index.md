@@ -71,7 +71,7 @@ driven by precipitation alone, not by an extrapolated time trend:
 time effect: disabled
 ```
 
-These configurations discussed in more detail in the [fitting a model for forecasting]({{< ref "/docs/5-forecasting/running/guide/fitting-a-model" >}}) section.
+These configurations discussed in more detail in the [fitting a model for forecasting]({{< ref "/docs/5-forecasting/guide/fitting-a-model" >}}) section.
 
 To run the analysis pipeline interactively, set your `analysis-pipeline.R` configurations as follows.
 
@@ -145,7 +145,7 @@ covariates:
     source: provided
 ```
 
-For more on the configuration options, see the [config files]({{< ref "/docs/5-forecasting/running/guide/config-files" >}}) section.
+For more on the configuration options, see the [config files]({{< ref "/docs/5-forecasting/guide/config-files" >}}) section.
 
 Similar to `analysis-pipeline.R`, `forecast-pipeline.R` points to its YAML config and can be run interactively or from the CLI.
 
@@ -183,7 +183,7 @@ assets/_output/M4MD/ELDO/mock-cover/y-hits/.../04-forecast/
             └── forecasts/        ← per-run plots
 ```
 
-For a complete reference of these plot, see the [forecast outputs reference]({{< ref "/docs/5-forecasting/running/guide/outputs" >}}).
+For a complete reference of these plot, see the [forecast outputs reference]({{< ref "/docs/5-forecasting/guide/outputs" >}}).
 
 ### Scenario comparison
 
@@ -229,4 +229,4 @@ In this tutorial you:
 - Interpreted ensemble trajectory plots to see how scenarios diverge from the historical trend
 - Used the driver–response relationship to understand why stratum A responds more strongly than stratum B
 
-If you're ready to apply this to your own data, the next tutorial walks through forecasting with real-world climate scenario files: [climate futures data tutorial]({{< ref "/docs/5-forecasting/running/tutorials/climate-futures-data" >}}).
+If you're ready to apply this to your own data, the next tutorial walks through forecasting with real-world climate scenario files: [climate futures data tutorial]({{< ref "/docs/5-forecasting/tutorials/climate-futures-data" >}}).

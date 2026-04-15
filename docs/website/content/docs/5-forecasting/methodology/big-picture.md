@@ -1,8 +1,6 @@
 ---
 title: The Big Picture
 weight: 1
-bookToc: true
-draft: true
 ---
 
 # The Big Picture: Posterior Predictive Forecasting
