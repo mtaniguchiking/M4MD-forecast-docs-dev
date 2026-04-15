@@ -34,13 +34,13 @@ Vegetation hit rate tracks precipitation closely, with stratum A starting at a h
 
 ![Vegetation hit rate by stratum over time, with precipitation overlaid](01-stratum-hit-rates.png)
 
-The precipitation–vegetation relationship is highly correlated. This is learned by the model and carried into the forecasts.
+The precipitation–vegetation relationship is highly correlated. This will be learned by the model and carried into the forecasts.
 
 <div style="text-align: center;">
 <img src="02-hits-vs-ppt.png" alt="Hit rate vs. precipitation scatter plot" width="500">
 </div>
 
-The future scenarios are represented by 1 GCM model each, covering two plausible climate futures.
+The future scenarios are represented by 1 GCM model each, covering two potential climate futures.
 
 ![Climate scenarios: historical and three future trajectories](03-climate-scenarios.png)
 
@@ -50,75 +50,96 @@ This mock data is intentionally simplified (e.g. the vegetation response to prec
 
 ## Step 1: Fit the Model
 
-Now that we understand the data, we can perform the model fitting. For our mock model, we run the analysis pipeline with the mock cover YAML file.
+Now that we understand the data, we can fit a model. For our mock model, we run the analysis pipeline with the mock cover YAML file. By default, this YAML is located at `assets/_config/M4MD/ELDO/mock-cover.yml`.
 
-To do this interactively, set the analysis-pipeline.R configurations
+There are two key configurations in this YAML:
 
-```R
-yaml_file <- # <<------------------------------------------------- CUSTOMIZE!
-  'assets/_config/M4MD/ELDO/mock-cover.yml'
-
-n_adapt <- 1000
-n_update <- 5000
-n_iter <- 2500
-n_cores <- 1
-override_dqs <- FALSE
-excl_null_mods <- TRUE
-save_mcarray <- FALSE
-save_forecast_inputs <- TRUE # so we can forecast later!
-pass_errors <- FALSE
-
-this_slice <- c(1)# <<-------------------------------------------- CUSTOMIZE!
-```
-
-```sh
-./analysis-pipeline.R assets/_config/M4MD/ELDO/mock-cover.yml --save-forecast-inputs --excl-null
-```
-
-Two key configurations in this YAML:
-
-The `additional covariates` field tells the model which predictors to include. Here we add
-a stratum interaction so the model fits a separate precipitation slope per stratum:
+1) The `additional covariates` field tells the model which predictors to include. Here we add
+a stratum interaction so the model fits a separate precipitation weight per stratum. Covariate interaction
+terms are described in the [covariates]({{< ref "/docs/1-guide/b-config-files/iii-analysis-model/covariates" >}})
+section.
 
 ```yaml
 additional covariates:
   - ppt, ppt*stratum
 ```
 
-By default the model includes a linear time trend. We disable it here so forecasts are
+2) By default the model includes a linear time trend. We disable it here so forecasts are
 driven by precipitation alone, not by an extrapolated time trend:
 
 ```yaml
 time effect: disabled
 ```
 
-The `--save-forecast-inputs` flag is what makes Step 3 possible — it writes the fitted model outputs in a format the forecast pipeline can read. Without it, the forecast pipeline won't have what it needs.
+These configurations discussed in more detail in the [fitting a model for forecasting]({{< ref "/docs/5-forecasting/running/guide/fitting-a-model" >}}) section.
+
+To run the analysis pipeline interactively, set your `analysis-pipeline.R` configurations as follows.
+
+```R
+yaml_file <- "assets/_config/M4MD/ELDO/mock-cover.yml"
+            # point to the YAML described above
+
+n_adapt <- 1000
+n_update <- 5000
+n_iter <- 2500
+n_cores <- 1
+override_dqs <- FALSE
+excl_null_mods <- TRUE # we won't be using the null model
+save_mcarray <- FALSE
+save_forecast_inputs <- TRUE # so we can forecast later!
+pass_errors <- FALSE
+
+this_slice <- c(1)
+```
+
+Then source your `analysis-pipeline.R`. Alternatively, run the model fitting pipeline from the CLI.
+
+```sh
+./analysis-pipeline.R assets/_config/M4MD/ELDO/mock-cover.yml \
+    --save-forecast-inputs --excl-null
+```
+
+A successful run should output a completed model initialization and finish with diagnostic trace plots.
+
+```
+Initializing model
+
+  |++++++++++++++++++++++++++++++++++++++++++++++++++| 100%
+  |**************************************************| 100%
+  |**************************************************| 100%
+  |**************************************************| 100%
+
+#  ... intermediate outputs ...
+
+Diagnostics: trace plot(s)...
+|=======================================================|100% ~0 s remaining
+```
 
 ## Step 2: Inspect the Output (optional)
 
-Before forecasting, it's worth checking the model output at `assets/_output/M4MD/ELDO/mock-cover/y_hits/binom_inv-logit_b0_hier-site/ppt_pptXstratum/`. You'll notice a `04-forecasting` folder containing posterior draws and model metadata — this is saved because of the `--save-forecast-inputs` flag we passed when fitting.
+We now have a fitted model! Before forecasting, it's worth checking the model output at `assets/_output/M4MD/ELDO/mock-cover/y_hits/binom_inv-logit_b0_hier-site/ppt_pptXstratum/`. You'll notice a `04-forecasting` folder containing posterior draws and model metadata — this is saved because of the `--save-forecast-inputs` flag we passed when fitting.
 
-If you'd like to evaluate the model, see [model diagnostics]({{< ref "/docs/1-guide/c-outputs/output-dir/01-diagnostics" >}}) and [model checking]({{< ref "/docs/1-guide/c-outputs/output-dir/02-checking" >}}). For example, the test statistics in `mod-summary.csv` and the convergence diagnostics in `convergence-diagnostics.txt` indicate a successful fit.
+If you'd like to evaluate the model, see [model diagnostics]({{< ref "/docs/1-guide/c-outputs/output-dir/01-diagnostics" >}}) and [model checking]({{< ref "/docs/1-guide/c-outputs/output-dir/02-checking" >}}). You'll find that the test statistics in `mod-summary.csv` and the convergence diagnostics in `convergence-diagnostics.txt` indicate a successful fit.
 
 ## Step 3: Run the Forecast Pipeline
 
-Now we're ready to forecast. The config for this run is at `forecasting/mock-data-tutorial/mock-forecast-config.yaml`. The first sections are provided here with comments.
+Now we're ready to forecast. The configuration YAML for this run is at `forecasting/mock-data-tutorial/mock-forecast-config.yaml`. The first sections are provided here with comments.
 
 ```YAML
 # ==== PATHS ==================================================================
 
 paths:
-  # Directory written by the fitting pipeline (--save-forecast-inputs flag).
+  # the directory written by the fitting pipeline
   fitted_model_dir: assets/_output/M4MD/ELDO/mock-cover/y_hits/binom_inv-logit_b0_hier-site/ppt_pptXstratum
 
-  # Future climate scenarios generated by generate-mock-data.R
+  # the two future climate scenarios (wet, dry) generated by generate-mock-data.R
   scenarios_file: assets/_data/mock-covariate-scenarios.csv
-
 
 # ==== COVARIATES =============================================================
 
-# Declare how each covariate used in the fitted model will be sourced for
-# the forecast period. "provided" means values come from scenarios_file above.
+# declare how each covariate used in the fitted model will be sourced for
+# the forecast period
+# we only used precipitation (ppt) and we provide it in the scenarios_file
 covariates:
   ppt:
     source: provided
@@ -126,16 +147,24 @@ covariates:
 
 For more on the configuration options, see the [config files]({{< ref "/docs/5-forecasting/running/guide/config-files" >}}) section.
 
-We use this YAML to run the forecast. Forecasting computation should take under a minute on most modern machines.
+Similar to `analysis-pipeline.R`, `forecast-pipeline.R` points to its YAML config and can be run interactively or from the CLI.
+
+To run the forecast pipeline interactively, set your `forecast-pipeline.R` configuration as follows.
+
+```R
+config_path <- "forecasting/mock-data-tutorial/mock-forecast-config.yaml"
+```
+
+Then source your `forecast-pipeline.R`. Alternatively, run the forecast pipeline from the CLI.
 
 ```bash
 Rscript forecasting/forecast/forecast-pipeline.R \
-  --config forecasting/mock-data-tutorial/mock-forecast-config.yaml
+    --config forecasting/mock-data-tutorial/mock-forecast-config.yaml
 ```
 
 <!-- TODO: update forecasting path when pipeline moves -->
 
-Forecasting computation will take a moment to run. You'll know it's complete when the output prints " Forecasting Complete!" Once it finishes, we can explore the outputs.
+Forecasting computation should take under a minute on most modern machines. You'll know it's complete when the output prints ` Forecasting Complete!`
 
 ## Step 4: Reading Your Outputs
 
@@ -160,11 +189,15 @@ For a complete reference of these plot, see the [forecast outputs reference]({{<
 
 We'll now walk through a couple of plots to finish the tutorial. As you look at them, two things should stand out: the scenarios should visibly diverge after 2026, and stratum A should show a wider gap between them than stratum B.
 
-Our first stop is the parkwide ensemble trajectories. This shows the park average behavior under our two future scenarios. The `dry` and `wet` labels map directly to the `scenario_name` column in `mock-covariate-scenarios.csv` (the same file from Step 0).
+Our first stop is the parkwide ensemble trajectories. This shows the park average behavior under our two future scenarios. The `dry` and `wet` labels map directly to the `scenario_name` column in `mock-covariate-scenarios.csv`.
 
 ![Park-wide ensemble trajectories under both scenarios](ensemble-trajectories-parkwide.png)
 
-The two scenarios visibly diverge from 2026 onward: `wet` tracks upward while `dry` continues the historical downward trend. This is the expected result — the model learned a positive precipitation–vegetation relationship during training, so higher future precipitation translates to higher forecast cover.
+The two scenarios visibly diverge from 2026 onward: `wet` tracks upward while `dry` continues the historical downward trend. This is the expected result; the model learned a positive precipitation–vegetation relationship during training, so higher future precipitation translates to higher forecast cover.
+
+{{< hint info >}}
+If we had provided more than one model for our scenario(s), this plot would include an interval band representing inter-model variation (i.e. model uncertainty)
+{{< /hint >}}
 
 The stratum-level comparison plots tell the same story split by stratum:
 
@@ -181,7 +214,7 @@ The stratum-level comparison plots tell the same story split by stratum:
 
 ### Stratum-level response differences
 
-Notice that stratum A shows a wider gap between the two scenarios than stratum B. This is also expected. The driver–response scatter plot from training captures why:
+Notice that the two scenarios (dry vs wet) diverge more in stratum A than in stratum B (stratum A's trajectories spread further apart over time). This is also expected. The driver–response scatter plot from training captures why:
 
 ![Driver–response relationship by stratum](driver-response-comparison.png)
 
