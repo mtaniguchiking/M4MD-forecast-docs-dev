@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Guide on Models for missing data</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/guide/</link><description>Recent content in Guide on Models for missing data</description><generator>Hugo</generator><language>en-us</language><atom:link href="https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/guide/index.xml" rel="self" type="application/rss+xml"/><item><title>Fitting for forecasting</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/guide/fitting-a-model/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/guide/fitting-a-model/</guid><description>&lt;h1 id="fitting-a-model-for-forecasting"&gt;
+ Fitting a model for forecasting
+ &lt;a class="anchor" href="#fitting-a-model-for-forecasting"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;Before forecasting, you must fit a Bayesian hierarchical model that is configured with forecasting in mind. This page covers some key considerations and configurations for doing so. It assumes familiarity with the model fitting pipeline (detailed in the model fitting guide).&lt;/p&gt;
+&lt;h2 id="analysis-pipeliner-command-line-arguments"&gt;
+ &lt;code&gt;analysis-pipeline.R&lt;/code&gt; command-line arguments
+ &lt;a class="anchor" href="#analysis-pipeliner-command-line-arguments"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;You must set the &lt;code&gt;save_forecast_inputs&lt;/code&gt; argument to &lt;code&gt;TRUE&lt;/code&gt;. This saves the model metadata and full posterior draws, which are the required inputs to the forecasting pipeline.&lt;/p&gt;</description></item></channel></rss>

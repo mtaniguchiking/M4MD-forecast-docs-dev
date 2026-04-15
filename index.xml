@@ -13,7 +13,16 @@
  Usage
  &lt;a class="anchor" href="#usage"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;See the &lt;a href="https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/c-outputs/object-types/"&gt;object types&lt;/a&gt; entry for a more thorough introduction to this topic.&lt;/p&gt;</description></item><item><title>Installation</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/installation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/installation/</guid><description>&lt;h1 id="installation"&gt;
+&lt;p&gt;See the &lt;a href="https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/c-outputs/object-types/"&gt;object types&lt;/a&gt; entry for a more thorough introduction to this topic.&lt;/p&gt;</description></item><item><title>Fitting for forecasting</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/guide/fitting-a-model/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/guide/fitting-a-model/</guid><description>&lt;h1 id="fitting-a-model-for-forecasting"&gt;
+ Fitting a model for forecasting
+ &lt;a class="anchor" href="#fitting-a-model-for-forecasting"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;Before forecasting, you must fit a Bayesian hierarchical model that is configured with forecasting in mind. This page covers some key considerations and configurations for doing so. It assumes familiarity with the model fitting pipeline (detailed in the model fitting guide).&lt;/p&gt;
+&lt;h2 id="analysis-pipeliner-command-line-arguments"&gt;
+ &lt;code&gt;analysis-pipeline.R&lt;/code&gt; command-line arguments
+ &lt;a class="anchor" href="#analysis-pipeliner-command-line-arguments"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;You must set the &lt;code&gt;save_forecast_inputs&lt;/code&gt; argument to &lt;code&gt;TRUE&lt;/code&gt;. This saves the model metadata and full posterior draws, which are the required inputs to the forecasting pipeline.&lt;/p&gt;</description></item><item><title>Installation</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/installation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/installation/</guid><description>&lt;h1 id="installation"&gt;
  Installation
  &lt;a class="anchor" href="#installation"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
@@ -44,21 +53,16 @@
  Usage
  &lt;a class="anchor" href="#usage"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;In some cases &amp;ndash; a model for soil stability observations &amp;ndash; there is only one plausible, implemented likelihood function (&lt;code&gt;ordinal-latent-normal&lt;/code&gt;). In other cases &amp;ndash; species richness &amp;ndash; there might be several available options (&lt;code&gt;poisson&lt;/code&gt;, &lt;code&gt;negative-binomial&lt;/code&gt;, and their zero-inflated counterparts). In cases where you specify multiple likelihoods, the model API will create a separate analysis for each, and the relative performance of each can be evaluated using model diagnostics, posterior predictive checks, and information criteria.&lt;/p&gt;</description></item><item><title>Mock data walkthrough</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/running/guides/mock-data/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/running/guides/mock-data/</guid><description>&lt;h1 id="your-first-forecast-mock-data"&gt;
+&lt;p&gt;In some cases &amp;ndash; a model for soil stability observations &amp;ndash; there is only one plausible, implemented likelihood function (&lt;code&gt;ordinal-latent-normal&lt;/code&gt;). In other cases &amp;ndash; species richness &amp;ndash; there might be several available options (&lt;code&gt;poisson&lt;/code&gt;, &lt;code&gt;negative-binomial&lt;/code&gt;, and their zero-inflated counterparts). In cases where you specify multiple likelihoods, the model API will create a separate analysis for each, and the relative performance of each can be evaluated using model diagnostics, posterior predictive checks, and information criteria.&lt;/p&gt;</description></item><item><title>Mock data walkthrough</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/tutorials/mock-data/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/tutorials/mock-data/</guid><description>&lt;h1 id="your-first-forecast-mock-data"&gt;
  Your First Forecast (Mock Data)
  &lt;a class="anchor" href="#your-first-forecast-mock-data"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
-&lt;p&gt;This is the simpliest path to perform a forecast. All data is pre-committed, so there&amp;rsquo;s nothing to download or prepare. The walkthrough has three steps.&lt;/p&gt;
+&lt;p&gt;This tutorial walks through a simple forecast run using synthetic data. You&amp;rsquo;ll fit a vegetation cover model, generate forecasts under two climate scenarios, and interpret how the model&amp;rsquo;s learned patterns manifest in these forecasts.&lt;/p&gt;
 &lt;h2 id="prerequisites"&gt;
  Prerequisites
  &lt;a class="anchor" href="#prerequisites"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;A working M4MD repo. [TODO: formalize this]&lt;/p&gt;
-&lt;h2 id="step-0-understand-the-mock-data"&gt;
- Step 0: Understand the mock data
- &lt;a class="anchor" href="#step-0-understand-the-mock-data"&gt;#&lt;/a&gt;
-&lt;/h2&gt;
-&lt;p&gt;The mock dataset represents a single park unit (&lt;strong&gt;ELDO&lt;/strong&gt;) with two vegetation strata (&lt;strong&gt;A&lt;/strong&gt; and &lt;strong&gt;B&lt;/strong&gt;), three sites per stratum, and three transects per site — surveyed annually from &lt;strong&gt;2000 to 2025&lt;/strong&gt;. Each transect records how many of 100 sample points hit a plant (&lt;code&gt;y_hits&lt;/code&gt; out of &lt;code&gt;n_points = 100&lt;/code&gt;). A single climate covariate, &lt;strong&gt;precipitation (ppt)&lt;/strong&gt;, declines gradually over the training period and drives the vegetation response.&lt;/p&gt;</description></item><item><title>Model builder</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/4-internals/model-builder/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/4-internals/model-builder/</guid><description>&lt;h1 id="model-builder"&gt;
+&lt;p&gt;See the &lt;a href="https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/installation/"&gt;getting started&lt;/a&gt; section if you haven&amp;rsquo;t used the model fitting pipeline before. The model fitting steps (Steps 1 and 2) are pretty brief, so if you&amp;rsquo;re unfamiliar with the model fitting process, the linked guides in each section are a good place to start.&lt;/p&gt;</description></item><item><title>Model builder</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/4-internals/model-builder/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/4-internals/model-builder/</guid><description>&lt;h1 id="model-builder"&gt;
  Model builder
  &lt;a class="anchor" href="#model-builder"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
@@ -116,38 +120,44 @@ optional output directory as such:&lt;/p&gt;</description></item><item><title>No
  The usual case
  &lt;a class="anchor" href="#the-usual-case"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;In the usual case, we are working with a single vector of observations (a single column of data in a flat file). Below, we see the first few lines of the data block for an analysis of count-type data from Little Bighorn Battlefield National Monument (LIBI), in Montana (a park within the Rocky Mountain Network). The file, &lt;code&gt;rich.yml&lt;/code&gt;, lives in the directory &lt;code&gt;assets/uplands-config/ROMN/LIBI&lt;/code&gt;.&lt;/p&gt;</description></item><item><title>Climate futures tutorial</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/running/guides/climate-futures-data/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/running/guides/climate-futures-data/</guid><description>&lt;h1 id="forecasting-with-real-world-data"&gt;
- Forecasting with Real-World Data
- &lt;a class="anchor" href="#forecasting-with-real-world-data"&gt;#&lt;/a&gt;
+&lt;p&gt;In the usual case, we are working with a single vector of observations (a single column of data in a flat file). Below, we see the first few lines of the data block for an analysis of count-type data from Little Bighorn Battlefield National Monument (LIBI), in Montana (a park within the Rocky Mountain Network). The file, &lt;code&gt;rich.yml&lt;/code&gt;, lives in the directory &lt;code&gt;assets/uplands-config/ROMN/LIBI&lt;/code&gt;.&lt;/p&gt;</description></item><item><title>The Big Picture</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/methodology/big-picture/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/methodology/big-picture/</guid><description>&lt;p&gt;&lt;strong&gt;*WORK IN PROGRESS (this is empty for now)&lt;/strong&gt;*&lt;/p&gt;
+&lt;h1 id="the-big-picture-posterior-predictive-forecasting"&gt;
+ The Big Picture: Posterior Predictive Forecasting
+ &lt;a class="anchor" href="#the-big-picture-posterior-predictive-forecasting"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
-&lt;!-- TODO: Intro paragraph — this path is for users who have their own NPS
- monitoring data and want to run a real forecast. It has a moderate lift:
- the user provides a response variable CSV, and an external notebooks repo
- handles covariate and scenario data preparation.
---&gt;
-&lt;h2 id="what-youll-need"&gt;
- What You&amp;rsquo;ll Need
- &lt;a class="anchor" href="#what-youll-need"&gt;#&lt;/a&gt;
+&lt;!-- PREREQUISITE: This page assumes familiarity with the M4MD model — in
+ particular the hierarchical Bayesian structure described in the original
+ paper (link TBD). --&gt;
+&lt;h2 id="what-does-the-model-know"&gt;
+ What Does the Model Know?
+ &lt;a class="anchor" href="#what-does-the-model-know"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;!-- TODO: Checklist — same R/JAGS prereqs as mock walkthrough, plus:
- - your own response variable CSV (format TBD — link to column schema)
- - access to the external notebooks repo (link TBD)
+&lt;!-- TODO: Intuition section — after fitting, the model has learned a posterior
+ distribution over all parameters (intercepts, slopes, variance terms).
+ This distribution encodes everything the data told us about vegetation
+ response to climate. Forecasting asks: given new climate conditions,
+ what does the model expect to see?
 --&gt;
-&lt;h2 id="step-1-prepare-your-covariate-and-scenario-data"&gt;
- Step 1: Prepare Your Covariate and Scenario Data
- &lt;a class="anchor" href="#step-1-prepare-your-covariate-and-scenario-data"&gt;#&lt;/a&gt;
+&lt;h2 id="the-posterior-predictive-distribution"&gt;
+ The Posterior Predictive Distribution
+ &lt;a class="anchor" href="#the-posterior-predictive-distribution"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;!-- TODO: Point to the external notebooks repo (URL TBD). Explain:
- - User provides their response variable CSV
- - The notebooks produce a formatted covariates CSV and a scenarios CSV
- - The output format matches what analysis-pipeline.R and
- forecast-pipeline.R expect
---&gt;
-&lt;h2 id="step-2-fit-the-model"&gt;
- Step 2: Fit the Model
- &lt;a class="anchor" href="#step-2-fit-the-model"&gt;#&lt;/a&gt;
-&lt;/h2&gt;
-&lt;p&gt;Once your data files are ready, follow the same fit step as the mock walkthrough:&lt;/p&gt;</description></item><item><title>Covariate data</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/a-data/ii-x-info/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/a-data/ii-x-info/</guid><description>&lt;h1 id="covariate-data"&gt;
+&lt;!-- TODO: Introduce the integral:
+ p(y_new | y) = ∫ p(y_new | θ) p(θ | y) dθ
+
+ Explain each piece in plain English:
+ - p(θ | y): the posterior — what we learned from the data
+ - p(y_new | θ): the likelihood — how the model generates new data
+ - p(y_new | y): the posterior predictive — full uncertainty about new observations
+
+ Note that this is a distribution, not a point estimate. The result reflects
+ both parameter uncertainty (from MCMC) and observation-level noise.
+--&gt;</description></item><item><title>Climate futures tutorial</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/tutorials/climate-futures-data/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/tutorials/climate-futures-data/</guid><description>&lt;h1 id="forecasting-with-real-climate-data"&gt;
+ Forecasting with Real Climate Data
+ &lt;a class="anchor" href="#forecasting-with-real-climate-data"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;This tutorial walks through combining your own response data with climate data to run the forecast pipeline. You&amp;rsquo;ll use a companion repo to pull together observed and projected climate covariates for your park unit, then run those through the M4MD pipeline to generate forecasts under different climate futures.&lt;/p&gt;
+&lt;p&gt;If you haven&amp;rsquo;t run a forecast before, the &lt;a href="https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/tutorials/mock-data/"&gt;mock data tutorial&lt;/a&gt; is a great place to start — it covers the same pipeline steps with a simpler synthetic dataset.&lt;/p&gt;</description></item><item><title>Covariate data</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/a-data/ii-x-info/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/a-data/ii-x-info/</guid><description>&lt;h1 id="covariate-data"&gt;
  Covariate data
  &lt;a class="anchor" href="#covariate-data"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
@@ -188,7 +198,120 @@ optional output directory as such:&lt;/p&gt;</description></item><item><title>No
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;coordinate columns&lt;/span&gt;:
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; - &lt;span style="color:#ae81ff"&gt;xcoord&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; - &lt;span style="color:#ae81ff"&gt;ycoord&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Here again, we point to the name of the file (&lt;code&gt;file&lt;/code&gt;) and supply the names of the columns containing the spatial coordinates (&lt;code&gt;coordinate columns&lt;/code&gt;). Note that proper residual analysis requires Cartesian coordinates. If the locations come directly from a geographic coordinate system, they&amp;rsquo;ll need to be transformed to a projected coordinate system.&lt;/p&gt;</description></item><item><title>Requirements</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/requirements/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/requirements/</guid><description>&lt;h1 id="requirements"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Here again, we point to the name of the file (&lt;code&gt;file&lt;/code&gt;) and supply the names of the columns containing the spatial coordinates (&lt;code&gt;coordinate columns&lt;/code&gt;). Note that proper residual analysis requires Cartesian coordinates. If the locations come directly from a geographic coordinate system, they&amp;rsquo;ll need to be transformed to a projected coordinate system.&lt;/p&gt;</description></item><item><title>Pipeline Walkthrough</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/methodology/pipeline-walkthrough/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/methodology/pipeline-walkthrough/</guid><description>&lt;p&gt;&lt;strong&gt;*WORK IN PROGRESS (this is empty for now)&lt;/strong&gt;*&lt;/p&gt;
+&lt;h1 id="pipeline-walkthrough-forecast-pipeliner"&gt;
+ Pipeline Walkthrough: &lt;code&gt;forecast-pipeline.R&lt;/code&gt;
+ &lt;a class="anchor" href="#pipeline-walkthrough-forecast-pipeliner"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;!-- TODO: Intro paragraph — this page walks through all steps of
+ forecast-pipeline.R, annotating what each step does and which
+ functions it calls. Cross-reference with forecast-engine.R and
+ related source files.
+
+ Source file: forecasting/forecast/forecast-pipeline.R
+--&gt;
+&lt;h2 id="step-1-parse-and-validate-config"&gt;
+ Step 1: Parse and Validate Config
+ &lt;a class="anchor" href="#step-1-parse-and-validate-config"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;!-- TODO: The pipeline reads the YAML config via read-forecast-config.R.
+ Describe what is validated at this stage and what errors to expect
+ if required fields are missing or malformed.
+ Source: forecasting/forecast/read-forecast-config.R
+--&gt;
+&lt;h2 id="step-2-load-model-metadata"&gt;
+ Step 2: Load Model Metadata
+ &lt;a class="anchor" href="#step-2-load-model-metadata"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;!-- TODO: The pipeline reads forecasting-metadata.rds from the 04-forecast/
+ output directory. Describe what is in this file and why the forecast
+ pipeline needs it (model spec, covariate info, site/stratum structure).
+ Source: forecast-engine.R:load_forecasting_metadata()
+--&gt;
+&lt;h2 id="step-3-load-mcmc-draws"&gt;
+ Step 3: Load MCMC Draws
+ &lt;a class="anchor" href="#step-3-load-mcmc-draws"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;!-- TODO: Reads mcmc-draws-full.csv. These are the posterior samples that
+ will be used for the predictive draws. Describe structure (rows = draws,
+ cols = parameters).
+--&gt;
+&lt;h2 id="step-4-load-covariate-moments"&gt;
+ Step 4: Load Covariate Moments
+ &lt;a class="anchor" href="#step-4-load-covariate-moments"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;!-- TODO: Reads covariate-moments.rds — the training-data mean and SD for
+ each covariate. Used in Step 6 to standardize the forecast covariates
+ using the same transformation applied to the training data.
+ Source: forecast-engine.R:load_covariate_moments()
+--&gt;
+&lt;h2 id="step-5-load-scenario-data"&gt;
+ Step 5: Load Scenario Data
+ &lt;a class="anchor" href="#step-5-load-scenario-data"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;!-- TODO: Reads the user-supplied scenarios CSV. Describe the expected
+ column schema and how scenario_id / model_run_id are used to group runs.
+--&gt;
+&lt;h2 id="step-6-prepare-the-covariate-matrix"&gt;
+ Step 6: Prepare the Covariate Matrix
+ &lt;a class="anchor" href="#step-6-prepare-the-covariate-matrix"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;!-- TODO: For each scenario × model_run combination, builds the design matrix X
+ that corresponds to the future conditions. Key operations:
+ - Applies covariate strategies (provided / hold_last / hold_mean)
+ - Standardizes covariates using training moments from Step 4
+ - Reconstructs interaction terms (e.g., ppt × stratum columns)
+ Source: forecast-engine.R:prepare_covariate_matrix()
+--&gt;
+&lt;h2 id="step-7-reconstruct-the-design-matrix"&gt;
+ Step 7: Reconstruct the Design Matrix
+ &lt;a class="anchor" href="#step-7-reconstruct-the-design-matrix"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;!-- TODO: Describe how the fixed-effects design matrix columns are matched
+ back to the parameter names in the MCMC draws. The metadata drives this
+ so that the forecast pipeline doesn't need the original model config.
+ Source: forecast-engine.R:build_fe_lookup()
+--&gt;
+&lt;h2 id="step-8-sample-posterior-predictive-draws"&gt;
+ Step 8: Sample Posterior Predictive Draws
+ &lt;a class="anchor" href="#step-8-sample-posterior-predictive-draws"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;!-- TODO: For each MCMC draw s and each future time point:
+ 1. Compute linear predictor η_s using posterior parameter draw
+ 2. Apply inverse link function (logit → probability, log → count, etc.)
+ 3. Sample y_new from the appropriate likelihood
+ Result: a matrix of draws representing the posterior predictive distribution.
+ Source: forecast-engine.R:compute_forecast_draws(),
+ forecast-likelihoods.R
+--&gt;
+&lt;h2 id="step-9-summarize-across-draws"&gt;
+ Step 9: Summarize Across Draws
+ &lt;a class="anchor" href="#step-9-summarize-across-draws"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;!-- TODO: Aggregate the draw matrix to point estimates + credible intervals:
+ - mu_median, mu_lower, mu_upper (mean response)
+ - y_rep_median, y_rep_lower, y_rep_upper (observation-level)
+ Source: forecast-engine.R:summarize_ensemble()
+--&gt;
+&lt;h2 id="step-10-summarize-across-model-runs-ensemble"&gt;
+ Step 10: Summarize Across Model Runs (Ensemble)
+ &lt;a class="anchor" href="#step-10-summarize-across-model-runs-ensemble"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;!-- TODO: Pool across GCM model runs within a scenario to form an ensemble.
+ Describe how model runs are combined (e.g., equal weighting).
+ Compare across scenarios for decision support.
+--&gt;
+&lt;h2 id="step-11-write-outputs-and-plots"&gt;
+ Step 11: Write Outputs and Plots
+ &lt;a class="anchor" href="#step-11-write-outputs-and-plots"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;!-- TODO: Describe the output files written:
+ - forecast-site-summaries.csv
+ - Trajectory plots (one per site or stratum?)
+ - Spaghetti plots
+ - Cross-scenario comparison plots
+ Source: forecasting/forecast/forecast-plot-engine.R
+--&gt;</description></item><item><title>Requirements</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/requirements/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/requirements/</guid><description>&lt;h1 id="requirements"&gt;
  Requirements
  &lt;a class="anchor" href="#requirements"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
@@ -239,57 +362,7 @@ optional output directory as such:&lt;/p&gt;</description></item><item><title>No
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;event date info&lt;/span&gt;:
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;date-time column&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;Year&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;date-time format&lt;/span&gt;: &lt;span style="color:#66d9ef"&gt;Y&lt;/span&gt;!
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;As with the other statements in the data block, we point to the name of the covariate file (&lt;code&gt;file&lt;/code&gt;; see the &lt;a href="https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/a-data/ii-x-info/"&gt;covariate data&lt;/a&gt; section for more detail) and, if different from the date attributes in the response data, supply info required to properly parse covariate datetime fields.&lt;/p&gt;</description></item><item><title>Custom data guide</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/running/guides/custom-data/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/running/guides/custom-data/</guid><description>&lt;h1 id="running-a-forecast-with-custom-data"&gt;
- Running a Forecast with Custom Data
- &lt;a class="anchor" href="#running-a-forecast-with-custom-data"&gt;#&lt;/a&gt;
-&lt;/h1&gt;
-&lt;!-- TODO: Intro paragraph — this is the full reference for users bringing
- entirely their own data (response, covariates, and scenarios). No
- external tool required. This page is denser than the walkthroughs
- and serves as a reference rather than a tutorial.
---&gt;
-&lt;h2 id="required-input-files"&gt;
- Required Input Files
- &lt;a class="anchor" href="#required-input-files"&gt;#&lt;/a&gt;
-&lt;/h2&gt;
-&lt;!-- TODO: Describe each input file with column schemas:
- 1. Response variable CSV — columns, units, required fields
- 2. Covariates CSV (training) — columns, format
- 3. Scenarios CSV (future) — columns, scenario_id vs model_run_id distinction,
- how multiple GCM runs are represented
- Cross-reference forecasting/getting-started/generate-mock-data.R
- for concrete examples of each format.
---&gt;
-&lt;h2 id="forecast-config-yaml-reference"&gt;
- Forecast Config YAML Reference
- &lt;a class="anchor" href="#forecast-config-yaml-reference"&gt;#&lt;/a&gt;
-&lt;/h2&gt;
-&lt;!-- TODO: Document every key in the forecast config YAML:
- - Required keys (paths to inputs, output dir, likelihood)
- - Covariate strategy options: provided / hold_last / hold_mean
- - Scenario filtering options
- - n_cores, seed, etc.
- Source: forecasting/forecast/read-forecast-config.R
---&gt;
-&lt;h2 id="running-the-pipeline"&gt;
- Running the Pipeline
- &lt;a class="anchor" href="#running-the-pipeline"&gt;#&lt;/a&gt;
-&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Rscript forecasting/forecast/forecast-pipeline.R &lt;span style="color:#ae81ff"&gt;\
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; --config path/to/forecast-config.yaml
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- TODO: Note any useful flags (--dry-run, --verbose, etc. if they exist).
- Describe what a successful run looks like in the console. --&gt;
-&lt;h2 id="output-files"&gt;
- Output Files
- &lt;a class="anchor" href="#output-files"&gt;#&lt;/a&gt;
-&lt;/h2&gt;
-&lt;!-- TODO: Document the output directory layout and key files:
- - Trajectory plots (per-site, per-stratum)
- - Spaghetti plots
- - forecast-site-summaries.csv — describe each column
- - mu_median vs y_rep_median — explain the distinction in plain English
- Source: forecasting/forecast/forecast-plot-engine.R
---&gt;</description></item><item><title>Group-level effects</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iii-analysis-model/group-level-effects/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iii-analysis-model/group-level-effects/</guid><description>&lt;h1 id="group-level-effects"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;As with the other statements in the data block, we point to the name of the covariate file (&lt;code&gt;file&lt;/code&gt;; see the &lt;a href="https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/a-data/ii-x-info/"&gt;covariate data&lt;/a&gt; section for more detail) and, if different from the date attributes in the response data, supply info required to properly parse covariate datetime fields.&lt;/p&gt;</description></item><item><title>Group-level effects</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iii-analysis-model/group-level-effects/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iii-analysis-model/group-level-effects/</guid><description>&lt;h1 id="group-level-effects"&gt;
  Group-level effects
  &lt;a class="anchor" href="#group-level-effects"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
