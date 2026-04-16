@@ -18,8 +18,9 @@ This forecasting documentation contains three subsections:
 {{< hint info >}}
 **Tutorials**
 
-- Start here for your first forecast with a step-by-step walkthrough and mock data
-- Learn how to forecast with climate futures data or your own data
+- Walkthrough of a full forecast run using mock data for a first time user
+- Additional tutorial using CCRP climate futures data with your own observation data
+
 
 → [Tutorials]({{< ref "/docs/5-forecasting/tutorials" >}})
 {{< /hint >}}
