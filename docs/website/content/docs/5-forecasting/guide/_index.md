@@ -28,7 +28,7 @@ Gather two types of data before you start:
 - **Future scenario data** — projected covariate values (e.g., climate scenarios) for the forecast period, formatted as a scenarios CSV.
 
 > For details on response and covariate data requirements, see the [model fitting data]({{< ref "/docs/1-guide/a-data/i-y-info" >}}) guide.
-> For details on future scenario data requirements, see the [forecasting data]({{< ref "/docs/5-forecasting/guide/data" >}}) guide.
+> For details on future scenario data requirements, see the [forecasting data]({{< ref "/docs/5-forecasting/guide/input-data" >}}) guide.
 
 ---
 
