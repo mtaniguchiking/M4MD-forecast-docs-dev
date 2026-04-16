@@ -11,5 +11,5 @@
  Forecasting with Real Climate Data
  &lt;a class="anchor" href="#forecasting-with-real-climate-data"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
-&lt;p&gt;This tutorial walks through combining your own response data with climate data to run the forecast pipeline. You&amp;rsquo;ll use a companion repo to pull together observed and projected climate covariates for your park unit, then run those through the M4MD pipeline to generate forecasts under different climate futures.&lt;/p&gt;
-&lt;p&gt;If you haven&amp;rsquo;t run a forecast before, the &lt;a href="https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/tutorials/mock-data/"&gt;mock data tutorial&lt;/a&gt; is a great place to start — it covers the same pipeline steps with a simpler synthetic dataset.&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;This tutorial walks through combining your own response data with climate data to run the forecast pipeline. You&amp;rsquo;ll use a temporary, external repo to pull together observed and projected climate covariates for your park unit, then run those through the M4MD pipeline to generate forecasts under different climate futures.&lt;/p&gt;
+&lt;p&gt;If you haven&amp;rsquo;t run a forecast before, the &lt;a href="https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/tutorials/mock-data/"&gt;mock data tutorial&lt;/a&gt; is a great place to start.&lt;/p&gt;</description></item></channel></rss>
