@@ -7,4 +7,102 @@
  &lt;code&gt;analysis-pipeline.R&lt;/code&gt; command-line arguments
  &lt;a class="anchor" href="#analysis-pipeliner-command-line-arguments"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;You must set the &lt;code&gt;save_forecast_inputs&lt;/code&gt; argument to &lt;code&gt;TRUE&lt;/code&gt;. This saves the model metadata and full posterior draws, which are the required inputs to the forecasting pipeline.&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;You must set the &lt;code&gt;save_forecast_inputs&lt;/code&gt; argument to &lt;code&gt;TRUE&lt;/code&gt;. This saves the model metadata and full posterior draws, which are the required inputs to the forecasting pipeline.&lt;/p&gt;</description></item><item><title>Input Data</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/guide/input-data/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/guide/input-data/</guid><description>&lt;h1 id="forcast-input-data"&gt;
+ Forcast Input data
+ &lt;a class="anchor" href="#forcast-input-data"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;The forecasting pipeline requires two inputs:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;A &lt;strong&gt;fitted model directory&lt;/strong&gt; — written by the model fitting pipeline when run with &lt;code&gt;--save-forecast-inputs&lt;/code&gt; (see &lt;a href="./fitting-a-model"&gt;Fitting a model for forecasting&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;A &lt;strong&gt;scenarios CSV&lt;/strong&gt; — future covariate projections you supply, described on this page&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id="scenarios-csv"&gt;
+ Scenarios CSV
+ &lt;a class="anchor" href="#scenarios-csv"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;The scenarios CSV provides the covariate values the pipeline uses to construct future predictions. Each row represents one site in one year under one scenario and model run.&lt;/p&gt;</description></item><item><title>Config files</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/guide/config-files/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/guide/config-files/</guid><description>&lt;h1 id="config-files"&gt;
+ Config files
+ &lt;a class="anchor" href="#config-files"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;The forecast config is a YAML file that tells the pipeline where to find your data, how to source covariates, and how to format outputs.&lt;/p&gt;
+&lt;p&gt;A minimal example:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# ==== PATHS =======================================================&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;paths&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;fitted_model_dir&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;path/to/model/output&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;scenarios_file&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;path/to/future-scenario-data.csv&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# ==== COVARIATES ================================================&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;covariates&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;covariate1&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;source&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;provided&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;covariate2&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;source&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;hold_last&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# ==== COMPUTATION =================================================&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;random seed&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;42&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;max draws&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;2000&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# ==== OUTPUT ======================================================&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;summary levels&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; - &lt;span style="color:#ae81ff"&gt;site&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; - &lt;span style="color:#ae81ff"&gt;stratum&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;summary quantiles&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; - &lt;span style="color:#ae81ff"&gt;0.05&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; - &lt;span style="color:#ae81ff"&gt;0.500&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; - &lt;span style="color:#ae81ff"&gt;0.95&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The sections below describe each field.&lt;/p&gt;</description></item><item><title>Outputs</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/guide/outputs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/guide/outputs/</guid><description>&lt;p&gt;&lt;strong&gt;*WORK IN PROGRESS (this is somewhat empty for now)&lt;/strong&gt;*&lt;/p&gt;
+&lt;h1 id="forecast-outputs"&gt;
+ Forecast Outputs
+ &lt;a class="anchor" href="#forecast-outputs"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;The forecasting pipeline writes all outputs into &lt;code&gt;04-forecast/&lt;/code&gt; subdirectories inside your &lt;code&gt;fitted_model_dir&lt;/code&gt;. The structure depends on how many scenarios and model runs are in your scenarios CSV.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="scenarios-and-model-runs"&gt;
+ Scenarios and model runs
+ &lt;a class="anchor" href="#scenarios-and-model-runs"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Each unique combination of &lt;code&gt;(scenario_id, model_run_id)&lt;/code&gt; in your scenarios CSV is treated as a separate forecast run. The pipeline then:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Produces &lt;strong&gt;run-level outputs&lt;/strong&gt; for each individual run&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ensembles&lt;/strong&gt; across model runs within each scenario (if a scenario has more than one model run)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Compares&lt;/strong&gt; across scenarios (if there is more than one scenario)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id="directory-structure"&gt;
+ Directory structure
+ &lt;a class="anchor" href="#directory-structure"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;04-forecast/
+ forecast-inputs/ (written by fitting pipeline — do not modify)
+ runs/
+ &amp;lt;scenario_name&amp;gt;/
+ &amp;lt;model_run_name&amp;gt;/ (one folder per model run)
+ forecast-site-summaries.csv
+ forecast-stratum-summaries.csv
+ forecast-bundle.rds
+ forecasts/
+ [TODO: plot filenames]
+ ensemble/ (only when scenario has &amp;gt;1 model run)
+ &amp;lt;scenario&amp;gt;-ensemble-site-summaries.csv
+ &amp;lt;scenario&amp;gt;-ensemble-stratum-summaries.csv
+ &amp;lt;scenario&amp;gt;-ensemble-bundle.rds
+ ensemble/
+ [TODO: plot filenames]
+ comparison/ (only when there is &amp;gt;1 scenario)
+ comparison/
+ [TODO: plot filenames]
+ diagnostics/
+ diagnostics/
+ [TODO: plot filenames]
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h2 id="summary-csvs"&gt;
+ Summary CSVs
+ &lt;a class="anchor" href="#summary-csvs"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Summary CSVs are written at each spatial level you specified in &lt;code&gt;summary levels&lt;/code&gt;. The filename pattern is &lt;code&gt;{output prefix}-{level}-summaries.csv&lt;/code&gt; (e.g., &lt;code&gt;forecast-site-summaries.csv&lt;/code&gt;).&lt;/p&gt;</description></item></channel></rss>
