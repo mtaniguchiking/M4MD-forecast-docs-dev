@@ -6,7 +6,7 @@ weight: 1
 
 # Tutorials
 
-There are two tutorials for running a forecast, depending on your familiarity with the pipeline and the data you're starting with.
+There are two tutorials for running a forecast, depending on your familiarity with the pipeline and the data you're starting with:
 
 {{< hint info >}}
 **Mock data (your first time forecasting)**

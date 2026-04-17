@@ -13,14 +13,11 @@ In context of this repository, "model fitting" refers to running `analysis-pipel
 
 This forecasting documentation contains three subsections:
 
----
-
 {{< hint info >}}
 **Tutorials**
 
-- Walkthrough of a full forecast run using mock data for a first time user
-- Additional tutorial using CCRP climate futures data with your own observation data
-
+- Beginner walkthrough of a full forecast run using mock data
+- (Temporary) applied tutorial using climate futures data
 
 → [Tutorials]({{< ref "/docs/5-forecasting/tutorials" >}})
 {{< /hint >}}
@@ -28,7 +25,8 @@ This forecasting documentation contains three subsections:
 {{< hint warning >}}
 **Guide**
 
-- Reference documentation for configuration options and pipeline outputs
+- Configuration options for setting up and running the forecast pipeline
+- Documentation of forecast outputs and plots
 
 → [Guide]({{< ref "/docs/5-forecasting/guide" >}})
 {{< /hint >}}
@@ -36,8 +34,8 @@ This forecasting documentation contains three subsections:
 {{< hint danger >}}
 **Methodology**
 
-- Go here to understand the underlying posterior predictive framework
-- Explore what each step of the forecast pipeline is doing
+- Overview of the underlying posterior predictive framework
+- Explanation of what each step of the forecast pipeline is doing
 
 → [Methodology]({{< ref "/docs/5-forecasting/methodology" >}})
 {{< /hint >}}
