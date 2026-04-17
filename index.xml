@@ -53,16 +53,7 @@
  Usage
  &lt;a class="anchor" href="#usage"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;In some cases &amp;ndash; a model for soil stability observations &amp;ndash; there is only one plausible, implemented likelihood function (&lt;code&gt;ordinal-latent-normal&lt;/code&gt;). In other cases &amp;ndash; species richness &amp;ndash; there might be several available options (&lt;code&gt;poisson&lt;/code&gt;, &lt;code&gt;negative-binomial&lt;/code&gt;, and their zero-inflated counterparts). In cases where you specify multiple likelihoods, the model API will create a separate analysis for each, and the relative performance of each can be evaluated using model diagnostics, posterior predictive checks, and information criteria.&lt;/p&gt;</description></item><item><title>Mock data walkthrough</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/tutorials/mock-data/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/tutorials/mock-data/</guid><description>&lt;h1 id="your-first-forecast-mock-data"&gt;
- Your First Forecast (Mock Data)
- &lt;a class="anchor" href="#your-first-forecast-mock-data"&gt;#&lt;/a&gt;
-&lt;/h1&gt;
-&lt;p&gt;This tutorial walks through a simple forecast run using synthetic data. You&amp;rsquo;ll fit a vegetation cover model, generate forecasts under two climate scenarios, and interpret how the model&amp;rsquo;s learned patterns manifest in these forecasts.&lt;/p&gt;
-&lt;h2 id="prerequisites"&gt;
- Prerequisites
- &lt;a class="anchor" href="#prerequisites"&gt;#&lt;/a&gt;
-&lt;/h2&gt;
-&lt;p&gt;See the &lt;a href="https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/installation/"&gt;getting started&lt;/a&gt; section if you haven&amp;rsquo;t used the model fitting pipeline before. The model fitting steps (Steps 1 and 2) are pretty brief, so if you&amp;rsquo;re unfamiliar with the model fitting process, the linked guides in each section are a good place to start.&lt;/p&gt;</description></item><item><title>Model builder</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/4-internals/model-builder/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/4-internals/model-builder/</guid><description>&lt;h1 id="model-builder"&gt;
+&lt;p&gt;In some cases &amp;ndash; a model for soil stability observations &amp;ndash; there is only one plausible, implemented likelihood function (&lt;code&gt;ordinal-latent-normal&lt;/code&gt;). In other cases &amp;ndash; species richness &amp;ndash; there might be several available options (&lt;code&gt;poisson&lt;/code&gt;, &lt;code&gt;negative-binomial&lt;/code&gt;, and their zero-inflated counterparts). In cases where you specify multiple likelihoods, the model API will create a separate analysis for each, and the relative performance of each can be evaluated using model diagnostics, posterior predictive checks, and information criteria.&lt;/p&gt;</description></item><item><title>Model builder</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/4-internals/model-builder/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/4-internals/model-builder/</guid><description>&lt;h1 id="model-builder"&gt;
  Model builder
  &lt;a class="anchor" href="#model-builder"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
