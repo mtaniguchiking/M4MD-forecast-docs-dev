@@ -12,6 +12,8 @@ This tutorial walks through a simple forecast run using synthetic data. You'll f
 
 See the [getting started]({{< ref "/docs/0-getting-started/installation.md" >}}) section if you haven't used the model fitting pipeline before. The model fitting steps (Steps 1 and 2) are pretty brief, so if you're unfamiliar with the model fitting process, the linked guides in each section are a good place to start.
 
+> File/folder paths in this tutoral assume your working directory is set to the repository root directory (i.e. `/M4MD`).
+
 ## Step 0: Understand the mock data
 
 This mock dataset represents a park unit (ELDO) with two vegetation strata (A and B), six sites per stratum, and one transect per site. The data is annual from 2000 to 2025. Each transect records how many of 100 sample points hit a plant (`y_hits` out of `n_points = 100`). A single climate covariate, precipitation (ppt), declines gradually over the training period and drives the vegetation response.
