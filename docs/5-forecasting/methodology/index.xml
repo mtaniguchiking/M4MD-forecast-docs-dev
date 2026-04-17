@@ -1,146 +1,49 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Methodology on Models for missing data</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/methodology/</link><description>Recent content in Methodology on Models for missing data</description><generator>Hugo</generator><language>en-us</language><atom:link href="https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/methodology/index.xml" rel="self" type="application/rss+xml"/><item><title>The Big Picture</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/methodology/big-picture/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/methodology/big-picture/</guid><description>&lt;p&gt;&lt;strong&gt;*WORK IN PROGRESS (this is empty for now)&lt;/strong&gt;*&lt;/p&gt;
-&lt;h1 id="the-big-picture-posterior-predictive-forecasting"&gt;
- The Big Picture: Posterior Predictive Forecasting
- &lt;a class="anchor" href="#the-big-picture-posterior-predictive-forecasting"&gt;#&lt;/a&gt;
-&lt;/h1&gt;
-&lt;!-- PREREQUISITE: This page assumes familiarity with the M4MD model — in
- particular the hierarchical Bayesian structure described in the original
- paper (link TBD). --&gt;
-&lt;h2 id="what-does-the-model-know"&gt;
- What Does the Model Know?
- &lt;a class="anchor" href="#what-does-the-model-know"&gt;#&lt;/a&gt;
-&lt;/h2&gt;
-&lt;!-- TODO: Intuition section — after fitting, the model has learned a posterior
- distribution over all parameters (intercepts, slopes, variance terms).
- This distribution encodes everything the data told us about vegetation
- response to climate. Forecasting asks: given new climate conditions,
- what does the model expect to see?
---&gt;
-&lt;h2 id="the-posterior-predictive-distribution"&gt;
- The Posterior Predictive Distribution
- &lt;a class="anchor" href="#the-posterior-predictive-distribution"&gt;#&lt;/a&gt;
-&lt;/h2&gt;
-&lt;!-- TODO: Introduce the integral:
- p(y_new | y) = ∫ p(y_new | θ) p(θ | y) dθ
-
- Explain each piece in plain English:
- - p(θ | y): the posterior — what we learned from the data
- - p(y_new | θ): the likelihood — how the model generates new data
- - p(y_new | y): the posterior predictive — full uncertainty about new observations
-
- Note that this is a distribution, not a point estimate. The result reflects
- both parameter uncertainty (from MCMC) and observation-level noise.
---&gt;</description></item><item><title>Pipeline Walkthrough</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/methodology/pipeline-walkthrough/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/methodology/pipeline-walkthrough/</guid><description>&lt;p&gt;&lt;strong&gt;*WORK IN PROGRESS (this is empty for now)&lt;/strong&gt;*&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Methodology on Models for missing data</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/methodology/</link><description>Recent content in Methodology on Models for missing data</description><generator>Hugo</generator><language>en-us</language><atom:link href="https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/methodology/index.xml" rel="self" type="application/rss+xml"/><item><title>The Big Picture</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/methodology/big-picture/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/methodology/big-picture/</guid><description>&lt;p&gt;&lt;strong&gt;*WORK IN PROGRESS (this is empty for now)&lt;/strong&gt;*&lt;/p&gt;</description></item><item><title>Pipeline Walkthrough</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/methodology/pipeline-walkthrough/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/methodology/pipeline-walkthrough/</guid><description>&lt;p&gt;&lt;strong&gt;*WORK IN PROGRESS (this is empty for now)&lt;/strong&gt;*&lt;/p&gt;
 &lt;h1 id="pipeline-walkthrough-forecast-pipeliner"&gt;
  Pipeline Walkthrough: &lt;code&gt;forecast-pipeline.R&lt;/code&gt;
  &lt;a class="anchor" href="#pipeline-walkthrough-forecast-pipeliner"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
-&lt;!-- TODO: Intro paragraph — this page walks through all steps of
- forecast-pipeline.R, annotating what each step does and which
- functions it calls. Cross-reference with forecast-engine.R and
- related source files.
-
- Source file: forecasting/forecast/forecast-pipeline.R
---&gt;
 &lt;h2 id="step-1-parse-and-validate-config"&gt;
  Step 1: Parse and Validate Config
  &lt;a class="anchor" href="#step-1-parse-and-validate-config"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;!-- TODO: The pipeline reads the YAML config via read-forecast-config.R.
- Describe what is validated at this stage and what errors to expect
- if required fields are missing or malformed.
- Source: forecasting/forecast/read-forecast-config.R
---&gt;
 &lt;h2 id="step-2-load-model-metadata"&gt;
  Step 2: Load Model Metadata
  &lt;a class="anchor" href="#step-2-load-model-metadata"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;!-- TODO: The pipeline reads forecasting-metadata.rds from the 04-forecast/
- output directory. Describe what is in this file and why the forecast
- pipeline needs it (model spec, covariate info, site/stratum structure).
- Source: forecast-engine.R:load_forecasting_metadata()
---&gt;
 &lt;h2 id="step-3-load-mcmc-draws"&gt;
  Step 3: Load MCMC Draws
  &lt;a class="anchor" href="#step-3-load-mcmc-draws"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;!-- TODO: Reads mcmc-draws-full.csv. These are the posterior samples that
- will be used for the predictive draws. Describe structure (rows = draws,
- cols = parameters).
---&gt;
 &lt;h2 id="step-4-load-covariate-moments"&gt;
  Step 4: Load Covariate Moments
  &lt;a class="anchor" href="#step-4-load-covariate-moments"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;!-- TODO: Reads covariate-moments.rds — the training-data mean and SD for
- each covariate. Used in Step 6 to standardize the forecast covariates
- using the same transformation applied to the training data.
- Source: forecast-engine.R:load_covariate_moments()
---&gt;
 &lt;h2 id="step-5-load-scenario-data"&gt;
  Step 5: Load Scenario Data
  &lt;a class="anchor" href="#step-5-load-scenario-data"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;!-- TODO: Reads the user-supplied scenarios CSV. Describe the expected
- column schema and how scenario_id / model_run_id are used to group runs.
---&gt;
 &lt;h2 id="step-6-prepare-the-covariate-matrix"&gt;
  Step 6: Prepare the Covariate Matrix
  &lt;a class="anchor" href="#step-6-prepare-the-covariate-matrix"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;!-- TODO: For each scenario × model_run combination, builds the design matrix X
- that corresponds to the future conditions. Key operations:
- - Applies covariate strategies (provided / hold_last / hold_mean)
- - Standardizes covariates using training moments from Step 4
- - Reconstructs interaction terms (e.g., ppt × stratum columns)
- Source: forecast-engine.R:prepare_covariate_matrix()
---&gt;
 &lt;h2 id="step-7-reconstruct-the-design-matrix"&gt;
  Step 7: Reconstruct the Design Matrix
  &lt;a class="anchor" href="#step-7-reconstruct-the-design-matrix"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;!-- TODO: Describe how the fixed-effects design matrix columns are matched
- back to the parameter names in the MCMC draws. The metadata drives this
- so that the forecast pipeline doesn't need the original model config.
- Source: forecast-engine.R:build_fe_lookup()
---&gt;
 &lt;h2 id="step-8-sample-posterior-predictive-draws"&gt;
  Step 8: Sample Posterior Predictive Draws
  &lt;a class="anchor" href="#step-8-sample-posterior-predictive-draws"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;!-- TODO: For each MCMC draw s and each future time point:
- 1. Compute linear predictor η_s using posterior parameter draw
- 2. Apply inverse link function (logit → probability, log → count, etc.)
- 3. Sample y_new from the appropriate likelihood
- Result: a matrix of draws representing the posterior predictive distribution.
- Source: forecast-engine.R:compute_forecast_draws(),
- forecast-likelihoods.R
---&gt;
 &lt;h2 id="step-9-summarize-across-draws"&gt;
  Step 9: Summarize Across Draws
  &lt;a class="anchor" href="#step-9-summarize-across-draws"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;!-- TODO: Aggregate the draw matrix to point estimates + credible intervals:
- - mu_median, mu_lower, mu_upper (mean response)
- - y_rep_median, y_rep_lower, y_rep_upper (observation-level)
- Source: forecast-engine.R:summarize_ensemble()
---&gt;
 &lt;h2 id="step-10-summarize-across-model-runs-ensemble"&gt;
  Step 10: Summarize Across Model Runs (Ensemble)
  &lt;a class="anchor" href="#step-10-summarize-across-model-runs-ensemble"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;!-- TODO: Pool across GCM model runs within a scenario to form an ensemble.
- Describe how model runs are combined (e.g., equal weighting).
- Compare across scenarios for decision support.
---&gt;
 &lt;h2 id="step-11-write-outputs-and-plots"&gt;
  Step 11: Write Outputs and Plots
  &lt;a class="anchor" href="#step-11-write-outputs-and-plots"&gt;#&lt;/a&gt;
-&lt;/h2&gt;
-&lt;!-- TODO: Describe the output files written:
- - forecast-site-summaries.csv
- - Trajectory plots (one per site or stratum?)
- - Spaghetti plots
- - Cross-scenario comparison plots
- Source: forecasting/forecast/forecast-plot-engine.R
---&gt;</description></item></channel></rss>
+&lt;/h2&gt;</description></item></channel></rss>
