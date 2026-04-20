@@ -6,7 +6,10 @@ bookToc: true
 
 # Sync changes
 
-## Checking for updates
+## Checking for updates within RStudio
+For many National Park Service users, getting the latest updates and pushing changes is easiest within RStudio.
+
+## Checking for updates with a terminal
 
 ### Project updates
 To get the latest __models-for-missing-data__ code, navigate to your project directory using a terminal, and run `git pull`.
