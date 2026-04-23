@@ -6,13 +6,11 @@
  Obtaining a copy of the repository
  &lt;a class="anchor" href="#obtaining-a-copy-of-the-repository"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;h3 id="new-here"&gt;
- New here?
- &lt;a class="anchor" href="#new-here"&gt;#&lt;/a&gt;
+&lt;h3 id="nps-im-staff-or-partner"&gt;
+ NPS I&amp;amp;M staff or partner?
+ &lt;a class="anchor" href="#nps-im-staff-or-partner"&gt;#&lt;/a&gt;
 &lt;/h3&gt;
-&lt;p&gt;To clone the repository, open a terminal[^1] and run the following command &lt;em&gt;from&lt;/em&gt; the directory into which you&amp;rsquo;d like to place the project (e.g., from &lt;code&gt;~/repos&lt;/code&gt;).&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-sh" data-lang="sh"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;git clone https://github.com/lzachmann/models-for-missing-data.git &lt;span style="color:#f92672"&gt;[&lt;/span&gt;DIRNAME&lt;span style="color:#f92672"&gt;]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;DIRNAME&lt;/code&gt; is optional, and specifies the name of the directory into which the project will be cloned on your local machine. You could call it &amp;ldquo;m4md&amp;rdquo; for instance, if you wanted something a bit shorter than the default &amp;ldquo;models-for-missing-data.&amp;rdquo;&lt;/p&gt;</description></item><item><title>Requirements</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/requirements/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/requirements/</guid><description>&lt;h1 id="requirements"&gt;
+&lt;p&gt;The latest version of the scripts have migrated to the &lt;a href="https://github.com/NPS-SWNC/M4MD"&gt;National Park Service&amp;rsquo;s Southwestern Network Collaboration GitHub account&lt;/a&gt;. The models for missing data scripts are in a private repository that will become public at a later date. If you are a National Park Service Inventory and Monitoring staff member of partner, please send an email to &lt;a href="mailto:cheryl_mcintyre@nps.gov"&gt;Cheryl McIntyre&lt;/a&gt; to request access and include your GitHub username (ideally associated with a NPS email).&lt;/p&gt;</description></item><item><title>Requirements</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/requirements/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/requirements/</guid><description>&lt;h1 id="requirements"&gt;
  Requirements
  &lt;a class="anchor" href="#requirements"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
@@ -29,26 +27,4 @@
  Checking for updates within RStudio
  &lt;a class="anchor" href="#checking-for-updates-within-rstudio"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;For many National Park Service users, getting the latest updates and pushing changes is easiest within RStudio.&lt;/p&gt;
-&lt;h2 id="checking-for-updates-with-a-terminal"&gt;
- Checking for updates with a terminal
- &lt;a class="anchor" href="#checking-for-updates-with-a-terminal"&gt;#&lt;/a&gt;
-&lt;/h2&gt;
-&lt;h3 id="project-updates"&gt;
- Project updates
- &lt;a class="anchor" href="#project-updates"&gt;#&lt;/a&gt;
-&lt;/h3&gt;
-&lt;p&gt;To get the latest &lt;strong&gt;models-for-missing-data&lt;/strong&gt; code, navigate to your project directory using a terminal, and run &lt;code&gt;git pull&lt;/code&gt;.&lt;/p&gt;
-&lt;h3 id="submodule-updates--individual-submodules"&gt;
- Submodule updates / individual submodules
- &lt;a class="anchor" href="#submodule-updates--individual-submodules"&gt;#&lt;/a&gt;
-&lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-sh" data-lang="sh"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;cd &amp;lt;submodule path&amp;gt; &lt;span style="color:#75715e"&gt;# e.g., model-api&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;git fetch
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;git checkout gh-submodule
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;git pull origin gh-submodule
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="submodule-updates--all-submodules-simultaneously"&gt;
- Submodule updates / all submodules simultaneously
- &lt;a class="anchor" href="#submodule-updates--all-submodules-simultaneously"&gt;#&lt;/a&gt;
-&lt;/h3&gt;
-&lt;p&gt;First, be sure to do any necessary housekeeping (remove, stash, or commit changes). To get the latest updates for each of the submodules, run:&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;For many National Park Service users, getting the latest updates and pushing changes is easiest within RStudio. All members of NPS-SWNC/M4MD can get the latest updates. You must have write privileges to push your changes to the repo. Please send an email to &lt;a href="mailto:cheryl_mcintyre@nps.gov"&gt;Cheryl McIntyre&lt;/a&gt; to request write access. To sync changes, begin by opening the M4MD RStudio Project File.&lt;/p&gt;</description></item></channel></rss>
