@@ -15,7 +15,7 @@
  &lt;a class="anchor" href="#requirements"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
 &lt;p&gt;The requirements include R (v4.X.X) and RStudio (if you&amp;rsquo;d like to work with &lt;strong&gt;models-for-missing-data&lt;/strong&gt; interactively), and JAGS (v4.3.0). Git and Git Bash (for Windows users) are convenient if you&amp;rsquo;d like to stay up to date with the latest changes.&lt;/p&gt;
-&lt;p&gt;If you are working on a National Park Service computer, there are a few additional requirements and suggestions. You can install most of the required software yourself from the NPS Company Portal but installing JAGS requires a Bison Support System (BSS) ticket.&lt;/p&gt;</description></item><item><title>Quickstart</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/quickstart/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/quickstart/</guid><description>&lt;h1 id="quickstart"&gt;
+&lt;p&gt;If you are working on a National Park Service computer, there are a few additional requirements and suggestions. You can install most of the required software yourself from the NPS Company Portal but not JAGS. Installing JAGS requires a Bison Support System (BSS) ticket.&lt;/p&gt;</description></item><item><title>Quickstart</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/quickstart/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/quickstart/</guid><description>&lt;h1 id="quickstart"&gt;
  Quickstart
  &lt;a class="anchor" href="#quickstart"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
