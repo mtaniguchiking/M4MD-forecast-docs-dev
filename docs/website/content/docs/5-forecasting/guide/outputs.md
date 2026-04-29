@@ -13,7 +13,7 @@ The forecasting pipeline writes all outputs into `04-forecast/` subdirectories i
 
 ## Scenarios and model runs
 
-Each unique combination of `(scenario_id, model_run_id)` in your scenarios CSV is treated as a separate forecast run. The pipeline then:
+Each unique combination of `(scenario, model_run)` in your scenarios CSV is treated as a separate forecast run. The pipeline then:
 
 1. Produces **run-level outputs** for each individual run
 2. **Ensembles** across model runs within each scenario (if a scenario has more than one model run)
@@ -27,8 +27,8 @@ Each unique combination of `(scenario_id, model_run_id)` in your scenarios CSV i
 04-forecast/
   forecast-inputs/         (written by fitting pipeline — do not modify)
   runs/
-    <scenario_name>/
-      <model_run_name>/    (one folder per model run)
+    <scenario>/
+      <model_run>/         (one folder per model run)
         forecast-site-summaries.csv
         forecast-stratum-summaries.csv
         forecast-bundle.rds
@@ -58,10 +58,8 @@ Summary CSVs are written at each spatial level you specified in `summary levels`
 
 | Column | Description |
 |---|---|
-| `scenario_id` | Scenario identifier |
-| `scenario_name` | Scenario label |
-| `model_run_id` | Model run identifier |
-| `model_run_name` | Model run label |
+| `scenario` | Scenario label |
+| `model_run` | Model run label |
 | `site_id` | Site identifier (site-level only) |
 | `stratum_id` | Stratum identifier |
 | `cal_year` | Forecast year |
@@ -80,7 +78,7 @@ Ensemble CSVs (written when a scenario has >1 model run) collapse across model r
 
 | Column | Description |
 |---|---|
-| `scenario_id`, `scenario_name`, `stratum_id`, `cal_year` | Grouping identifiers |
+| `scenario`, `stratum_id`, `cal_year` | Grouping identifiers |
 | `n_runs` | Number of model runs included in the ensemble |
 | `ensemble_mean` | Mean of run-level `mu_median` values across model runs |
 | `ensemble_median` | Median of run-level `mu_median` values |
