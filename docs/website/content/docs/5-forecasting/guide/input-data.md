@@ -40,17 +40,12 @@ Include one column for each covariate declared as `source: provided` in your for
 
 The `scenario` and `model_run` columns allow you to encode multiple climate scenarios and multiple model runs per scenario in a single file. The pipeline processes each unique `(scenario, model_run)` combination as a separate forecast run.
 
-For a single GCM projection under one scenario, you only need one unique combination.
+### Example (from [mock data tutorial]({{< ref "/docs/5-forecasting/tutorials/mock-data" >}}))
 
-For how multiple model runs and scenarios affect the output structure, see [Outputs](./outputs.md).
-
-### Example
-
-```csv
-scenario,model_run,site_id,stratum_id,cal_year,ppt
-dry,Mock-GCM-1,A1,A,2026,337
-dry,Mock-GCM-1,A1,A,2027,303
-dry,Mock-GCM-2,A1,A,2026,290
-dry,Mock-GCM-2,A1,A,2027,315
-wet,Mock-GCM-1,A1,A,2026,480
-```
+| `scenario` | `model_run` | `site_id` | `stratum_id` | `cal_year` | `ppt` |
+|---|---|---|---|---|---|
+| dry | Mock-GCM-1 | A1 | A | 2026 | 337 |
+| dry | Mock-GCM-1 | A1 | A | 2027 | 303 |
+| dry | Mock-GCM-2 | A1 | A | 2026 | 290 |
+| dry | Mock-GCM-2 | A1 | A | 2027 | 315 |
+| wet | Mock-GCM-1 | A1 | A | 2026 | 480 |
