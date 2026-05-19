@@ -22,15 +22,7 @@
  &lt;code&gt;analysis-pipeline.R&lt;/code&gt; command-line arguments
  &lt;a class="anchor" href="#analysis-pipeliner-command-line-arguments"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;You must set the &lt;code&gt;save_forecast_inputs&lt;/code&gt; argument to &lt;code&gt;TRUE&lt;/code&gt;. This saves the model metadata and full posterior draws, which are required inputs to the forecasting pipeline.&lt;/p&gt;</description></item><item><title>Installation</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/installation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/installation/</guid><description>&lt;h1 id="cloning-the-repository"&gt;
- Cloning the repository
- &lt;a class="anchor" href="#cloning-the-repository"&gt;#&lt;/a&gt;
-&lt;/h1&gt;
-&lt;h2 id="nps-im-staff-or-partner"&gt;
- NPS I&amp;amp;M staff or partner
- &lt;a class="anchor" href="#nps-im-staff-or-partner"&gt;#&lt;/a&gt;
-&lt;/h2&gt;
-&lt;p&gt;The latest version of the scripts have migrated to the &lt;a href="https://github.com/NPS-SWNC/M4MD"&gt;National Park Service&amp;rsquo;s Southwestern Network Collaboration GitHub account&lt;/a&gt;. The models for missing data scripts are in a private repository that will become public at a later date. If you are a National Park Service Inventory and Monitoring staff member of partner, please send an email to &lt;a href="mailto:cheryl_mcintyre@nps.gov"&gt;Cheryl McIntyre&lt;/a&gt; to request access and include your GitHub username (ideally associated with a NPS email).&lt;/p&gt;</description></item><item><title>Likelihood function</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iii-analysis-model/likelihood-function/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iii-analysis-model/likelihood-function/</guid><description>&lt;h1 id="likelihood-function"&gt;
+&lt;p&gt;You must set the &lt;code&gt;save_forecast_inputs&lt;/code&gt; argument to &lt;code&gt;TRUE&lt;/code&gt;. This saves the model metadata and full posterior draws, which are required inputs to the forecasting pipeline.&lt;/p&gt;</description></item><item><title>Likelihood function</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iii-analysis-model/likelihood-function/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iii-analysis-model/likelihood-function/</guid><description>&lt;h1 id="likelihood-function"&gt;
  Likelihood function
  &lt;a class="anchor" href="#likelihood-function"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
@@ -62,7 +54,15 @@ optional output directory as such:&lt;/p&gt;</description></item><item><title>No
 &lt;p&gt;Statistics is basically a missing data problem!&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&amp;ndash; Little 2013&lt;/p&gt;
-&lt;p&gt;Nearly all samples &amp;ndash; whether by design or by accident &amp;ndash; are incomplete. We very rarely make a complete census of all individuals in a population or all sites on a landscape. Sometimes we don&amp;rsquo;t collect, or can&amp;rsquo;t collect, complete information for individual samples or measures. For instance, we might know an animal was alive when it was last seen, so we know it survived &lt;em&gt;at least&lt;/em&gt; that long, but know nothing about its current status. Or we might have information on the coverage of an invasive species down to a certain patch size, beyond which patches are too small or numerous to survey.&lt;/p&gt;</description></item><item><title>Response data</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/a-data/i-y-info/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/a-data/i-y-info/</guid><description>&lt;h1 id="response-data"&gt;
+&lt;p&gt;Nearly all samples &amp;ndash; whether by design or by accident &amp;ndash; are incomplete. We very rarely make a complete census of all individuals in a population or all sites on a landscape. Sometimes we don&amp;rsquo;t collect, or can&amp;rsquo;t collect, complete information for individual samples or measures. For instance, we might know an animal was alive when it was last seen, so we know it survived &lt;em&gt;at least&lt;/em&gt; that long, but know nothing about its current status. Or we might have information on the coverage of an invasive species down to a certain patch size, beyond which patches are too small or numerous to survey.&lt;/p&gt;</description></item><item><title>Repository cloning</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/installation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/installation/</guid><description>&lt;h1 id="cloning-the-repository"&gt;
+ Cloning the repository
+ &lt;a class="anchor" href="#cloning-the-repository"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;h2 id="nps-im-staff-or-partner"&gt;
+ NPS I&amp;amp;M staff or partner
+ &lt;a class="anchor" href="#nps-im-staff-or-partner"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;The latest version of the scripts have migrated to the &lt;a href="https://github.com/NPS-SWNC/M4MD"&gt;National Park Service&amp;rsquo;s Southwestern Network Collaboration GitHub account&lt;/a&gt;. The models for missing data scripts are in a private repository that will become public at a later date. If you are a National Park Service Inventory and Monitoring staff member of partner, please send an email to &lt;a href="mailto:cheryl_mcintyre@nps.gov"&gt;Cheryl McIntyre&lt;/a&gt; to request access and include your GitHub username (ideally associated with a NPS email).&lt;/p&gt;</description></item><item><title>Response data</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/a-data/i-y-info/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/a-data/i-y-info/</guid><description>&lt;h1 id="response-data"&gt;
  Response data
  &lt;a class="anchor" href="#response-data"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
@@ -214,7 +214,7 @@ optional output directory as such:&lt;/p&gt;</description></item><item><title>No
 &lt;h2 id="step-11-write-outputs-and-plots"&gt;
  Step 11: Write Outputs and Plots
  &lt;a class="anchor" href="#step-11-write-outputs-and-plots"&gt;#&lt;/a&gt;
-&lt;/h2&gt;</description></item><item><title>Requirements</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/requirements/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/requirements/</guid><description>&lt;h1 id="software-requirements"&gt;
+&lt;/h2&gt;</description></item><item><title>Software requirements</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/requirements/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/requirements/</guid><description>&lt;h1 id="software-requirements"&gt;
  Software requirements
  &lt;a class="anchor" href="#software-requirements"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
@@ -268,7 +268,31 @@ optional output directory as such:&lt;/p&gt;</description></item><item><title>No
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;event date info&lt;/span&gt;:
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;date-time column&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;Year&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;date-time format&lt;/span&gt;: &lt;span style="color:#66d9ef"&gt;Y&lt;/span&gt;!
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;As with the other statements in the data block, we point to the name of the covariate file (&lt;code&gt;file&lt;/code&gt;; see the &lt;a href="https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/a-data/ii-x-info/"&gt;covariate data&lt;/a&gt; section for more detail) and, if different from the date attributes in the response data, supply info required to properly parse covariate datetime fields.&lt;/p&gt;</description></item><item><title>Group-level effects</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iii-analysis-model/group-level-effects/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iii-analysis-model/group-level-effects/</guid><description>&lt;h1 id="group-level-effects"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;As with the other statements in the data block, we point to the name of the covariate file (&lt;code&gt;file&lt;/code&gt;; see the &lt;a href="https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/a-data/ii-x-info/"&gt;covariate data&lt;/a&gt; section for more detail) and, if different from the date attributes in the response data, supply info required to properly parse covariate datetime fields.&lt;/p&gt;</description></item><item><title>Folderstructure</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/folder-structure/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/folder-structure/</guid><description>&lt;h1 id="folder-structure"&gt;
+ Folder structure
+ &lt;a class="anchor" href="#folder-structure"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;A best practice is to create a M4MD_NetworkCode folder in the same directory but separate from the M4MD folder (e.g., have C:\M4MD and C:\M4MD_SCPN). This helps ensure that you do not inadvertently push sensitive information to GitHub. Within your M4MD_NetworkCode folder, you should setup the file tree structure for your given network (&lt;code&gt;&amp;lt;network code&amp;gt;&lt;/code&gt;) and park units (&lt;code&gt;&amp;lt;unit code&amp;gt;&lt;/code&gt;) to look like the following:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;. # network folder (outside project folder, e.g., C:\M4MD_SCPN)
+└── &amp;lt;config&amp;gt;/
+ └── &amp;lt;network code&amp;gt;/
+ ├── &amp;lt;unit code1&amp;gt;/
+ │ ├── _park-level-attributes.yml
+ │ └── &amp;lt;analysis file&amp;gt;.yml
+ ├── &amp;lt;unit code2&amp;gt;/
+ │ ├── _park-level-attributes.yml
+ │ └── &amp;lt;analysis file&amp;gt;.yml
+ └── _network-level-attributes.yml
+└── &amp;lt;data&amp;gt;/
+ └── &amp;lt;network code&amp;gt;/
+ ├── &amp;lt;unit code1&amp;gt;/
+ ├── &amp;lt;unit code2&amp;gt;/
+└── &amp;lt;output&amp;gt;/
+ └── &amp;lt;network code&amp;gt;/
+ ├── &amp;lt;unit code1&amp;gt;/
+ ├── &amp;lt;unit code2&amp;gt;/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The required network-level-attributes.yml and park-level-attributes.yml files are described in &lt;a href="https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/i-design-metadata/"&gt;Guide/Config files/Design metadata&lt;/a&gt;)&lt;/p&gt;</description></item><item><title>Group-level effects</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iii-analysis-model/group-level-effects/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iii-analysis-model/group-level-effects/</guid><description>&lt;h1 id="group-level-effects"&gt;
  Group-level effects
  &lt;a class="anchor" href="#group-level-effects"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
