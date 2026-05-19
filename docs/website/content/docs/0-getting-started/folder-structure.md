@@ -1,5 +1,5 @@
 ---
-title: Folderstructure
+title: Folder structure
 weight: 3
 bookToc: true
 ---
