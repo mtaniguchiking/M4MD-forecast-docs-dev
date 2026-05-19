@@ -4,7 +4,7 @@ weight: 2
 bookToc: true
 ---
 
-# Requirements
+# Software requirements
 
 The requirements include R (v4.X.X) and RStudio (if you'd like to work with __models-for-missing-data__ interactively), and JAGS (v4.3.0). Git and Git Bash (for Windows users) are convenient if you'd like to stay up to date with the latest changes.
 
