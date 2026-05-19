@@ -27,7 +27,7 @@ A best practice is to create a M4MD_NetworkCode folder in the same directory but
             ├── <unit code1>/
             ├── <unit code2>/
          
-The required network-level-attributes.yml and park-level-attributes.yml files are described in  [Guide/Config files/Design metadata]({{< ref "/docs/1-guide/b-config-files/i-design-metadata.md" >}}))
+The required network-level-attributes.yml and park-level-attributes.yml files are described in  [Guide/Config files/Design metadata]({{< ref "/docs/1-guide/b-config-files/i-design-metadata.md" >}}).
 
 To take a real-world example from an analysis of species richness data at Little Bighorn Battlefield National Monument (LIBI), in Montana -- a park within Rocky Mountain Network (ROMN) -- the complete file tree might look like the following:
 
