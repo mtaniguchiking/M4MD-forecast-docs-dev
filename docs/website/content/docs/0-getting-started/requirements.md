@@ -1,5 +1,5 @@
 ---
-title: "Requirements"
+title: "Software requirements"
 weight: 2
 bookToc: true
 ---
