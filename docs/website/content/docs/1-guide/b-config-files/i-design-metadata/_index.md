@@ -11,16 +11,15 @@ Two high-level "attributes" files are required for all analyses. So long as the 
 
 The file tree structure needed to configure analysis of data from a given park unit (`<unit code>`) in a given network (`<network code>`) must look like the following
 
-    . # project root
-    └── assets
-        └── <config dir>/
-            └── <network code>/
-                ├── <unit code>/
-                │   ├── _park-level-attributes.yml
-                │   └── <analysis file>.yml
-                └── _network-level-attributes.yml
+    . # network folder (outside project folder)
+    └── <config dir>/
+        └── <network code>/
+            ├── <unit code>/
+            │   ├── _park-level-attributes.yml
+            │   └── <analysis file>.yml
+            └── _network-level-attributes.yml
 
-The name of `<config dir>` is arbitrary. For the demo analyses it's `_config`, while for the "uplands" status and trends work we've used `uplands-config`.
+The name of `<config dir>` is arbitrary. For the demo analyses it's `_config`, while for the NPS "uplands" status and trends work we've used `config` .
 
 The directory structure, as shown, is relative to the root of the project on your file system. The contents of `<analysis file>.yml` are described in the ensuing sections of the guide. To take a real-world example from an analysis of species richness data at Little Bighorn Battlefield National Monument (LIBI), in Montana -- a park within Rocky Mountain Network (ROMN) -- the complete file tree might look like the following:
 
@@ -34,6 +33,8 @@ The directory structure, as shown, is relative to the root of the project on you
                 └── _network-level-attributes.yml
 
 ### Network-level attributes
+In order to run the models for a given network, you must have a network attributes file (configuration file) in the config/network folder and it must be named “_network-level-attributes.yml”. This attributes file cross-walks your network-specific nomenclature into the more universal nomenclature of the M4MD pipeline. Specifically, you need to identify the column names for your units (parks), sites (plots), and event date. These column names must be consistent across your data files (response, covariates, and locations).
+
 These attributes, which appear in the file `_network-level-attributes.yml`, consist of several key-value pairs used to define the park unit code (`unit code column`) by whatever name it goes by in the raw data, the name of the column containing the site ID (`site id column`), and a nested set of key-value pairs used to describe the date associated with each observation.
 ```YAML
 unit code column: Park
@@ -55,7 +56,9 @@ event date info:
 ```
 
 ### Park-level attributes
-Park-level metadata, stored in `_park-level-attributes.yml`, cannot be defined at a higher level because most, if not all, of this information applies only to an individual park, and not to other park units in the network. Specifically, we use this file to describe the name of the column in the raw data that defines the strata (`stratum id column`) and the associated stratum areas (`stratum area info`).
+In order to run the models for a give park, you must have a park configuration file in the config/network/park folder and it must be named “_park-level-attributes.yml”. This file tells the pipeline the name of your stratum column and the area of the individual strata. If your park has no strata (or a single stratum), you still must have the _park-level-attributes.yml file. 
+
+Park-level metadata, stored in `_park-level-attributes.yml`, cannot be defined at a higher level because most, if not all, of this information applies only to an individual park, and not to other park units in the network. Specifically, we use this file to describe the name of the column in the raw data that defines the strata (`stratum id column`) and the associated stratum areas (`stratum area info`). The units of area are your choice. 
 
 These areas, in turn, are used internally to compute a weighted mean at the park scale. Each entry beneath `stratum area info` must correspond to the actual stratum IDs in the column indicated by `stratum id column`. If there are no strata, then you can supply the same column used by `_network-level-attributes.yml` to indicate the unit code, and supply a single stratum area for the park.
 ```YAML
