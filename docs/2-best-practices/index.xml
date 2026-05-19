@@ -1,1 +1,27 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Best practices on Models for missing data</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/2-best-practices/</link><description>Recent content in Best practices on Models for missing data</description><generator>Hugo</generator><language>en-us</language><atom:link href="https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/2-best-practices/index.xml" rel="self" type="application/rss+xml"/></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Best practices on Models for missing data</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/2-best-practices/</link><description>Recent content in Best practices on Models for missing data</description><generator>Hugo</generator><language>en-us</language><atom:link href="https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/2-best-practices/index.xml" rel="self" type="application/rss+xml"/><item><title>Exploratory data analysis</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/2-best-practices/exploratory-analysis/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/2-best-practices/exploratory-analysis/</guid><description>&lt;h1 id="exploratory-data-analysis"&gt;
+ Exploratory data analysis
+ &lt;a class="anchor" href="#exploratory-data-analysis"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;h2 id="the-response-data"&gt;
+ The response data
+ &lt;a class="anchor" href="#the-response-data"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;We recommend taking a look at basic histograms of your response variable. If you don&amp;rsquo;t know already, this is a great time to think about why &lt;a href="https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/a-data/iii-types-of-random-variables/"&gt;&lt;em&gt;type&lt;/em&gt; of data&lt;/a&gt; you&amp;rsquo;re working with. Is it a count, a proportion, or some other quantity? Look for signs of skewness or zero-inflation.&lt;/p&gt;
+&lt;h2 id="the-covariates"&gt;
+ The covariates
+ &lt;a class="anchor" href="#the-covariates"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;It may be helpful to evaluate the correlation between covariates and your response variable, and among covariates. Scatterplots of the response variable vs. each covariate can sometimes be illuminating. If two potential covariates are highly corelated, one should probably be dropped in favor of the other to ensure parsimony, model convergence, and sensible results.&lt;/p&gt;</description></item><item><title>Config templates</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/2-best-practices/config-templates/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/2-best-practices/config-templates/</guid><description>&lt;h1 id="existing-analysis-config-files-as-templates"&gt;
+ Existing analysis config files as templates
+ &lt;a class="anchor" href="#existing-analysis-config-files-as-templates"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;If your data type is common within the NPS Inventory and Monitoring division, it may make sense to create a copy of the appropriate analysis config file template and modify it according to your needs. See &lt;a href="https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/"&gt;Config files&lt;/a&gt; for a list and description of the templates.&lt;/p&gt;</description></item><item><title>Model checking</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/2-best-practices/model-checking/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/2-best-practices/model-checking/</guid><description>&lt;h1 id="model-checking-and-evaluation"&gt;
+ Model checking and evaluation
+ &lt;a class="anchor" href="#model-checking-and-evaluation"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;We recommend checking model convergence before doing anything else. If you are evaluating a large number of models for a given state variable, it can be helpful to set override_dqs to TRUE near the top of the analysis-pipeline.R script. This will override (remove) the derived quantities and turns off most of the outputs, which can save you time and space during initial evaluation.&lt;/p&gt;
+&lt;h2 id="failure-to-converge"&gt;
+ Failure to converge
+ &lt;a class="anchor" href="#failure-to-converge"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;If a model is failing to converge, it can be for all sorts of reasons. Sometimes there simply weren&amp;rsquo;t enough MCMC iterations, or your inits were out of left field. If convergence issues affect specific parameters, it can be helpful to play around with different model parameterizations. Sometimes there&amp;rsquo;s not enough trend of any sort to permit a random intercept / random slopes (&lt;code&gt;b0-b1&lt;/code&gt;) model, for instance. (This can be verified by plotting the empirical means at each site over time, for example.) If you&amp;rsquo;re seeing extreme &amp;ldquo;funnel&amp;rdquo; shapes in the funnel diagnostics, it may be helpful to try a non-centered parameterization. In yet other cases, it might be the prior(s). You can check if it&amp;rsquo;s the priors by rerunning specific models (&amp;ldquo;model.jags&amp;rdquo; with modified priors) using the output directory and associated &amp;ldquo;calling-script.R&amp;rdquo;.&lt;/p&gt;</description></item></channel></rss>
