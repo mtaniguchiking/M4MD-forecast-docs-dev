@@ -61,4 +61,19 @@ is often referred to as a Bayesian p value). A Bayesian p value that is very clo
 0.8 or less than 0.2) may suggest a poor model fit.&lt;/p&gt;</description></item><item><title>Exposure / offset</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iv-analysis-extras/exposure/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iv-analysis-extras/exposure/</guid><description>&lt;h1 id="exposure--offset"&gt;
  Exposure / offset
  &lt;a class="anchor" href="#exposure--offset"&gt;#&lt;/a&gt;
-&lt;/h1&gt;</description></item></channel></rss>
+&lt;/h1&gt;</description></item><item><title>Disable time</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iv-analysis-extras/time-disabled/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iv-analysis-extras/time-disabled/</guid><description>&lt;h1 id="disable-time-as-a-fixed-effect"&gt;
+ Disable time as a fixed effect
+ &lt;a class="anchor" href="#disable-time-as-a-fixed-effect"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;Disable time as a fixed effect (remove time slope) so models are driven by covariates only. If you are fitting a model for forecasting, you must carefully consider whether or not to include a time term.&lt;/p&gt;
+&lt;h2 id="syntax"&gt;
+ Syntax
+ &lt;a class="anchor" href="#syntax"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-yml" data-lang="yml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;time effect&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;disabled&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Note that having time effect followed by anything will also disable the linear time term.&lt;/p&gt;
+&lt;h2 id="usage"&gt;
+ Usage
+ &lt;a class="anchor" href="#usage"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;See the &lt;a href="https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/guide/fitting-a-model/"&gt;Fitting for forecasting&lt;/a&gt; entry for a more thorough introduction to this topic.&lt;/p&gt;</description></item></channel></rss>
