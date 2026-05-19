@@ -191,7 +191,7 @@ For a complete reference of these plot, see the [forecast outputs reference]({{<
 
 We'll now walk through a couple of plots to finish the tutorial. As you look at them, two things should stand out: the scenarios should visibly diverge after 2026, and stratum A should show a wider gap between them than stratum B.
 
-Our first stop is the parkwide ensemble trajectories. This shows the park average behavior under our two future scenarios. The `dry` and `wet` labels map directly to the `scenario_name` column in `mock-covariate-scenarios.csv`.
+Our first stop is the parkwide ensemble trajectories. This shows the park average behavior under our two future scenarios. The `dry` and `wet` labels map directly to the `scenario` column in `mock-covariate-scenarios.csv`.
 
 ![Park-wide ensemble trajectories under both scenarios](ensemble-trajectories-parkwide.png)
 
