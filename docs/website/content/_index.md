@@ -13,7 +13,7 @@ This website serves as a storehouse of information about software used by severa
 
 {{< columns >}}
 ### Getting started
-Installation instructions, a rundown of the requirements of the software, and a quickstart tutorial for those looking to be hands-on immediately with demo data.
+Repository cloning instructions, a rundown the required software, a suggested folder structure, a quickstart tutorial for those looking to be hands-on immediately with demo data, and how to sync changes.
 <--->
 ### Guide
 Technical information about the software, including _inputs_ and _outputs_. We describe the data, the metadata syntax used to specify models, and the various outputs of the program, from model checking to inference.

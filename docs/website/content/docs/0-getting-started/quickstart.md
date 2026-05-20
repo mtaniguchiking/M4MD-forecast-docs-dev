@@ -1,12 +1,12 @@
 ---
 title: Quickstart
-weight: 3
+weight: 4
 bookToc: true
 ---
 
 # Quickstart
 
-Assuming you've got the __models-for-missing-data__ project code (see [Installation]({{< ref "/docs/0-getting-started/installation.md" >}})) and have all of the dependencies (see [Requirements]({{< ref "/docs/0-getting-started/requirements.md" >}})), the last remaining pieces you'll need to begin running models are the data and analysis config files. We've included examples of each in the "assets/" directory. See the guide for more information about each of these components of the __models-for-missing-data__ workflow. You can find an example of the data [here](https://raw.githubusercontent.com/lzachmann/models-for-missing-data/main/assets/_data/count-data.csv), and an analysis config file for these data [here](https://raw.githubusercontent.com/lzachmann/models-for-missing-data/main/assets/_config/M4MD/ELDO/counts.yml).
+Assuming you've got the __models-for-missing-data__ project code (see [Cloning the repository]({{< ref "/docs/0-getting-started/installation.md" >}})) and have all of the dependencies (see [Software requirements]({{< ref "/docs/0-getting-started/requirements.md" >}})), the last remaining pieces you'll need to begin running models are the data and analysis config files. We've included examples of each in the "assets/" directory. See the guide for more information about each of these components of the __models-for-missing-data__ workflow. You can find an example of the data [here](https://raw.githubusercontent.com/lzachmann/models-for-missing-data/main/assets/_data/count-data.csv), and an analysis config file for these data [here](https://raw.githubusercontent.com/lzachmann/models-for-missing-data/main/assets/_config/M4MD/ELDO/counts.yml).
 
 ## Usage
 
