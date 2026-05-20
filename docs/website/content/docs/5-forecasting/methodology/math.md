@@ -148,7 +148,7 @@ This puts future values on the same scale that $\beta$ was estimated on.
 
 The resulting columns are ordered to align with $\beta$.
 
-**In code:** `prepare_covariate_matrix()` (`forecast-engine.R:218–338`).
+**In code:** `prepare_covariate_matrix()` (`forecast-engine.R:236–356`).
 
 ### Step 2 — Compute the linear predictor $\eta_{jkt}^{(m)}$
 
@@ -205,7 +205,7 @@ At the end of Step 4, every $(m, j, k, t)$ tuple has two associated quantities:
 - $\mu_{jkt}^{(m)}$ — the deterministic mean, which captures parameter uncertainty.
 - $\hat y_{jkt}^{(m)}$ — one draw from the response distribution, which captures parameter + observation-scale variability uncertainty.
 
-**In code:** `sample_predictive()` (dispatch) and the per-family samplers `sample_beta_predictive`, `sample_binomial_predictive`, etc., in `forecast-likelihoods.R:51–289`.
+**In code:** `sample_predictive()` (dispatch) at `forecast-likelihoods.R:303–331`; per-family samplers `sample_beta_predictive`, `sample_binomial_predictive`, etc., at `forecast-likelihoods.R:51–289`.
 
 ### Step 5 — Summarize across draws
 
@@ -217,7 +217,7 @@ Collapse the $M$ draws into summary statistics at each scale (site, stratum, par
 
 The `*_lower` and `*_upper` columns use user-configurable quantiles set via the summary quantiles field in the forecast config YAML (see [Config files]({{< ref "/docs/5-forecasting/guide/config-files.md" >}})).
 
-**In code:** `summarize_forecasts()` (`forecast-engine.R:667–726`); `summarize_ensemble()` (`forecast-engine.R:741–786`).
+**In code:** `summarize_forecasts()` (`forecast-engine.R:763–822`); `summarize_ensemble()` (`forecast-engine.R:840–885`).
 
 ---
 
