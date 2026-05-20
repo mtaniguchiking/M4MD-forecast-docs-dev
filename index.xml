@@ -189,9 +189,9 @@ optional output directory as such:&lt;/p&gt;</description></item><item><title>No
 &lt;/h1&gt;
 &lt;p&gt;&lt;code&gt;forecast-pipeline.R&lt;/code&gt; is the orchestrator script for running a forecast. After a user provides a forecast config &lt;a href="https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/guide/config-files/"&gt;YAML file&lt;/a&gt;, it produces forecast summaries, plots, and diagnostics.&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;forecast-pipeline.R&lt;/code&gt; can be thought of as a sister script to &lt;code&gt;analysis-pipeline.R&lt;/code&gt;. Both scripts expect a user provided config file, and both act as orchestrators that source other scripts to produce their outputs.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;forecast-pipeline.R&lt;/code&gt; can be thought of as a sister script to &lt;code&gt;analysis-pipeline.R&lt;/code&gt;. Both scripts expect a user-provided config file, and both act as orchestrators that source other scripts to produce their outputs.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;It works through 11 steps. The first six are setup (load inputs, line up parameters with covariates, standardize the scenarios); Step 7 is where posterior predictive samples are generated; and Steps 8–11 turn those samples into the CSVs and plots a user looks at.&lt;/p&gt;</description></item><item><title>Software requirements</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/requirements/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/requirements/</guid><description>&lt;h1 id="software-requirements"&gt;
+&lt;p&gt;The script contains 11 steps in total. Steps 1–6 prepare the inputs, Step 7 generates posterior predictive samples, and Steps 8–11 output the CSVs + plots a user looks at.&lt;/p&gt;</description></item><item><title>Software requirements</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/requirements/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/requirements/</guid><description>&lt;h1 id="software-requirements"&gt;
  Software requirements
  &lt;a class="anchor" href="#software-requirements"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
