@@ -7,11 +7,11 @@ weight: 2
 
 `forecast-pipeline.R` is the orchestrator script for running a forecast. After a user provides a forecast config [YAML file]({{< ref "/docs/5-forecasting/guide/config-files" >}}), it produces forecast summaries, plots, and diagnostics.
 
-> `forecast-pipeline.R` can be thought of as a sister script to `analysis-pipeline.R`. Both scripts expect a user provided config file, and both act as orchestrators that source other scripts to produce their outputs.
+> `forecast-pipeline.R` can be thought of as a sister script to `analysis-pipeline.R`. Both scripts expect a user-provided config file, and both act as orchestrators that source other scripts to produce their outputs.
 
-The script contains 11 steps in total. Steps 1-6 prepare the inputs, Step 7 generates posterior predictive samples, and Steps 8–11 output the CSVs + plots a user looks at.
+The script contains 11 steps in total. Steps 1–6 prepare the inputs, Step 7 generates posterior predictive samples, and Steps 8–11 output the CSVs + plots a user looks at.
 
-To view the forecasting pipeline from a higher level, see the [big picture section]({{< ref "/docs/5-forecasting/methodology/big-picture" >}}). To view the underlying math, especially the calculations mentioned in Steps 6-7 here, see the [math section]({{< ref "/docs/5-forecasting/methodology/math" >}}).
+To view the forecasting pipeline from a higher level, see the [big picture section]({{< ref "/docs/5-forecasting/methodology/big-picture" >}}). To view the underlying math, especially the calculations mentioned in Steps 6–7 here, see the [math section]({{< ref "/docs/5-forecasting/methodology/math" >}}).
 
 ---
 
@@ -23,7 +23,7 @@ It also opens the fitted model's `forecasting-metadata.rds` to pull out the mode
 
 ## Step 2: Load Forecasting Metadata
 
-Loads additional artifacts from the model fitting pipeline, including site-in-stratum + stratum-id lookup tables, and `covariate-moments.rds`.
+Loads additional artifacts from the model fitting pipeline, including site-in-stratum + stratum-id lookup tables and `covariate-moments.rds`.
 
 This is the step where the forecast pipeline notes the "shape" of the fitted model, such as which sites belong to which strata and how many of each there are.
 
