@@ -183,55 +183,15 @@ optional output directory as such:&lt;/p&gt;</description></item><item><title>No
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;coordinate columns&lt;/span&gt;:
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; - &lt;span style="color:#ae81ff"&gt;xcoord&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; - &lt;span style="color:#ae81ff"&gt;ycoord&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Here again, we point to the name of the file (&lt;code&gt;file&lt;/code&gt;) and supply the names of the columns containing the spatial coordinates (&lt;code&gt;coordinate columns&lt;/code&gt;). Note that proper residual analysis requires Cartesian coordinates. If the locations come directly from a geographic coordinate system, they&amp;rsquo;ll need to be transformed to a projected coordinate system.&lt;/p&gt;</description></item><item><title>Pipeline Walkthrough</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/methodology/pipeline-walkthrough/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/methodology/pipeline-walkthrough/</guid><description>&lt;p&gt;&lt;strong&gt;*WORK IN PROGRESS (this is empty for now)&lt;/strong&gt;*&lt;/p&gt;
-&lt;h1 id="pipeline-walkthrough-forecast-pipeliner"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Here again, we point to the name of the file (&lt;code&gt;file&lt;/code&gt;) and supply the names of the columns containing the spatial coordinates (&lt;code&gt;coordinate columns&lt;/code&gt;). Note that proper residual analysis requires Cartesian coordinates. If the locations come directly from a geographic coordinate system, they&amp;rsquo;ll need to be transformed to a projected coordinate system.&lt;/p&gt;</description></item><item><title>Pipeline Walkthrough</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/methodology/pipeline-walkthrough/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/methodology/pipeline-walkthrough/</guid><description>&lt;h1 id="pipeline-walkthrough-forecast-pipeliner"&gt;
  Pipeline Walkthrough: &lt;code&gt;forecast-pipeline.R&lt;/code&gt;
  &lt;a class="anchor" href="#pipeline-walkthrough-forecast-pipeliner"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
-&lt;h2 id="step-1-parse-and-validate-config"&gt;
- Step 1: Parse and Validate Config
- &lt;a class="anchor" href="#step-1-parse-and-validate-config"&gt;#&lt;/a&gt;
-&lt;/h2&gt;
-&lt;h2 id="step-2-load-model-metadata"&gt;
- Step 2: Load Model Metadata
- &lt;a class="anchor" href="#step-2-load-model-metadata"&gt;#&lt;/a&gt;
-&lt;/h2&gt;
-&lt;h2 id="step-3-load-mcmc-draws"&gt;
- Step 3: Load MCMC Draws
- &lt;a class="anchor" href="#step-3-load-mcmc-draws"&gt;#&lt;/a&gt;
-&lt;/h2&gt;
-&lt;h2 id="step-4-load-covariate-moments"&gt;
- Step 4: Load Covariate Moments
- &lt;a class="anchor" href="#step-4-load-covariate-moments"&gt;#&lt;/a&gt;
-&lt;/h2&gt;
-&lt;h2 id="step-5-load-scenario-data"&gt;
- Step 5: Load Scenario Data
- &lt;a class="anchor" href="#step-5-load-scenario-data"&gt;#&lt;/a&gt;
-&lt;/h2&gt;
-&lt;h2 id="step-6-prepare-the-covariate-matrix"&gt;
- Step 6: Prepare the Covariate Matrix
- &lt;a class="anchor" href="#step-6-prepare-the-covariate-matrix"&gt;#&lt;/a&gt;
-&lt;/h2&gt;
-&lt;h2 id="step-7-reconstruct-the-design-matrix"&gt;
- Step 7: Reconstruct the Design Matrix
- &lt;a class="anchor" href="#step-7-reconstruct-the-design-matrix"&gt;#&lt;/a&gt;
-&lt;/h2&gt;
-&lt;h2 id="step-8-sample-posterior-predictive-draws"&gt;
- Step 8: Sample Posterior Predictive Draws
- &lt;a class="anchor" href="#step-8-sample-posterior-predictive-draws"&gt;#&lt;/a&gt;
-&lt;/h2&gt;
-&lt;h2 id="step-9-summarize-across-draws"&gt;
- Step 9: Summarize Across Draws
- &lt;a class="anchor" href="#step-9-summarize-across-draws"&gt;#&lt;/a&gt;
-&lt;/h2&gt;
-&lt;h2 id="step-10-summarize-across-model-runs-ensemble"&gt;
- Step 10: Summarize Across Model Runs (Ensemble)
- &lt;a class="anchor" href="#step-10-summarize-across-model-runs-ensemble"&gt;#&lt;/a&gt;
-&lt;/h2&gt;
-&lt;h2 id="step-11-write-outputs-and-plots"&gt;
- Step 11: Write Outputs and Plots
- &lt;a class="anchor" href="#step-11-write-outputs-and-plots"&gt;#&lt;/a&gt;
-&lt;/h2&gt;</description></item><item><title>Software requirements</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/requirements/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/requirements/</guid><description>&lt;h1 id="software-requirements"&gt;
+&lt;p&gt;&lt;code&gt;forecast-pipeline.R&lt;/code&gt; is the orchestrator script for running a forecast. After a user provides a forecast config &lt;a href="https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/guide/config-files/"&gt;YAML file&lt;/a&gt;, it produces forecast summaries, plots, and diagnostics.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;forecast-pipeline.R&lt;/code&gt; can be thought of as a sister script to &lt;code&gt;analysis-pipeline.R&lt;/code&gt;. Both scripts expect a user provided config file, and both act as orchestrators that source other scripts to produce their outputs.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;It works through 11 steps. The first six are setup (load inputs, line up parameters with covariates, standardize the scenarios); Step 7 is where posterior predictive samples are generated; and Steps 8–11 turn those samples into the CSVs and plots a user looks at.&lt;/p&gt;</description></item><item><title>Software requirements</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/requirements/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/requirements/</guid><description>&lt;h1 id="software-requirements"&gt;
  Software requirements
  &lt;a class="anchor" href="#software-requirements"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
@@ -337,7 +297,12 @@ optional output directory as such:&lt;/p&gt;</description></item><item><title>No
  Failure to converge
  &lt;a class="anchor" href="#failure-to-converge"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;If a model is failing to converge, it can be for all sorts of reasons. Sometimes there simply weren&amp;rsquo;t enough MCMC iterations, or your inits were out of left field. If convergence issues affect specific parameters, it can be helpful to play around with different model parameterizations. Sometimes there&amp;rsquo;s not enough trend of any sort to permit a random intercept / random slopes (&lt;code&gt;b0-b1&lt;/code&gt;) model, for instance. (This can be verified by plotting the empirical means at each site over time, for example.) If you&amp;rsquo;re seeing extreme &amp;ldquo;funnel&amp;rdquo; shapes in the funnel diagnostics, it may be helpful to try a non-centered parameterization. In yet other cases, it might be the prior(s). You can check if it&amp;rsquo;s the priors by rerunning specific models (&amp;ldquo;model.jags&amp;rdquo; with modified priors) using the output directory and associated &amp;ldquo;calling-script.R&amp;rdquo;.&lt;/p&gt;</description></item><item><title>Unequal inclusion probabilities</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/posts/unequal-inclusion-probability/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/posts/unequal-inclusion-probability/</guid><description>&lt;p&gt;The Sonoran Desert is among the most extreme environments on Earth. Sampling in these remote, rugged landscapes requires a different approach. When the Park Service established monitoring in Organ Pipe Cactus National Monument they used an approach to select sites based on the cost of travel to sites on the broader landscape, visiting less &amp;ldquo;costly&amp;rdquo; sites with higher probability than more costly sites. The cost surface that defined the probability of inclusion of sites was developed using terrain data, and a tool that estimates the time to travel to any arbitrary location on the landscape.&lt;/p&gt;</description></item><item><title>Outputs</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/guide/outputs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/guide/outputs/</guid><description>&lt;p&gt;&lt;strong&gt;*WORK IN PROGRESS (this is somewhat empty for now)&lt;/strong&gt;*&lt;/p&gt;
+&lt;p&gt;If a model is failing to converge, it can be for all sorts of reasons. Sometimes there simply weren&amp;rsquo;t enough MCMC iterations, or your inits were out of left field. If convergence issues affect specific parameters, it can be helpful to play around with different model parameterizations. Sometimes there&amp;rsquo;s not enough trend of any sort to permit a random intercept / random slopes (&lt;code&gt;b0-b1&lt;/code&gt;) model, for instance. (This can be verified by plotting the empirical means at each site over time, for example.) If you&amp;rsquo;re seeing extreme &amp;ldquo;funnel&amp;rdquo; shapes in the funnel diagnostics, it may be helpful to try a non-centered parameterization. In yet other cases, it might be the prior(s). You can check if it&amp;rsquo;s the priors by rerunning specific models (&amp;ldquo;model.jags&amp;rdquo; with modified priors) using the output directory and associated &amp;ldquo;calling-script.R&amp;rdquo;.&lt;/p&gt;</description></item><item><title>The Math</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/methodology/math/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/methodology/math/</guid><description>&lt;h1 id="forecast-calculations"&gt;
+ Forecast calculations
+ &lt;a class="anchor" href="#forecast-calculations"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;This page describes the calculations the forecast pipeline applies to a fitted model and a future-scenario covariate set to produce posterior predictive distributions.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Prerequisites.&lt;/strong&gt; This page assumes familiarity with the model architecture described in &lt;strong&gt;Zachmann et al. (2021)&lt;/strong&gt;, &lt;em&gt;&amp;ldquo;Bayesian Models for Analysis of Inventory and Monitoring Data with Non-ignorable Missingness&amp;rdquo;&lt;/em&gt;, &lt;a href="https://link.springer.com/article/10.1007/s13253-021-00473-z"&gt;JABES 26, 125–148&lt;/a&gt;. In particular, you should understand the hierarchical structure (site within stratum within park), the role of the link function $g(\cdot)$, and the general form of Eq. 6 (outlined below).&lt;/p&gt;</description></item><item><title>Unequal inclusion probabilities</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/posts/unequal-inclusion-probability/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/posts/unequal-inclusion-probability/</guid><description>&lt;p&gt;The Sonoran Desert is among the most extreme environments on Earth. Sampling in these remote, rugged landscapes requires a different approach. When the Park Service established monitoring in Organ Pipe Cactus National Monument they used an approach to select sites based on the cost of travel to sites on the broader landscape, visiting less &amp;ldquo;costly&amp;rdquo; sites with higher probability than more costly sites. The cost surface that defined the probability of inclusion of sites was developed using terrain data, and a tool that estimates the time to travel to any arbitrary location on the landscape.&lt;/p&gt;</description></item><item><title>Outputs</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/guide/outputs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/guide/outputs/</guid><description>&lt;p&gt;&lt;strong&gt;*WORK IN PROGRESS (this is somewhat empty for now)&lt;/strong&gt;*&lt;/p&gt;
 &lt;h1 id="forecast-outputs"&gt;
  Forecast Outputs
  &lt;a class="anchor" href="#forecast-outputs"&gt;#&lt;/a&gt;
