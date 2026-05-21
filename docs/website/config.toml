@@ -11,6 +11,12 @@ enableGitInfo = true
 [markup.goldmark.renderer]
   unsafe = true
 
+[markup.goldmark.extensions.passthrough]
+  enable = true
+  [markup.goldmark.extensions.passthrough.delimiters]
+    block  = [['$$', '$$'], ['\[', '\]']]
+    inline = [['$',  '$'],  ['\(', '\)']]
+
 [params]
   # (Optional, default light) Sets color theme: light, dark or auto.
   # Theme 'auto' switches between dark and light modes based on browser/os preferences
