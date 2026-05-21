@@ -16,6 +16,8 @@ We use YAML to create analysis configuration files. These files are intended to 
 
 We call these subcomponents of the analysis config file "blocks". The blocks provide sensible organization to the specifications of an analysis.
 
+You can view and edit the analysis configuration files in RStudio, Visual Studio Code, or other code editors. 
+
 The ./assets/uplands-config/templates folder contains a set of templates for common types of data within the NPS Inventory and Monitoring division. The templates include all of the options & extras and are organized to match the developers guide. The templates include:
 
 1. covercclass-ordinal.yml – Plant cover measured using Daubenmire cover classes, modeled as ordinal data from a beta distributed latent variable
