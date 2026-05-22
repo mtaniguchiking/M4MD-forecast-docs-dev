@@ -249,8 +249,8 @@ optional output directory as such:&lt;/p&gt;</description></item><item><title>No
  Folder structure
  &lt;a class="anchor" href="#folder-structure"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
-&lt;p&gt;A best practice is to create a M4MD_NetworkCode folder in the same directory but separate from the M4MD folder (e.g., have C:\M4MD and C:\M4MD_SCPN). This helps ensure that you do not inadvertently push sensitive information to GitHub. Within your M4MD_NetworkCode folder, you should setup the file tree structure for your given network (&lt;code&gt;&amp;lt;network code&amp;gt;&lt;/code&gt;) and park units (&lt;code&gt;&amp;lt;unit code&amp;gt;&lt;/code&gt;) to look like the following:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;. # network folder (outside project folder, e.g., C:\M4MD_SCPN)
+&lt;p&gt;A best practice is to create a M4MD_NPS folder in the same directory but separate from the M4MD folder (i.e., have C:\M4MD and C:\M4MD_NPS). This helps ensure that you do not inadvertently push sensitive information to GitHub. Within your M4MD_NPS folder, you should setup the file tree structure for your given network (&lt;code&gt;&amp;lt;network code&amp;gt;&lt;/code&gt;) and park units (&lt;code&gt;&amp;lt;unit code&amp;gt;&lt;/code&gt;) to look like the following:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;. # C:\M4MD_NPS (outside M4MD project folder)
 └── &amp;lt;config&amp;gt;/
  └── &amp;lt;network code&amp;gt;/
  ├── &amp;lt;unit code1&amp;gt;/
