@@ -29,9 +29,22 @@ From the output root (`.`), there are an ordered / numbered set of directories a
 |:---|:---|
 | calling-script.R | Reproducible calling script |
 | inits-needed.txt | List of the parameters for which initial values (`inits`) are required |
-| mod-summary.csv | Test statistics (`p_sd`, `p_mean`), posterior predictive loss (`ppl`), deviance information criterion (`dic`), and {{< katex >}}\hat{R}{{< /katex >}} (`gelman_diag`) |
 | model.jags | JAGS model file |
+| mod-summary.csv | Test statistics (`p_sd`, `p_mean`), posterior predictive loss (`ppl`), deviance information criterion (`dic`), and {{< katex >}}\hat{R}{{< /katex >}} (`gelman_diag`) |
 | output-metadata.md | Basic metadata for files included in the output folder |
 | system-time.txt | Time required to fit the model |
 
 We will work through the contents of each of the directories in turn.
+
+## A note on model summary statistics
+* p_mean and p_sd should be between 0.1 - 0.9, with values near 0.5 representing the best fit to data. 
+* If gelman_diag is good and p_mean and p_sd are within a good range, your “best” model is chosen by a combination of DIC and ppl. 
+    * DIC is similar to AIC – lowest is best model 
+    * Lower ppl is better 
+    * If DIC is within a couple digits, models are not all that different and can choose based on lower ppl 
+* Gelman_diag is convergence – close to 1.0 is ideal. If it’s higher, increase n_adapt and n_iter and see if it improves. If it’s very high and won’t come down, there might be something wrong with your model/data/covariates.
+
+If running multiple models and want to easily compare them, you can compile multiple mod-summary files using the following code:
+`source('src/wrangle.r')`
+
+`get_mod_summary_files(  './output/SCPN/WUPA_S/cc-fxn/')`
