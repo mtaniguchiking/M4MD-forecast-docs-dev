@@ -11,7 +11,7 @@ weight: 2
 
 The script contains 11 steps in total. Steps 1–6 prepare the inputs, Step 7 generates posterior predictive samples, and Steps 8–11 output the CSVs + plots a user looks at.
 
-To view the forecasting pipeline from a higher level, see the [big picture section]({{< ref "/docs/5-forecasting/methodology/big-picture" >}}). To view the underlying math, especially the calculations mentioned in Steps 6–7 here, see the [math section]({{< ref "/docs/5-forecasting/methodology/math" >}}).
+To view the forecasting pipeline from a higher level, see the [architecture section]({{< ref "/docs/5-forecasting/methodology/architecture" >}}). To view the underlying math, especially the calculations mentioned in Steps 6–7 here, see the [math section]({{< ref "/docs/5-forecasting/methodology/math" >}}).
 
 ---
 

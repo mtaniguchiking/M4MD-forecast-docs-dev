@@ -1,5 +1,5 @@
 ---
-title: The Math
+title: Pipeline Math
 weight: 3
 ---
 
