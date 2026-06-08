@@ -233,7 +233,6 @@ optional output directory as such:&lt;/p&gt;</description></item><item><title>No
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;summary quantiles&lt;/span&gt;:
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; - &lt;span style="color:#ae81ff"&gt;0.05&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; - &lt;span style="color:#ae81ff"&gt;0.500&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; - &lt;span style="color:#ae81ff"&gt;0.95&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The sections below describe each field.&lt;/p&gt;</description></item><item><title>Covariate info</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/ii-analysis-data/covariate-info/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/ii-analysis-data/covariate-info/</guid><description>&lt;h1 id="covariate-info"&gt;
  Covariate info
@@ -302,7 +301,7 @@ optional output directory as such:&lt;/p&gt;</description></item><item><title>No
  &lt;a class="anchor" href="#forecast-calculations"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
 &lt;p&gt;This page describes the calculations the forecast pipeline applies to a fitted model and a future-scenario covariate set to produce posterior predictive distributions.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Prerequisites.&lt;/strong&gt; This page assumes familiarity with the model architecture described in &lt;strong&gt;Zachmann et al. (2021)&lt;/strong&gt;, &lt;em&gt;&amp;ldquo;Bayesian Models for Analysis of Inventory and Monitoring Data with Non-ignorable Missingness&amp;rdquo;&lt;/em&gt;, &lt;a href="https://link.springer.com/article/10.1007/s13253-021-00473-z"&gt;JABES 26, 125–148&lt;/a&gt;. In particular, you should understand the hierarchical structure (site within stratum within park), the role of the link function $g(\cdot)$, and the general form of Eq. 6 (outlined below).&lt;/p&gt;</description></item><item><title>Unequal inclusion probabilities</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/posts/unequal-inclusion-probability/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/posts/unequal-inclusion-probability/</guid><description>&lt;p&gt;The Sonoran Desert is among the most extreme environments on Earth. Sampling in these remote, rugged landscapes requires a different approach. When the Park Service established monitoring in Organ Pipe Cactus National Monument they used an approach to select sites based on the cost of travel to sites on the broader landscape, visiting less &amp;ldquo;costly&amp;rdquo; sites with higher probability than more costly sites. The cost surface that defined the probability of inclusion of sites was developed using terrain data, and a tool that estimates the time to travel to any arbitrary location on the landscape.&lt;/p&gt;</description></item><item><title>Outputs</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/guide/outputs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/guide/outputs/</guid><description>&lt;p&gt;&lt;strong&gt;*WORK IN PROGRESS (this is somewhat empty for now)&lt;/strong&gt;*&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Prerequisites.&lt;/strong&gt; This page assumes familiarity with the model architecture described in &lt;strong&gt;Zachmann et al. (2021)&lt;/strong&gt;, &lt;em&gt;&amp;ldquo;Bayesian Models for Analysis of Inventory and Monitoring Data with Non-ignorable Missingness&amp;rdquo;&lt;/em&gt;, &lt;a href="https://link.springer.com/article/10.1007/s13253-021-00473-z"&gt;JABES 26, 125–148&lt;/a&gt;. In particular, you should understand the hierarchical structure (site within stratum within park), the role of the link function $g(\cdot)$, and the general form of Eq. 6 (outlined below).&lt;/p&gt;</description></item><item><title>Unequal inclusion probabilities</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/posts/unequal-inclusion-probability/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/posts/unequal-inclusion-probability/</guid><description>&lt;p&gt;The Sonoran Desert is among the most extreme environments on Earth. Sampling in these remote, rugged landscapes requires a different approach. When the Park Service established monitoring in Organ Pipe Cactus National Monument they used an approach to select sites based on the cost of travel to sites on the broader landscape, visiting less &amp;ldquo;costly&amp;rdquo; sites with higher probability than more costly sites. The cost surface that defined the probability of inclusion of sites was developed using terrain data, and a tool that estimates the time to travel to any arbitrary location on the landscape.&lt;/p&gt;</description></item><item><title>Outputs</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/guide/outputs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/guide/outputs/</guid><description>&lt;p&gt;&lt;strong&gt;*WORK IN PROGRESS&lt;/strong&gt;*&lt;/p&gt;
 &lt;h1 id="forecast-outputs"&gt;
  Forecast Outputs
  &lt;a class="anchor" href="#forecast-outputs"&gt;#&lt;/a&gt;
@@ -325,33 +324,32 @@ optional output directory as such:&lt;/p&gt;</description></item><item><title>No
  &lt;a class="anchor" href="#directory-structure"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
 &lt;pre tabindex="0"&gt;&lt;code&gt;04-forecast/
- forecast-inputs/ (written by fitting pipeline — do not modify)
- runs/
- &amp;lt;scenario&amp;gt;/
- &amp;lt;model_run&amp;gt;/ (one folder per model run)
- forecast-site-summaries.csv
- forecast-stratum-summaries.csv
- forecast-bundle.rds
- forecasts/
- [TODO: plot filenames]
- ensemble/ (only when scenario has &amp;gt;1 model run)
- &amp;lt;scenario&amp;gt;-ensemble-site-summaries.csv
- &amp;lt;scenario&amp;gt;-ensemble-stratum-summaries.csv
- &amp;lt;scenario&amp;gt;-ensemble-bundle.rds
- ensemble/
- [TODO: plot filenames]
- comparison/ (only when there is &amp;gt;1 scenario)
- comparison/
- [TODO: plot filenames]
- diagnostics/
- diagnostics/
- [TODO: plot filenames]
+├── forecast-inputs/ # written by fitting pipeline
+├── runs/
+│ ├── &amp;lt;scenario&amp;gt;/
+│ │ ├── &amp;lt;model_run&amp;gt;/ # one folder per model run
+│ │ │ ├── forecast-site-summaries.csv
+│ │ │ ├── forecast-stratum-summaries.csv
+│ │ │ ├── forecast-bundle.rds
+│ │ │ └── forecasts/ # run-level plots
+│ │ │ ├── [plot files]
+│ │ │ └── &amp;lt;model_run&amp;gt;-plots.rds
+│ │ └── ensemble/ # when scenario has &amp;gt;1 model run
+│ │ ├── &amp;lt;scenario&amp;gt;-ensemble-site-summaries.csv
+│ │ ├── &amp;lt;scenario&amp;gt;-ensemble-stratum-summaries.csv
+│ │ ├── &amp;lt;scenario&amp;gt;-ensemble-bundle.rds
+│ │ ├── [plot files] # ensemble plots
+│ │ └── &amp;lt;scenario&amp;gt;-ensemble-plots.rds
+│ └── comparison/ # cross-scenario comparison plots
+│ └── [plot files]
+└── diagnostics/ # diagnostic plots
+ └── [plot files]
 &lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
 &lt;h2 id="summary-csvs"&gt;
  Summary CSVs
  &lt;a class="anchor" href="#summary-csvs"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;Summary CSVs are written at each spatial level you specified in &lt;code&gt;summary levels&lt;/code&gt;. The filename pattern is &lt;code&gt;{output prefix}-{level}-summaries.csv&lt;/code&gt; (e.g., &lt;code&gt;forecast-site-summaries.csv&lt;/code&gt;).&lt;/p&gt;</description></item><item><title>Posterior predictive checks</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iv-analysis-extras/ppc-facets/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iv-analysis-extras/ppc-facets/</guid><description>&lt;h1 id="posterior-predictive-checks"&gt;
+&lt;p&gt;Summary CSVs are written at each spatial level you specified in &lt;code&gt;summary levels&lt;/code&gt;. The filename pattern is &lt;code&gt;{output prefix}-{level}-summaries.csv&lt;/code&gt; (e.g. &lt;code&gt;forecast-site-summaries.csv&lt;/code&gt;).&lt;/p&gt;</description></item><item><title>Posterior predictive checks</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iv-analysis-extras/ppc-facets/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iv-analysis-extras/ppc-facets/</guid><description>&lt;h1 id="posterior-predictive-checks"&gt;
  Posterior predictive checks
  &lt;a class="anchor" href="#posterior-predictive-checks"&gt;#&lt;/a&gt;
 &lt;/h1&gt;

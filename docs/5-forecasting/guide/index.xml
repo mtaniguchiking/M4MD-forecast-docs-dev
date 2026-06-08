@@ -59,9 +59,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;summary quantiles&lt;/span&gt;:
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; - &lt;span style="color:#ae81ff"&gt;0.05&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; - &lt;span style="color:#ae81ff"&gt;0.500&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; - &lt;span style="color:#ae81ff"&gt;0.95&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The sections below describe each field.&lt;/p&gt;</description></item><item><title>Outputs</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/guide/outputs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/guide/outputs/</guid><description>&lt;p&gt;&lt;strong&gt;*WORK IN PROGRESS (this is somewhat empty for now)&lt;/strong&gt;*&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The sections below describe each field.&lt;/p&gt;</description></item><item><title>Outputs</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/guide/outputs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/guide/outputs/</guid><description>&lt;p&gt;&lt;strong&gt;*WORK IN PROGRESS&lt;/strong&gt;*&lt;/p&gt;
 &lt;h1 id="forecast-outputs"&gt;
  Forecast Outputs
  &lt;a class="anchor" href="#forecast-outputs"&gt;#&lt;/a&gt;
@@ -84,30 +83,29 @@
  &lt;a class="anchor" href="#directory-structure"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
 &lt;pre tabindex="0"&gt;&lt;code&gt;04-forecast/
- forecast-inputs/ (written by fitting pipeline — do not modify)
- runs/
- &amp;lt;scenario&amp;gt;/
- &amp;lt;model_run&amp;gt;/ (one folder per model run)
- forecast-site-summaries.csv
- forecast-stratum-summaries.csv
- forecast-bundle.rds
- forecasts/
- [TODO: plot filenames]
- ensemble/ (only when scenario has &amp;gt;1 model run)
- &amp;lt;scenario&amp;gt;-ensemble-site-summaries.csv
- &amp;lt;scenario&amp;gt;-ensemble-stratum-summaries.csv
- &amp;lt;scenario&amp;gt;-ensemble-bundle.rds
- ensemble/
- [TODO: plot filenames]
- comparison/ (only when there is &amp;gt;1 scenario)
- comparison/
- [TODO: plot filenames]
- diagnostics/
- diagnostics/
- [TODO: plot filenames]
+├── forecast-inputs/ # written by fitting pipeline
+├── runs/
+│ ├── &amp;lt;scenario&amp;gt;/
+│ │ ├── &amp;lt;model_run&amp;gt;/ # one folder per model run
+│ │ │ ├── forecast-site-summaries.csv
+│ │ │ ├── forecast-stratum-summaries.csv
+│ │ │ ├── forecast-bundle.rds
+│ │ │ └── forecasts/ # run-level plots
+│ │ │ ├── [plot files]
+│ │ │ └── &amp;lt;model_run&amp;gt;-plots.rds
+│ │ └── ensemble/ # when scenario has &amp;gt;1 model run
+│ │ ├── &amp;lt;scenario&amp;gt;-ensemble-site-summaries.csv
+│ │ ├── &amp;lt;scenario&amp;gt;-ensemble-stratum-summaries.csv
+│ │ ├── &amp;lt;scenario&amp;gt;-ensemble-bundle.rds
+│ │ ├── [plot files] # ensemble plots
+│ │ └── &amp;lt;scenario&amp;gt;-ensemble-plots.rds
+│ └── comparison/ # cross-scenario comparison plots
+│ └── [plot files]
+└── diagnostics/ # diagnostic plots
+ └── [plot files]
 &lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
 &lt;h2 id="summary-csvs"&gt;
  Summary CSVs
  &lt;a class="anchor" href="#summary-csvs"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;Summary CSVs are written at each spatial level you specified in &lt;code&gt;summary levels&lt;/code&gt;. The filename pattern is &lt;code&gt;{output prefix}-{level}-summaries.csv&lt;/code&gt; (e.g., &lt;code&gt;forecast-site-summaries.csv&lt;/code&gt;).&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;Summary CSVs are written at each spatial level you specified in &lt;code&gt;summary levels&lt;/code&gt;. The filename pattern is &lt;code&gt;{output prefix}-{level}-summaries.csv&lt;/code&gt; (e.g. &lt;code&gt;forecast-site-summaries.csv&lt;/code&gt;).&lt;/p&gt;</description></item></channel></rss>
