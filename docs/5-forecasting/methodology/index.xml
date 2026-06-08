@@ -1,4 +1,22 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Methodology on Models for missing data</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/methodology/</link><description>Recent content in Methodology on Models for missing data</description><generator>Hugo</generator><language>en-us</language><atom:link href="https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/methodology/index.xml" rel="self" type="application/rss+xml"/><item><title>The Big Picture</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/methodology/big-picture/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/methodology/big-picture/</guid><description>&lt;p&gt;&lt;strong&gt;*WORK IN PROGRESS (this is empty for now)&lt;/strong&gt;*&lt;/p&gt;</description></item><item><title>Pipeline Walkthrough</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/methodology/pipeline-walkthrough/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/methodology/pipeline-walkthrough/</guid><description>&lt;h1 id="pipeline-walkthrough-forecast-pipeliner"&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Methodology on Models for missing data</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/methodology/</link><description>Recent content in Methodology on Models for missing data</description><generator>Hugo</generator><language>en-us</language><atom:link href="https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/methodology/index.xml" rel="self" type="application/rss+xml"/><item><title>Pipeline Architecture</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/methodology/architecture/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/methodology/architecture/</guid><description>&lt;h1 id="pipeline-architecture"&gt;
+ Pipeline Architecture
+ &lt;a class="anchor" href="#pipeline-architecture"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;This page is a big-picture view of how the forecasting code fits together. For example, it talks about the scripts that make up the pipeline and how data flows between them.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;On this page:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="#the-forecasting-pipeline-at-a-glance"&gt;The forecasting pipeline at a glance&lt;/a&gt; — architecture diagram&lt;/li&gt;
+&lt;li&gt;&lt;a href="#stage-0-model-fitting-artifacts"&gt;Stage 0: model-fitting artifacts&lt;/a&gt; — preliminary model fitting outputs&lt;/li&gt;
+&lt;li&gt;&lt;a href="#stage-1-forecasting-inputs"&gt;Stage 1: forecasting inputs&lt;/a&gt; — forecasting inputs&lt;/li&gt;
+&lt;li&gt;&lt;a href="#stage-2-the-forecast-pipeline"&gt;Stage 2: the forecast pipeline&lt;/a&gt; — scripts that run a forecast&lt;/li&gt;
+&lt;li&gt;&lt;a href="#script-reference"&gt;Script reference&lt;/a&gt; — forecasting scripts summarized&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id="the-forecasting-pipeline-at-a-glance"&gt;
+ The forecasting pipeline at a glance
+ &lt;a class="anchor" href="#the-forecasting-pipeline-at-a-glance"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;&lt;img src="M4MD-forecast-diagram.svg" alt="Full architecture of the M4MD forecasting pipeline, from model fitting through forecast outputs." /&gt;&lt;/p&gt;</description></item><item><title>Pipeline Walkthrough</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/methodology/pipeline-walkthrough/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/methodology/pipeline-walkthrough/</guid><description>&lt;h1 id="pipeline-walkthrough-forecast-pipeliner"&gt;
  Pipeline Walkthrough: &lt;code&gt;forecast-pipeline.R&lt;/code&gt;
  &lt;a class="anchor" href="#pipeline-walkthrough-forecast-pipeliner"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
@@ -6,7 +24,7 @@
 &lt;blockquote&gt;
 &lt;p&gt;&lt;code&gt;forecast-pipeline.R&lt;/code&gt; can be thought of as a sister script to &lt;code&gt;analysis-pipeline.R&lt;/code&gt;. Both scripts expect a user-provided config file, and both act as orchestrators that source other scripts to produce their outputs.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;The script contains 11 steps in total. Steps 1–6 prepare the inputs, Step 7 generates posterior predictive samples, and Steps 8–11 output the CSVs + plots a user looks at.&lt;/p&gt;</description></item><item><title>The Math</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/methodology/math/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/methodology/math/</guid><description>&lt;h1 id="forecast-calculations"&gt;
+&lt;p&gt;The script contains 11 steps in total. Steps 1–6 prepare the inputs, Step 7 generates posterior predictive samples, and Steps 8–11 output the CSVs + plots a user looks at.&lt;/p&gt;</description></item><item><title>Pipeline Math</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/methodology/math/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/methodology/math/</guid><description>&lt;h1 id="forecast-calculations"&gt;
  Forecast calculations
  &lt;a class="anchor" href="#forecast-calculations"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
