@@ -117,7 +117,7 @@ To run the forecast pipeline interactively, set your `forecast-pipeline.R` confi
 config_path <- "forecasting/climate-futures-tutorial/<your-forecast-config.yaml>"
 ```
 
-Then source your `forecast-pipeline.R`. Alternatively, run the forecast pipeline from the CLI.
+Then source your `forecast-pipeline.R` by selecting `Source` in RStudio. Alternatively, run the forecast pipeline from the CLI.
 
 ```bash
 Rscript forecasting/forecast/forecast-pipeline.R \

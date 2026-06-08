@@ -5,7 +5,7 @@ weight: 1
 
 # Design metadata
 
-Two high-level "attributes" files are required for all analyses. So long as the basic details of the sampling design they describe do not vary for different measures within a park, or different park units within a network, they only need to be specified once.
+Two high-level "attributes" files are required for all analyses. So long as the basic details of the sampling design they describe do not vary for different measures within a park, or different park units within a network, they only need to be specified once. You can view and edit the attribute files in RStudio, Visual Studio Code, or other code editors. 
 
 ## The config file tree
 

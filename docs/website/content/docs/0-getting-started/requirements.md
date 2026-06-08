@@ -17,6 +17,7 @@ From NPS Company Portal, install:
   - RTools 4.4 or higher (required) 
   - Git (x64)-2.51.2.0 or higher (required) 
   - NPS Fonts (optional)
+  - Visual Studio Code (optional)
 
 You can check for and install the required packages from your R console with:
 ```sh

@@ -16,6 +16,9 @@ The response data include the observations we are trying to model, as well as co
 ## Format
 The response data are stored as flat files. The key characteristic of a flat file is that each row represents a single observation, while the columns describe values associated with the observation and the design features described above. These files are typically text files with no special word processing or markup. The file can be CSV, XLS, XLSX, GZ, or RDS. For ease of use, readability, and other reasons, we generally recommend CSV.
 
+## Considerations
+Check that your response dataset is complete (e.g., includes all transects or plots, including 0s for absence). If you have data for a small park with limited sites, check the number of sites per stratum. Less than 3 sites per stratum is not ideal and the model will throw an error when creating funnel plots; consider dropping the stratum from the analysis or combining similar strata. 
+
 ## Example
 The response data below contain species richness observations for forb (`native.forb.rich`) and grass-like (`native.gram.rich`) species from Little Bighorn Battlefield National Monument (LIBI), in Montana. Here, we see the first and last six rows of the data. 
 
