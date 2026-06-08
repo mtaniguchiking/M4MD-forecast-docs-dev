@@ -21,26 +21,26 @@ The scenarios CSV provides the covariate values the pipeline uses to construct f
 
 | Column | Description |
 |---|---|
-| `scenario` | Scenario label (e.g., `"dry"`, `"wet"`) |
-| `model_run` | Model run label (e.g., `"ACCESS-CM2"`) |
-| `site_id` | Site identifier — must match sites in the fitted model |
-| `stratum_id` | Stratum identifier — must match strata in the fitted model |
+| `scenario` | Scenario label (e.g. `"dry"`, `"wet"`, "`SSP2-4.5`") |
+| `model_run` | Model run label (e.g. `"GFDL-ESM4"`, `"climate-model-1"`) |
+| `site_id` | Site identifier (must match sites in the fitted model) |
+| `stratum_id` | Stratum identifier (must match strata in the fitted model) |
 | `cal_year` | Forecast year (integer) |
 | *covariate columns* | One column per `provided` covariate, named to match the covariate (see below) |
 
-> **Column names**: If your fitted model used non-standard column names (e.g., `Plot_ID` instead of `site_id`), the pipeline resolves these automatically using the column mappings stored in the model metadata. Use the same column names as in your original data.
+> **Column names**: If your fitted model used non-standard column names (e.g. `Plot_ID` instead of `site_id`), the pipeline resolves these automatically using the column mappings stored in the model metadata. **Use the same column names as in your original data.**
 
 ### Covariate columns
 
-Include one column for each covariate declared as `source: provided` in your forecast config. For example, if precipitation is `provided`, include a `ppt` column with projected values.
+Include one column for each covariate declared as `source: provided` in your forecast config. For example, if the covariate precipitation (represented as `ppt`) is `provided`, include a `ppt` column with projected values.
 
-> Covariates using `hold_last` or `hold_mean` strategies do **not** need a column in the scenarios CSV — the pipeline fills those values automatically from training data.
+> Covariates using `hold_last` or `hold_mean` strategies do **not** need a column in the scenarios CSV. The pipeline fills those values automatically from training data.
 
 ### Scenarios and model runs
 
 The `scenario` and `model_run` columns allow you to encode multiple climate scenarios and multiple model runs per scenario in a single file. The pipeline processes each unique `(scenario, model_run)` combination as a separate forecast run.
 
-### Example (from [mock data tutorial]({{< ref "/docs/5-forecasting/tutorials/mock-data" >}}))
+### Example (from the [mock data tutorial]({{< ref "/docs/5-forecasting/tutorials/mock-data" >}}))
 
 | `scenario` | `model_run` | `site_id` | `stratum_id` | `cal_year` | `ppt` |
 |---|---|---|---|---|---|

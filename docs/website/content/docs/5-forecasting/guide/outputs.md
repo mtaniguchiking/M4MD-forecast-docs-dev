@@ -3,7 +3,7 @@ title: Outputs
 weight: 4
 ---
 
-**\*WORK IN PROGRESS (this is somewhat empty for now)***
+**\*WORK IN PROGRESS***
 
 # Forecast Outputs
 
@@ -25,34 +25,33 @@ Each unique combination of `(scenario, model_run)` in your scenarios CSV is trea
 
 ```
 04-forecast/
-  forecast-inputs/         (written by fitting pipeline — do not modify)
-  runs/
-    <scenario>/
-      <model_run>/         (one folder per model run)
-        forecast-site-summaries.csv
-        forecast-stratum-summaries.csv
-        forecast-bundle.rds
-        forecasts/
-          [TODO: plot filenames]
-      ensemble/            (only when scenario has >1 model run)
-        <scenario>-ensemble-site-summaries.csv
-        <scenario>-ensemble-stratum-summaries.csv
-        <scenario>-ensemble-bundle.rds
-        ensemble/
-          [TODO: plot filenames]
-    comparison/            (only when there is >1 scenario)
-      comparison/
-        [TODO: plot filenames]
-  diagnostics/
-    diagnostics/
-      [TODO: plot filenames]
+├── forecast-inputs/                       # written by fitting pipeline
+├── runs/
+│   ├── <scenario>/
+│   │   ├── <model_run>/                    # one folder per model run
+│   │   │   ├── forecast-site-summaries.csv
+│   │   │   ├── forecast-stratum-summaries.csv
+│   │   │   ├── forecast-bundle.rds
+│   │   │   └── forecasts/                       # run-level plots
+│   │   │       ├── [plot files]
+│   │   │       └── <model_run>-plots.rds
+│   │   └── ensemble/                       # when scenario has >1 model run
+│   │       ├── <scenario>-ensemble-site-summaries.csv
+│   │       ├── <scenario>-ensemble-stratum-summaries.csv
+│   │       ├── <scenario>-ensemble-bundle.rds
+│   │       ├── [plot files]                     # ensemble plots
+│   │       └── <scenario>-ensemble-plots.rds
+│   └── comparison/                         # cross-scenario comparison plots
+│       └── [plot files]
+└── diagnostics/                            # diagnostic plots
+    └── [plot files]
 ```
 
 ---
 
 ## Summary CSVs
 
-Summary CSVs are written at each spatial level you specified in `summary levels`. The filename pattern is `{output prefix}-{level}-summaries.csv` (e.g., `forecast-site-summaries.csv`).
+Summary CSVs are written at each spatial level you specified in `summary levels`. The filename pattern is `{output prefix}-{level}-summaries.csv` (e.g. `forecast-site-summaries.csv`).
 
 ### Site- and stratum-level columns
 
@@ -70,7 +69,7 @@ Summary CSVs are written at each spatial level you specified in `summary levels`
 | `y_rep_mean` | Mean of the posterior predictive distribution (observation scale, includes dispersion) |
 | `y_rep_q025` / `y_rep_q975` | Credible interval on the observation-scale predictions |
 
-> **`mu` vs `y_rep`**: `mu` columns summarize the expected response (the latent mean), while `y_rep` columns include observation-level noise. For most ecological interpretations, `mu` columns are the primary quantity of interest.
+> **`mu` vs `y_rep`**: `mu` columns summarize the expected response (the latent mean), while `y_rep` columns include observation-level noise. For many ecological interpretations, `mu` columns are the primary quantity of interest.
 
 ### Ensemble-level columns
 
@@ -85,7 +84,7 @@ Ensemble CSVs (written when a scenario has >1 model run) collapse across model r
 | `ensemble_q025` / `ensemble_q975` | Spread across model runs (reflects climate model uncertainty) |
 | `ensemble_min` / `ensemble_max` | Range across model runs |
 
-> The ensemble does not include `y_rep` — combining observation noise across climate model runs conflates two statistically distinct sources of uncertainty.
+> The ensemble does not include `y_rep` because combining observation noise across climate model runs conflates two statistically distinct sources of uncertainty.
 
 ---
 
@@ -119,10 +118,4 @@ Combines all scenarios and runs. Useful for a high-level view of forecast behavi
 
 ## The forecast bundle (`.rds`)
 
-Each output directory also contains a `*-bundle.rds` file — an R list with the summary data frames and scenarios data. This is useful for custom downstream plotting without re-running the pipeline.
-
-```r
-bundle <- readRDS("04-forecast/runs/dry/GCM-1/forecast-bundle.rds")
-bundle$summaries$site   # site-level summary data frame
-bundle$summaries$stratum
-```
+Each output directory also contains a `*-bundle.rds` file with the summary data frames and scenarios data. This is useful for custom plotting.

@@ -62,8 +62,8 @@ Another important decision is whether to include a linear time term in your mode
 
 Including a time term for forecasting carries a strong assumption: **the linear trend continues at the same rate into the future.** This creates several potential problems:
 
-- **Unrealistic extrapolation** — a time trend projected 50 years forward may push vegetation cover toward 0% (or 100%) and stay there.
-- **Collinearity with climate** — if a covariate is also trending (e.g., warming or drying), the model cannot cleanly attribute change to covariate versus time.
+- **Unrealistic extrapolation** — a time trend projected many years forward may push the response variable to extreme values.
+- **Collinearity with climate** — if a covariate is also trending (e.g., warming or drying over time), the model cannot cleanly attribute change to covariate versus time.
 - **Mechanism conflated with trend** — a climate-covariate forecast may be designed to isolate a specific question: "how does vegetation respond to a climatic trend?" A time term undermines this by attributing part of the projected change to a continuation of historical trend rather than to climate forcing.
 
 Thus, when fitting a model for forecasting, you should include the time term if there is a known secular process that will continue through the forecast horizon. For example, if your system is demonstrably not at equilibrium, has grown linearly over the historical training period, *and* will grow linearly over the forecast period.

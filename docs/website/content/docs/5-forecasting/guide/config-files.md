@@ -41,7 +41,6 @@ summary levels:
 
 summary quantiles:
   - 0.05
-  - 0.500
   - 0.95
 
 ```
@@ -63,7 +62,7 @@ paths:
 | Field | Required | Description |
 |---|---|---|
 | `fitted_model_dir` | Yes | Path to the fitted model output directory. Must contain `04-forecast/forecast-inputs/`, which is written by the fitting pipeline when run with `--save-forecast-inputs`. |
-| `scenarios_file` | Yes | Path to your scenarios CSV. See [Input data]({{< ref "/docs/5-forecasting/guide/input-data" >}})
+| `scenarios_file` | Yes | Path to your scenarios CSV. See [Input data]({{< ref "/docs/5-forecasting/guide/input-data" >}}).
 
 ---
 
@@ -81,10 +80,10 @@ The default names for the scenario and model identifier columns are `scenario` a
 
 | Field | Description |
 |---|---|
-| `scenario` | Name of the column in your CSV that corresponds to `scenario` (e.g., `ssp`, `climate_scenario`) |
-| `model_run` | Name of the column in your CSV that corresponds to `model_run` (e.g., `gcm_name`, `ensemble_member`) |
+| `scenario` | Name of the column in your CSV that corresponds to `scenario` (e.g. `ssp`, `climate_scenario`) |
+| `model_run` | Name of the column in your CSV that corresponds to `model_run` (e.g. `gcm_name`, `ensemble_member`) |
 
-> Site, stratum, and year column aliases (e.g., `Plot_ID`, `Master_Stratification`, `Visit_Year`) are declared in the fitted model's metadata, not here.
+> Site, stratum, and year column aliases (like `Plot_ID`, `Master_Stratification`, `Visit_Year`, etc) are declared in the fitted model's metadata, not here.
 
 ---
 
@@ -104,19 +103,11 @@ covariates:
 
 Each named covariate takes a `source` field with one of three strategies:
 
-### `provided`
-
-This means future covariate values come from the scenarios CSV. Use this for covariates where you have actual projections (e.g. downscaled climate model output).
-
-The covariate name must match a column in your scenarios CSV.
-
-### `hold_last`
-
-This means the covariate is held at the last observed value from training data, separately for each site. Use this for covariates where no projection is available and a site-specific anchor is reasonable.
-
-### `hold_mean`
-
-The covariate is held at the training-data mean, separately for each site. Use this when you want a climatological baseline rather than a site-specific last observation.
+| `source` | Behavior | When to use |
+|---|---|---|
+| `provided` | Future covariate values come from the scenarios CSV. The covariate name must match a column in your scenarios CSV. | Covariates where you have future scenario data |
+| `hold_last` | The covariate is held at the last observed value from training data, separately for each site. | Covariates where no projection is available and a site-specific anchor is reasonable. |
+| `hold_mean` | The covariate is held at the training-data mean, separately for each site. | When you want a climatological baseline rather than a site-specific last observation. |
 
 > Covariates using `hold_last` or `hold_mean` do not require a column in the scenarios CSV.
 
@@ -147,7 +138,6 @@ summary levels:
 
 summary quantiles:
   - 0.05
-  - 0.500
   - 0.95
 
 output prefix: forecast
@@ -156,5 +146,5 @@ output prefix: forecast
 | Field | Required | Description |
 |---|---|---|
 | `summary levels` | Yes | Spatial aggregation levels to summarize. Valid values: `site`, `stratum`, `park`. Include one or more. |
-| `summary quantiles` | Yes | Quantiles for the credible interval. Provide three values: lower bound, median, upper bound. The example above produces a 90% credible interval. |
+| `summary quantiles` | Yes | Quantiles for the credible interval. Provide two values: the lower bound and the upper bound. The example above produces a 90% credible interval. |
 | `output prefix` | No | Prefix for output CSV filenames (default: `"forecast"`). For example, `forecast-site-summaries.csv`. |
