@@ -50,7 +50,7 @@ The next three sections walk through each stage.
 
 Model fitting must happen before forecasting. Since this page focuses on forecasting, this stage is intentionally brief (for more on the fitting workflow, see [fitting a model for forecasting]({{< ref "/docs/5-forecasting/guide/fitting-a-model.md" >}}).)
 
-A model fitting run writes several output folders (`00-inputs`, `01-diagnostics`, `02-checking`, `03-inference`, and `04-forecast`). The last one, `04-forecast`, is the handoff point into the forecasting pipeline. It holds the fitted model's posterior draws (`mcmc-draws-full.csv`), its metadata (`forecasting-metadata.rds`), the training-data covariate moments (`covariate-moments.rds`), and the site/stratum lookup tables.
+The model fitting pipeline writes several output folders (`00-inputs`, `01-diagnostics`, `02-checking`, `03-inference`, and `04-forecast`). The last one, `04-forecast`, is the handoff point into the forecasting pipeline. It contains the fitted model's posterior draws (`mcmc-draws-full.csv`), its metadata (`forecasting-metadata.rds`), the training-data covariate moments (`covariate-moments.rds`), and the site/stratum lookup tables.
 
 Stage 1's config will point to this `04-forecast` folder.
 
@@ -74,9 +74,11 @@ The [config files]({{< ref "/docs/5-forecasting/guide/config-files.md" >}}) page
 
 ## Stage 2: the forecast pipeline
 
+<div style="display: flex; gap: 1.5rem; align-items: flex-start;">
 <img src="M4MD-forecast-stage-2.svg"
      alt="Stage 2: forecast-pipeline.R reads the config and sources read-forecast-config.R, forecast-engine.R (which sources forecast-likelihoods.R), and forecast-plot-engine.R to produce forecast outputs."
-     style="float: left; width: 55%; max-width: 500px; margin: 0 1.5rem 1rem 0;" />
+     style="width: 55%; max-width: 500px; flex-shrink: 0;" />
+<div>
 
 A forecast is run via `forecast-pipeline.R`. It reads the forecast config YAML (which points to the Stage 0 artifacts and covariate data), then sources a collection of scripts. The scripts are detailed in the following [Script reference](#script-reference) section.
 
@@ -84,7 +86,8 @@ The engine and plot modules write their results back into the `04-forecast` fold
 
 The steps of `forecast-pipeline.R` are covered in more detail in the [Pipeline Walkthrough]({{< ref "/docs/5-forecasting/methodology/pipeline-walkthrough.md" >}}).
 
-<div style="clear: both;"></div>
+</div>
+</div>
 
 ---
 
