@@ -67,9 +67,9 @@ Summary CSVs are written at each spatial level you specified in `summary levels`
 | `mu_q025` / `mu_q975` | Lower and upper quantiles of the posterior predictive mean (bounds set by `summary quantiles` in config) |
 | `cover_pct_mean` | `mu_mean` expressed as a percentage (×100) |
 | `y_rep_mean` | Mean of the posterior predictive distribution (observation scale, includes dispersion) |
-| `y_rep_q025` / `y_rep_q975` | Credible interval on the observation-scale predictions |
+| `y_rep_q025` / `y_rep_q975` | Prediction interval on the observation-scale predictions |
 
-> **`mu` vs `y_rep`**: `mu` columns summarize the expected response (the latent mean), while `y_rep` columns include observation-level noise. For many ecological interpretations, `mu` columns are the primary quantity of interest.
+> **`mu` vs `y_rep`**: `mu` columns summarize the expected response (the latent mean), while `y_rep` columns include observation-level noise. For many ecological interpretations, `mu` columns are the primary quantity of interest. For what these bands mean and how to read them off the plots, see [Interpreting uncertainty]({{< ref "/docs/5-forecasting/guide/uncertainty" >}}).
 
 ### Ensemble-level columns
 
