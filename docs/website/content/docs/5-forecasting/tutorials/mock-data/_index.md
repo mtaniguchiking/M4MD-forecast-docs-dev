@@ -42,7 +42,7 @@ The precipitation–vegetation relationship is highly correlated. This will be l
 <img src="02-hits-vs-ppt.png" alt="Hit rate vs. precipitation scatter plot" width="500">
 </div>
 
-The future scenarios are represented by 1 GCM model each, covering two potential climate futures.
+The future scenarios are represented by 1 "global climate model" each, covering two potential climate futures.
 
 ![Climate scenarios: historical and three future trajectories](03-climate-scenarios.png)
 
@@ -119,7 +119,7 @@ Diagnostics: trace plot(s)...
 
 ## Step 2: Inspect the Output (optional)
 
-We now have a fitted model! Before forecasting, it's worth checking the model output at `assets/_output/M4MD/ELDO/mock-cover/y_hits/binom_inv-logit_b0_hier-site/ppt_pptXstratum/`. You'll notice a `04-forecasting` folder containing posterior draws and model metadata — this is saved because of the `--save-forecast-inputs` flag we passed when fitting.
+We now have a fitted model! Before forecasting, it's worth checking the model output at `assets/_output/M4MD/ELDO/mock-cover/y_hits/binom_inv-logit_b0_hier-site/ppt_pptXstratum/`. You'll notice a `04-forecasting` folder containing posterior draws and model metadata, which was saved because of the `--save-forecast-inputs` flag we passed when fitting.
 
 If you'd like to evaluate the model, see [model diagnostics]({{< ref "/docs/1-guide/c-outputs/output-dir/01-diagnostics" >}}) and [model checking]({{< ref "/docs/1-guide/c-outputs/output-dir/02-checking" >}}). You'll find that the test statistics in `mod-summary.csv` and the convergence diagnostics in `convergence-diagnostics.txt` indicate a successful fit.
 
@@ -216,11 +216,11 @@ The stratum-level comparison plots tell the same story split by stratum:
 
 ### Stratum-level response differences
 
-Notice that the two scenarios (dry vs wet) diverge more in stratum A than in stratum B (stratum A's trajectories spread further apart over time). This is also expected. The driver–response scatter plot from training captures why:
+Notice that the two scenarios (dry vs wet) diverge more in stratum A than in stratum B (stratum A's trajectories spread further apart over time). This is also expected and the driver–response scatter plot from training confirms this:
 
 ![Driver–response relationship by stratum](driver-response-comparison.png)
 
-Stratum A has a steeper ppt–cover slope historically — it occupies higher cover values at high precipitation and drops further when precipitation is low. Because the model fits a stratum-specific precipitation effect (via the `ppt*stratum` interaction term), it learns this stronger sensitivity and carries it into the forecast. The result is that the same change in precipitation produces a larger swing in predicted cover for stratum A than for B.
+Stratum A has a steeper ppt–cover slope historically (it occupies higher cover values at high precipitation and drops further when precipitation is low). Because the model fits a stratum-specific precipitation effect (via the `ppt*stratum` interaction term), it learns this stronger sensitivity and carries it into the forecast. The result is that the same change in precipitation produces a larger swing in predicted cover for stratum A than for B.
 
 ## Summary
 
