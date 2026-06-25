@@ -81,7 +81,7 @@ Ensemble CSVs (written when a scenario has >1 model run) collapse across model r
 | `n_runs` | Number of model runs included in the ensemble |
 | `ensemble_mean` | Mean of run-level `mu_median` values across model runs |
 | `ensemble_median` | Median of run-level `mu_median` values |
-| `ensemble_q025` / `ensemble_q975` | Spread across model runs (reflects climate model uncertainty) |
+| `ensemble_q025` / `ensemble_q975` | Spread across model runs (reflects future covariate uncertainty) |
 | `ensemble_min` / `ensemble_max` | Range across model runs |
 
 > The ensemble does not include `y_rep` because combining observation noise across climate model runs conflates two statistically distinct sources of uncertainty.
