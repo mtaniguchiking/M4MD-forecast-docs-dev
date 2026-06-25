@@ -10,14 +10,6 @@ Producing a forecast involves several steps across the model fitting and forecas
 
 ---
 
-## Workflow overview
-
-The diagram below sketches the full process. Each step is described in more detail in the checklist that follows.
-
-[TODO: I need to add workflow diagram here]
-
----
-
 ## Step-by-step checklist
 
 ### 1. Get your data
