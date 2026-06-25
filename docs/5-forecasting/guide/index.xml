@@ -108,4 +108,43 @@
  Summary CSVs
  &lt;a class="anchor" href="#summary-csvs"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;Summary CSVs are written at each spatial level you specified in &lt;code&gt;summary levels&lt;/code&gt;. The filename pattern is &lt;code&gt;{output prefix}-{level}-summaries.csv&lt;/code&gt; (e.g. &lt;code&gt;forecast-site-summaries.csv&lt;/code&gt;).&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;Summary CSVs are written at each spatial level you specified in &lt;code&gt;summary levels&lt;/code&gt;. The filename pattern is &lt;code&gt;{output prefix}-{level}-summaries.csv&lt;/code&gt; (e.g. &lt;code&gt;forecast-site-summaries.csv&lt;/code&gt;).&lt;/p&gt;</description></item><item><title>Interpreting uncertainty</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/guide/uncertainty/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/guide/uncertainty/</guid><description>&lt;h1 id="interpreting-forecast-uncertainty"&gt;
+ Interpreting forecast uncertainty
+ &lt;a class="anchor" href="#interpreting-forecast-uncertainty"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;In this pipeline, there are three sources of uncertainty during a forecast. This page explains the three sources and how to interpret them.&lt;/p&gt;
+&lt;h2 id="the-three-sources"&gt;
+ The three sources
+ &lt;a class="anchor" href="#the-three-sources"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;&lt;/th&gt;
+ &lt;th&gt;Source name&lt;/th&gt;
+ &lt;th&gt;Also called&lt;/th&gt;
+ &lt;th&gt;Shown on plots as&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;1&lt;/td&gt;
+ &lt;td&gt;&lt;strong&gt;Parameter uncertainty&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;estimation uncertainty&lt;/td&gt;
+ &lt;td&gt;Credible interval&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;2&lt;/td&gt;
+ &lt;td&gt;&lt;strong&gt;Observation uncertainty&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;process uncertainty, sampling uncertainty&lt;/td&gt;
+ &lt;td&gt;Prediction interval&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;3&lt;/td&gt;
+ &lt;td&gt;&lt;strong&gt;Future covariate uncertainty&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;model uncertainty, structural uncertainty&lt;/td&gt;
+ &lt;td&gt;Ensemble spread across runs&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Sources 1 and 3 are &lt;em&gt;epistemic&lt;/em&gt;, meaning they reflect what we don&amp;rsquo;t know. They shrink with more data and/or better models. Source 2 is &lt;em&gt;aleatoric&lt;/em&gt;, meaning it reflects how the world itself varies.&lt;/p&gt;</description></item></channel></rss>

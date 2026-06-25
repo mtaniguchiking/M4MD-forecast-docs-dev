@@ -450,7 +450,46 @@ is often referred to as a Bayesian p value). A Bayesian p value that is very clo
 &lt;/span&gt;
  coefficient can be computed as a derived quantity. See &lt;a href="https://stats.stackexchange.com/a/163148"&gt;this StackExchange post&lt;/a&gt; for more on this calculation.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;See &lt;a href="https://stats.oarc.ucla.edu/spss/faq/coding-systems-for-categorical-variables-in-regression-analysis"&gt;this resource&lt;/a&gt; for additional background on dummy vs effect coding.&lt;/p&gt;</description></item><item><title>Sync changes</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/sync-changes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/sync-changes/</guid><description>&lt;h1 id="sync-changes"&gt;
+&lt;p&gt;See &lt;a href="https://stats.oarc.ucla.edu/spss/faq/coding-systems-for-categorical-variables-in-regression-analysis"&gt;this resource&lt;/a&gt; for additional background on dummy vs effect coding.&lt;/p&gt;</description></item><item><title>Interpreting uncertainty</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/guide/uncertainty/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/guide/uncertainty/</guid><description>&lt;h1 id="interpreting-forecast-uncertainty"&gt;
+ Interpreting forecast uncertainty
+ &lt;a class="anchor" href="#interpreting-forecast-uncertainty"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;In this pipeline, there are three sources of uncertainty during a forecast. This page explains the three sources and how to interpret them.&lt;/p&gt;
+&lt;h2 id="the-three-sources"&gt;
+ The three sources
+ &lt;a class="anchor" href="#the-three-sources"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;&lt;/th&gt;
+ &lt;th&gt;Source name&lt;/th&gt;
+ &lt;th&gt;Also called&lt;/th&gt;
+ &lt;th&gt;Shown on plots as&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;1&lt;/td&gt;
+ &lt;td&gt;&lt;strong&gt;Parameter uncertainty&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;estimation uncertainty&lt;/td&gt;
+ &lt;td&gt;Credible interval&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;2&lt;/td&gt;
+ &lt;td&gt;&lt;strong&gt;Observation uncertainty&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;process uncertainty, sampling uncertainty&lt;/td&gt;
+ &lt;td&gt;Prediction interval&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;3&lt;/td&gt;
+ &lt;td&gt;&lt;strong&gt;Future covariate uncertainty&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;model uncertainty, structural uncertainty&lt;/td&gt;
+ &lt;td&gt;Ensemble spread across runs&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Sources 1 and 3 are &lt;em&gt;epistemic&lt;/em&gt;, meaning they reflect what we don&amp;rsquo;t know. They shrink with more data and/or better models. Source 2 is &lt;em&gt;aleatoric&lt;/em&gt;, meaning it reflects how the world itself varies.&lt;/p&gt;</description></item><item><title>Sync changes</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/sync-changes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/sync-changes/</guid><description>&lt;h1 id="sync-changes"&gt;
  Sync changes
  &lt;a class="anchor" href="#sync-changes"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
