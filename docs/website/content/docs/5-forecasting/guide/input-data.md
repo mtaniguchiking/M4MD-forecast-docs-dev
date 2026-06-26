@@ -3,7 +3,7 @@ title: Input Data
 weight: 2
 ---
 
-# Forcast Input data
+# Forecast Input data
 
 The forecasting pipeline requires three inputs:
 

@@ -20,7 +20,7 @@ To follow along you'll need:
 
 ## Step 0: Generate your climate covariates
 
-Head over to the [climate-futures-covariates](https://github.com/mtaniguchiking/climate-futures-covariates) repository. The [repo README](https://github.com/mtaniguchiking/climate-futures-covariates) is a good place to start. The repo walks you through four Quarto notebooks that take you from raw climate data downloads to pipeline-ready CSVs:
+Head over to the [climate-futures-covariates](https://github.com/mtaniguchiking/climate-futures-covariates) repository. The [repo README](https://github.com/mtaniguchiking/climate-futures-covariates) is a good place to start. The repo walks you through four Quarto notebooks that help you get future covariate climate CSVs that are formatted for this pipeline:
 
 | Notebook | What it does |
 |----------|-------------|
@@ -35,7 +35,7 @@ Once you've run all four notebooks, you'll have your historical covariate CSV an
 
 ## Step 1: Fit the model
 
-With your historical covariate CSV in hand, you're ready to fit. We will be editing your YAML to match this CSV, so save a copy of your original YAML if needed! Open your model YAML (or a copy of it) and point it to the new climate data:
+With your historical covariate CSV, you're ready to fit. We will be editing your YAML to match this CSV, so save a copy of your original YAML if needed! Open your model YAML (or a copy of it) and point it to the new climate data:
 
 ```yaml
 covariate info:
@@ -83,7 +83,7 @@ Or from the CLI:
 
 ## Step 2: Inspect the output (optional)
 
-Before forecasting, it's worth checking the model fitting output in its respective folder (likely in `assets/_output/...`). There should be a `04-forecasting` folder containing posterior draws and model metadata — this is saved because of the `--save-forecast-inputs` flag we passed when fitting.
+Before forecasting, it's worth checking the model fitting output in its respective folder (likely in `assets/_output/...`). There should be a `04-forecasting` folder, which was saved because of the `--save-forecast-inputs` flag we passed when fitting.
 
 If you'd like to evaluate the model, see [model diagnostics]({{< ref "/docs/1-guide/c-outputs/output-dir/01-diagnostics" >}}) and [model checking]({{< ref "/docs/1-guide/c-outputs/output-dir/02-checking" >}}). If the model was not successful in fitting (e.g. failure to converge, poor Bayesian p values), play around with your configs or switch to a new dataset before continuing.
 
@@ -102,9 +102,9 @@ paths:
 # ==== MODEL ==================================================================
 
 covariates:
-  ppt:
+  ppt: # only include if you selected ppt in 03-prep-climate-covariates.qmd 
     source: provided
-  tmax:
+  tmax: # only include if you selected tmax in 03-prep-climate-covariates.qmd 
     source: provided
 
 ```
@@ -139,4 +139,4 @@ In this tutorial you:
 - Ran the forecast pipeline against projected climate scenarios
 - Interpreted the outputs by climate future
 
-<!-- [TODO: pointer to next steps, e.g. model diagnostics, config file reference, etc.] -->
+If you're interested in using other covariates and/or other future scenario data, the [guide section]({{< ref "/docs/5-forecasting/guide" >}}) provides more general forecasting support.

@@ -82,7 +82,7 @@ The [config files]({{< ref "/docs/5-forecasting/guide/config-files.md" >}}) page
 
 A forecast is run via `forecast-pipeline.R`. It reads the forecast config YAML (which points to the Stage 0 artifacts and covariate data), then sources a collection of scripts. The scripts are detailed in the following [Script reference](#script-reference) section.
 
-The engine and plot modules write their results back into the `04-forecast` folder. The outputs are organized under `04-forecast/runs/` for ensemble summaries across model runs, cross-scenario comparison plots, etc, and `04-forecast/diagnostics/` a set of overall diagnostics. The [Outputs]({{< ref "/docs/5-forecasting/guide/outputs" >}}) guide described this output layout its content.
+The engine and plot modules write their results back into the `04-forecast` folder. The outputs are organized under `04-forecast/runs/` for ensemble summaries across model runs, cross-scenario comparison plots, etc, and `04-forecast/diagnostics/` a set of overall diagnostics. The [Outputs]({{< ref "/docs/5-forecasting/guide/outputs" >}}) guide describes this output layout in more detail.
 
 The steps of `forecast-pipeline.R` are covered in more detail in the [Pipeline Walkthrough]({{< ref "/docs/5-forecasting/methodology/pipeline-walkthrough.md" >}}).
 
