@@ -168,9 +168,9 @@ optional output directory as such:&lt;/p&gt;</description></item><item><title>No
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="usage"&gt;
  Usage
  &lt;a class="anchor" href="#usage"&gt;#&lt;/a&gt;
-&lt;/h2&gt;</description></item><item><title>Input Data</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/guide/input-data/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/guide/input-data/</guid><description>&lt;h1 id="forcast-input-data"&gt;
- Forcast Input data
- &lt;a class="anchor" href="#forcast-input-data"&gt;#&lt;/a&gt;
+&lt;/h2&gt;</description></item><item><title>Input Data</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/guide/input-data/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/guide/input-data/</guid><description>&lt;h1 id="forecast-input-data"&gt;
+ Forecast Input data
+ &lt;a class="anchor" href="#forecast-input-data"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
 &lt;p&gt;The forecasting pipeline requires three inputs:&lt;/p&gt;
 &lt;ol&gt;

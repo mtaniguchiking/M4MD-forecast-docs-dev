@@ -7,9 +7,9 @@
  &lt;code&gt;analysis-pipeline.R&lt;/code&gt; command-line arguments
  &lt;a class="anchor" href="#analysis-pipeliner-command-line-arguments"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;You must set the &lt;code&gt;save_forecast_inputs&lt;/code&gt; argument to &lt;code&gt;TRUE&lt;/code&gt;. This saves the model metadata and full posterior draws, which are required inputs to the forecasting pipeline.&lt;/p&gt;</description></item><item><title>Input Data</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/guide/input-data/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/guide/input-data/</guid><description>&lt;h1 id="forcast-input-data"&gt;
- Forcast Input data
- &lt;a class="anchor" href="#forcast-input-data"&gt;#&lt;/a&gt;
+&lt;p&gt;You must set the &lt;code&gt;save_forecast_inputs&lt;/code&gt; argument to &lt;code&gt;TRUE&lt;/code&gt;. This saves the model metadata and full posterior draws, which are required inputs to the forecasting pipeline.&lt;/p&gt;</description></item><item><title>Input Data</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/guide/input-data/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/guide/input-data/</guid><description>&lt;h1 id="forecast-input-data"&gt;
+ Forecast Input data
+ &lt;a class="anchor" href="#forecast-input-data"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
 &lt;p&gt;The forecasting pipeline requires three inputs:&lt;/p&gt;
 &lt;ol&gt;
