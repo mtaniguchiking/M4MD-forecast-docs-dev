@@ -14,15 +14,15 @@ R objects required to recreate analyses (JAGS inputs) and lookup tables.
 | coda-vars.rds | A list of the variables for which coda samples are drawn |
 | complete-covariates-data.csv | The covariate information used by this model |
 | covariate-moments.rds | Mean and standard deviation used to scale each of the covariates, used to back out of scaled version |
-| eval-mean-for-tv-covariates.rds | What is this file? |
+| eval-mean-for-tv-covariates.rds | Value setting (TRUE/FALSE) that determines whether to evaluate the mean for time-varying covariates |
 | jags-data.rds | A list containing the data |
-| jags-info.rds | Data frame containing the JAGS and CODA variables to be monitored, in addition to several other 'environment' settings/variables used during the original pass through the analysis pipeline |
+| jags-info.rds | Data frame containing the model information specified in the config file, JAGS and CODA variables to be monitored, in addition to several other 'environment' settings/variables used during the original pass through the analysis pipeline |
 | jags-inits.rds | A list containing initial values |
 | jags-n-iters.rds | The number of iterations used for adaptation, burn-in, and subsequent sampling |
-| jags-vars.rds | What is this file? |
+| jags-vars.rds | The names of variables to be monitored (and saved) by JAGS |
 | site-ids-and-indices.csv | Mappings of site IDs (typically character or non-sequential numeric IDs) to sequential indices |
 | site-in-stratum-info.csv | Complete mappings of site IDs to indices, stratum IDs to stratum indices, and (most importantly, for our purposes) indices for sites within each stratum |
 | state-variable-data-summary.txt | Used as a straight-face test for number of records, data types, etc. |
 | state-variable-data.csv | The complete, pre-processed dataset used to construct many of the objects described above |
 | stratum-ids-and-indices.csv | Mappings of stratum IDs (stratum names) to their corresponding sequential indices |
-| vars-to-watch.txt | The names of variables to be monitored (and saved) by JAGS |
+| vars-to-watch.txt | The names of variables to be monitored (and saved) by JAGS in text format |
