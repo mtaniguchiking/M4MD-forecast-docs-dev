@@ -7,103 +7,9 @@
   #
 
 Tabular and graphical summaries of Markov chain Monte Carlo (MCMC) draws from the posterior distribution of the parameters of a Bayesian model. The asterisk corresponds to the coefficients.
-
-  
-      
-          File
-          Description
-      
-  
-  
-      
-          coef/
-          Model coefficients
-      
-      
-          me/
-          Marginal effects
-      
-      
-          park/
-          Park-level inference
-      
-      
-          site/
-          Site-level inference
-      
-      
-          strata/
-          Stratum-level inference
-      
-      
-          trend/
-          Trend inference
-      
-      
-          zone/
-          Zone-level inference (optional)
-      
-      
-          coda-samples-quantiles.csv
-          Quantiles of the posterior distribution of key variables / parameters
-      
-      
-          coda-samples-summary.txt
-          Descriptive statistics and quantiles of the posterior distribution of key variables / parameters
-      
-  
-
-
-  Subdirectories
-  #
-
-
-  coef/ | model coefficients
-  #
-
-
-  
-      
-          File
-          Description
-      
-  
-  
-      
-          additional-coef-estimates-Beta-untransformed.png
-          The posterior distribution of fixed effect (covariate) terms.
-      
-      
-          beta-coef-estimates-untransformed.png
-          The median (points) and 95% equal-tailed credible intervals for group-level (random) effects. When the model is b0 only the intercepts (
-
-
-
-  \(\beta_{0j}\)
-
-) will vary by site within each stratum. When the model is b0-b1 both intercept (
-  \(\beta_{0j}\)
-
-) and time-slope terms (
-  \(\beta_{1j}\)
-
-) will vary by site (with correlation 
-  \(\rho\)
-
-).
-      
-      
-          hypers-hist-*.png
-          The hyper-distribution of random intercepts (&ldquo;hypers-hist-B0.png&rdquo;) or random time-slope terms (&ldquo;hypers-hist-B1.png&rdquo;) for each stratum
-      
-  
-
-
-  me/ | marginal effects
-  #
-
-Under construction"><meta name=theme-color content="#FFFFFF"><meta name=color-scheme content="light dark"><meta property="og:url" content="https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/c-outputs/output-dir/03-inference/"><meta property="og:site_name" content="Models for missing data"><meta property="og:title" content="03-inference"><meta property="og:description" content="03-inference | model inference # Overview # Tabular and graphical summaries of Markov chain Monte Carlo (MCMC) draws from the posterior distribution of the parameters of a Bayesian model. The asterisk corresponds to the coefficients.
-File Description coef/ Model coefficients me/ Marginal effects park/ Park-level inference site/ Site-level inference strata/ Stratum-level inference trend/ Trend inference zone/ Zone-level inference (optional) coda-samples-quantiles.csv Quantiles of the posterior distribution of key variables / parameters coda-samples-summary.txt Descriptive statistics and quantiles of the posterior distribution of key variables / parameters Subdirectories # coef/ | model coefficients # File Description additional-coef-estimates-Beta-untransformed.png The posterior distribution of fixed effect (covariate) terms. beta-coef-estimates-untransformed.png The median (points) and 95% equal-tailed credible intervals for group-level (random) effects. When the model is b0 only the intercepts ( \(\beta_{0j}\) ) will vary by site within each stratum. When the model is b0-b1 both intercept ( \(\beta_{0j}\) ) and time-slope terms ( \(\beta_{1j}\) ) will vary by site (with correlation \(\rho\) ). hypers-hist-*.png The hyper-distribution of random intercepts (“hypers-hist-B0.png”) or random time-slope terms (“hypers-hist-B1.png”) for each stratum me/ | marginal effects # Under construction"><meta property="og:locale" content="en_us"><meta property="og:type" content="website"><title>03-inference | Models for missing data</title><link rel=manifest href=/M4MD-forecast-docs-dev/manifest.json><link rel=icon href=/M4MD-forecast-docs-dev/favicon.png type=image/x-icon><link rel=stylesheet href=/M4MD-forecast-docs-dev/book.min.f7fd467d6327832cc2530f4ce11bc285934664d42402921c98dd150797b90e2b.css integrity="sha256-9/1GfWMngyzCUw9M4RvChZNGZNQkApIcmN0VB5e5Dis=" crossorigin=anonymous><script defer src=/M4MD-forecast-docs-dev/flexsearch.min.js></script><script defer src=/M4MD-forecast-docs-dev/en.search.min.462dd511d0e7b2b0db4091e0d2d9207a8f2ddcfa444848c20e868f0294b5560f.js integrity="sha256-Ri3VEdDnsrDbQJHg0tkgeo8t3PpESEjCDoaPApS1Vg8=" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-W93Y6ZYE7X"></script><script>var doNotTrack=!1,dnt=navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack,doNotTrack=dnt=="1"||dnt=="yes";if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-W93Y6ZYE7X")}</script><link rel=alternate type=application/rss+xml href=https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/c-outputs/output-dir/03-inference/index.xml title="Models for missing data"><link rel=stylesheet href=/M4MD-forecast-docs-dev/katex/katex.min.css><script defer src=/M4MD-forecast-docs-dev/katex/katex.min.js></script><script defer src=/M4MD-forecast-docs-dev/katex/auto-render.min.js onload='renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"\\[",right:"\\]",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1}],throwOnError:!1})'></script><link rel=stylesheet type=text/css href=/hugo-cite.css></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
+If the configuration file specifies time effect: disabled, only the coef (coefficient) folder is produced.
+If the configuration file specifies drivers: true, an additional me (marginal effects) folder is produced.
+If the pipeline specifies save_forecast_inputs, an additional forecast folder is produced."><meta name=theme-color content="#FFFFFF"><meta name=color-scheme content="light dark"><meta property="og:url" content="https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/c-outputs/output-dir/03-inference/"><meta property="og:site_name" content="Models for missing data"><meta property="og:title" content="03-inference"><meta property="og:description" content="03-inference | model inference # Overview # Tabular and graphical summaries of Markov chain Monte Carlo (MCMC) draws from the posterior distribution of the parameters of a Bayesian model. The asterisk corresponds to the coefficients. If the configuration file specifies time effect: disabled, only the coef (coefficient) folder is produced. If the configuration file specifies drivers: true, an additional me (marginal effects) folder is produced. If the pipeline specifies save_forecast_inputs, an additional forecast folder is produced."><meta property="og:locale" content="en_us"><meta property="og:type" content="website"><title>03-inference | Models for missing data</title><link rel=manifest href=/M4MD-forecast-docs-dev/manifest.json><link rel=icon href=/M4MD-forecast-docs-dev/favicon.png type=image/x-icon><link rel=stylesheet href=/M4MD-forecast-docs-dev/book.min.f7fd467d6327832cc2530f4ce11bc285934664d42402921c98dd150797b90e2b.css integrity="sha256-9/1GfWMngyzCUw9M4RvChZNGZNQkApIcmN0VB5e5Dis=" crossorigin=anonymous><script defer src=/M4MD-forecast-docs-dev/flexsearch.min.js></script><script defer src=/M4MD-forecast-docs-dev/en.search.min.eab35cf6e825056fffe44895c8153f7ecfdeb247b90362df18eda759db55f2db.js integrity="sha256-6rNc9uglBW//5EiVyBU/fs/eske5A2LfGO2nWdtV8ts=" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-W93Y6ZYE7X"></script><script>var doNotTrack=!1,dnt=navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack,doNotTrack=dnt=="1"||dnt=="yes";if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-W93Y6ZYE7X")}</script><link rel=alternate type=application/rss+xml href=https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/c-outputs/output-dir/03-inference/index.xml title="Models for missing data"><link rel=stylesheet href=/M4MD-forecast-docs-dev/katex/katex.min.css><script defer src=/M4MD-forecast-docs-dev/katex/katex.min.js></script><script defer src=/M4MD-forecast-docs-dev/katex/auto-render.min.js onload='renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"\\[",right:"\\]",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1}],throwOnError:!1})'></script><link rel=stylesheet type=text/css href=/hugo-cite.css></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
 <input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/M4MD-forecast-docs-dev/><span>Models for missing data</span></a></h2><div class=book-search><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><ul><li><span>Getting started</span><ul><li><a href=/M4MD-forecast-docs-dev/docs/0-getting-started/installation/>Repository cloning</a></li><li><a href=/M4MD-forecast-docs-dev/docs/0-getting-started/requirements/>Software requirements</a></li><li><a href=/M4MD-forecast-docs-dev/docs/0-getting-started/folder-structure/>Folder structure</a></li><li><a href=/M4MD-forecast-docs-dev/docs/0-getting-started/quickstart/>Quickstart</a></li><li><a href=/M4MD-forecast-docs-dev/docs/0-getting-started/sync-changes/>Sync changes</a></li></ul></li><li><span>Guide</span><ul><li><input type=checkbox id=section-f0006d90f49a940fc6c54938d45fb72e class=toggle>
 <label for=section-f0006d90f49a940fc6c54938d45fb72e class="flex justify-between"><a href=/M4MD-forecast-docs-dev/docs/1-guide/a-data/>Data</a></label><ul><li><a href=/M4MD-forecast-docs-dev/docs/1-guide/a-data/i-y-info/>Response data</a></li><li><a href=/M4MD-forecast-docs-dev/docs/1-guide/a-data/ii-x-info/>Covariate data</a></li><li><a href=/M4MD-forecast-docs-dev/docs/1-guide/a-data/iii-types-of-random-variables/>Types of random variables</a><ul></ul></li></ul></li><li><input type=checkbox id=section-966e82a0635a396abaf9bb0f3a5a8d87 class=toggle>
 <label for=section-966e82a0635a396abaf9bb0f3a5a8d87 class="flex justify-between"><a href=/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/>Config files</a></label><ul><li><a href=/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/i-design-metadata/>Design metadata</a><ul></ul></li><li><input type=checkbox id=section-69c0bb39335c38c9ebacf90eb543b4e1 class=toggle>
@@ -119,7 +25,10 @@ File Description coef/ Model coefficients me/ Marginal effects park/ Park-level 
 </label><strong>03-inference</strong>
 <label for=toc-control><img src=/M4MD-forecast-docs-dev/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#overview>Overview</a></li><li><a href=#subdirectories>Subdirectories</a><ul><li><a href=#coef--model-coefficients>coef/ | model coefficients</a></li><li><a href=#me--marginal-effects>me/ | marginal effects</a></li><li><a href=#park--park-level-inference>park/ | park-level inference</a></li><li><a href=#site--site-level-inference>site/ | site-level inference</a></li><li><a href=#strata--stratum-level-inference>strata/ | stratum-level inference</a></li><li><a href=#trend--trend>trend/ | trend</a></li></ul></li><li><a href=#references>References</a></li></ul></nav></aside></header><article class=markdown><h1 id=03-inference--model-inference>03-inference | model inference
 <a class=anchor href=#03-inference--model-inference>#</a></h1><h2 id=overview>Overview
-<a class=anchor href=#overview>#</a></h2><p>Tabular and graphical summaries of Markov chain Monte Carlo (MCMC) draws from the posterior distribution of the parameters of a Bayesian model. The asterisk corresponds to the coefficients.</p><table><thead><tr><th style=text-align:left><strong>File</strong></th><th style=text-align:left><strong>Description</strong></th></tr></thead><tbody><tr><td style=text-align:left>coef/</td><td style=text-align:left>Model coefficients</td></tr><tr><td style=text-align:left>me/</td><td style=text-align:left>Marginal effects</td></tr><tr><td style=text-align:left>park/</td><td style=text-align:left>Park-level inference</td></tr><tr><td style=text-align:left>site/</td><td style=text-align:left>Site-level inference</td></tr><tr><td style=text-align:left>strata/</td><td style=text-align:left>Stratum-level inference</td></tr><tr><td style=text-align:left>trend/</td><td style=text-align:left>Trend inference</td></tr><tr><td style=text-align:left>zone/</td><td style=text-align:left>Zone-level inference (optional)</td></tr><tr><td style=text-align:left>coda-samples-quantiles.csv</td><td style=text-align:left>Quantiles of the posterior distribution of key variables / parameters</td></tr><tr><td style=text-align:left>coda-samples-summary.txt</td><td style=text-align:left>Descriptive statistics and quantiles of the posterior distribution of key variables / parameters</td></tr></tbody></table><h2 id=subdirectories>Subdirectories
+<a class=anchor href=#overview>#</a></h2><p>Tabular and graphical summaries of Markov chain Monte Carlo (MCMC) draws from the posterior distribution of the parameters of a Bayesian model. The asterisk corresponds to the coefficients.
+If the configuration file specifies <code>time effect: disabled</code>, only the <code>coef</code> (coefficient) folder is produced.
+If the configuration file specifies <code>drivers: true</code>, an additional <code>me</code> (marginal effects) folder is produced.
+If the pipeline specifies <code>save_forecast_inputs</code>, an additional <code>forecast</code> folder is produced.</p><table><thead><tr><th style=text-align:left><strong>File</strong></th><th style=text-align:left><strong>Description</strong></th></tr></thead><tbody><tr><td style=text-align:left>coef/</td><td style=text-align:left>Model coefficients</td></tr><tr><td style=text-align:left>me/</td><td style=text-align:left>Marginal effects</td></tr><tr><td style=text-align:left>park/</td><td style=text-align:left>Park-level inference</td></tr><tr><td style=text-align:left>site/</td><td style=text-align:left>Site-level inference</td></tr><tr><td style=text-align:left>strata/</td><td style=text-align:left>Stratum-level inference</td></tr><tr><td style=text-align:left>trend/</td><td style=text-align:left>Trend inference</td></tr><tr><td style=text-align:left>zone/</td><td style=text-align:left>Zone-level inference (optional)</td></tr><tr><td style=text-align:left>coda-samples-quantiles.csv</td><td style=text-align:left>Quantiles of the posterior distribution of key variables / parameters</td></tr><tr><td style=text-align:left>coda-samples-summary.txt</td><td style=text-align:left>Descriptive statistics and quantiles of the posterior distribution of key variables / parameters</td></tr></tbody></table><h2 id=subdirectories>Subdirectories
 <a class=anchor href=#subdirectories>#</a></h2><h3 id=coef--model-coefficients>coef/ | model coefficients
 <a class=anchor href=#coef--model-coefficients>#</a></h3><table><thead><tr><th style=text-align:left><strong>File</strong></th><th style=text-align:left><strong>Description</strong></th></tr></thead><tbody><tr><td style=text-align:left>additional-coef-estimates-Beta-untransformed.png</td><td style=text-align:left>The posterior distribution of fixed effect (covariate) terms.</td></tr><tr><td style=text-align:left>beta-coef-estimates-untransformed.png</td><td style=text-align:left>The median (points) and 95% equal-tailed credible intervals for group-level (random) effects. When the model is <code>b0</code> only the intercepts (
 <link rel=stylesheet href=/M4MD-forecast-docs-dev/katex/katex.min.css><script defer src=/M4MD-forecast-docs-dev/katex/katex.min.js></script><script defer src=/M4MD-forecast-docs-dev/katex/auto-render.min.js onload=renderMathInElement(document.body)></script><span>\(\beta_{0j}\)
@@ -128,8 +37,23 @@ File Description coef/ Model coefficients me/ Marginal effects park/ Park-level 
 </span>) and time-slope terms (<span>
 \(\beta_{1j}\)
 </span>) will vary by site (with correlation <span>\(\rho\)
-</span>).</td></tr><tr><td style=text-align:left>hypers-hist-*.png</td><td style=text-align:left>The hyper-distribution of random intercepts (&ldquo;hypers-hist-B0.png&rdquo;) or random time-slope terms (&ldquo;hypers-hist-B1.png&rdquo;) for each stratum</td></tr></tbody></table><h3 id=me--marginal-effects>me/ | marginal effects
-<a class=anchor href=#me--marginal-effects>#</a></h3><p>Under construction</p><h3 id=park--park-level-inference>park/ | park-level inference
+</span>).</td></tr><tr><td style=text-align:left>hypers-hist-*.png</td><td style=text-align:left>The hyper-distribution of random intercepts (&ldquo;hypers-hist-B0.png&rdquo;) or random time-slope terms (&ldquo;hypers-hist-B1.png&rdquo;) for each stratum</td></tr></tbody></table><h4 id=examples>Examples
+<a class=anchor href=#examples>#</a></h4><p>In the example below, the posterior distribution of the fixed effect (coefficient) is mostly above 0, indicating a positive relationship between the coefficient (mean.deficit) and the response (native graminoid cover). This figure will only appear in the output if you include a covariate in the model.
+<img src=01-additional-coef-estimates.png alt=addition-coef-estimates></p><p>The example below shows the median (point) and 95% credible intervals (whiskers) for random effects. You can see how the estimate for the intercept (<span>
+\(\beta_{0}\)
+</span>) varies by each site within each strata (hills and valley), where some are positive and some are negative. This particular model did not allow the time-slope terms (<span>
+\(\beta_{1}\)
+</span>) to vary by site, so the coefficients for slope are fixed for each site in a stratum. If the model were <code>b0-b1</code> (varying intercept and slopes), you would also see the variation of the time-slope term by site.
+![beta-coef-estimates]!(02-beta-coef-estimates-untransformed.png)</p><p>The mean (<span>
+\(\mu\)
+</span>) and variance (<span>
+\(\sigma\)
+</span>) of the hyper-distribution of random intercepts term for each strata.
+<img src=03-hypers-hist.png alt=hypers-histogram></p><h3 id=me--marginal-effects>me/ | marginal effects
+<a class=anchor href=#me--marginal-effects>#</a></h3><p>Marginal effects folder includes any marginal effects specified in the config file.</p><table><thead><tr><th style=text-align:left><strong>File</strong></th><th style=text-align:left><strong>Description</strong></th></tr></thead><tbody><tr><td style=text-align:left>me-fe_mean.deficit-band.jpg</td><td style=text-align:left>A plot showing the marginal fixed effects, or the change in the response in relation to the covariate, while holding time constant.</td></tr><tr><td style=text-align:left>me-fe_mean.deficit-spaghetti.jpg</td><td style=text-align:left>A variation of the plot above with different aesthetics.</td></tr><tr><td style=text-align:left>me-X.rds</td><td style=text-align:left>The data required to reproduce the plot.</td></tr></tbody></table><h4 id=examples-1>Examples
+<a class=anchor href=#examples-1>#</a></h4><p>This example shows the relationship between the covariate (mean.deficit) and the response (native graminoid relative cover), while holding time constant. There appears to be a slightly positive slope. Refer to the coef output (additional-coef-estimates-Beta-untransformed.png) to see how the posterior distribution relates to 0 to determine whether there is a significant trend.
+<img src=04-me-fe_mean.deficit-band.png alt=me-fe></p><p>The spaghetti plot shows the same information as the previous plot, just with lines for the posterior draws (darker shading indicates a higher concentration of lines) and dashed lines showing the 95% credible intervals.
+<img src=05-me-fe_mean.deficit.spaghetti.png alt=me-fe-spaghetti></p><h3 id=park--park-level-inference>park/ | park-level inference
 <a class=anchor href=#park--park-level-inference>#</a></h3><p>Park-level mean of the response over time. Subfolders include results for all possible sites (&ldquo;all&rdquo;) and sampled sites (&ldquo;sampled&rdquo;). Unless you have provided covariates for all sites, inference with covariates (the <code>pred</code> files) will be limited to sampled sites.</p><p>In the file names below, the first asterisk corresponds to either <code>hat</code> or <code>pred</code>. The <code>hat</code> files hold any covariates present at their mean (essentially removing &ndash; or controlling for &ndash; the effect of changes in the covariates over time). The <code>pred</code> files (<em>if</em> present) correspond to predictions of park-level means conditional on the actual time-varying values of covariates &ndash; AKA &ldquo;bumpy plots.&rdquo; The uncertainty intervals, sometimes called &ldquo;credible intervals&rdquo;, are derived using the 95% <a href=https://cran.r-project.org/web/packages/HDInterval/index.html>Highest (Posterior) Density Intervals</a>, by default (dotted black lines). The median is shown in the solid black line. If &ldquo;out of sample&rdquo; (<code>oos</code>) JAGS objects, exist, results are provided both for the expected value (i.e., for the mean) of new observations as well as the value of new observations themselves
 <span class=hugo-cite-intext itemprop=citation>(<span class=hugo-cite-group>
 <a href=#hobbs2015bayesian><span class=visually-hidden>Citation: </span><span itemprop=author itemscope itemtype=https://schema.org/Person><meta itemprop=givenName content="N Thompson"><span itemprop=familyName>Hobbs</span></span> & <span itemprop=author itemscope itemtype=https://schema.org/Person><meta itemprop=givenName content="Mevin B"><span itemprop=familyName>Hooten</span></span>, <span itemprop=datePublished>2015</span>, p.&nbsp;197</a><span class=hugo-cite-citation>
@@ -141,7 +65,10 @@ File Description coef/ Model coefficients me/ Marginal effects park/ Park-level 
  
 <span itemprop=publisher itemtype=http://schema.org/Organization itemscope><span itemprop=name>Princeton University Press</span></span>.</span>
 </span></span>)</span>
-.</p><table><thead><tr><th style=text-align:left><strong>File</strong></th><th style=text-align:left><strong>Description</strong></th></tr></thead><tbody><tr><td style=text-align:left>*-park-mean-annual-summary-hdi95.csv</td><td style=text-align:left>Annual estimates of status (median, lower and upper credible intervals).</td></tr><tr><td style=text-align:left>*-park-mean-plot-hdi95.jpg</td><td style=text-align:left>Graphical representations of the RDS file. In the figures, the semi-transparent thin lines are draws from the posterior distribution of the park-level mean; the thick, solid dark line is the median of the mean and the thick, dashed lines correspond to the 95% HDIs at each timestep.</td></tr><tr><td style=text-align:left>*-park-mean-plot-objects-hdi95.rds</td><td style=text-align:left>The data required to reproduce the plot.</td></tr></tbody></table><h3 id=site--site-level-inference>site/ | site-level inference
+.</p><table><thead><tr><th style=text-align:left><strong>File</strong></th><th style=text-align:left><strong>Description</strong></th></tr></thead><tbody><tr><td style=text-align:left>*-park-mean-annual-summary-hdi95.csv</td><td style=text-align:left>Annual estimates of status (median, lower and upper credible intervals).</td></tr><tr><td style=text-align:left>*-park-mean-plot-hdi95.jpg</td><td style=text-align:left>Graphical representations of the RDS file. In the figures, the semi-transparent thin lines are draws from the posterior distribution of the park-level mean; the thick, solid dark line is the median of the mean and the thick, dashed lines correspond to the 95% HDIs at each timestep.</td></tr><tr><td style=text-align:left>*-park-mean-plot-objects-hdi95.rds</td><td style=text-align:left>The data required to reproduce the plot.</td></tr></tbody></table><p>Depending on the analysis, several other files may appear, including: &lsquo;*-site-means-(&lt;stratum-id>).png&rsquo;, and &lsquo;pred-site-means-df.csv&rsquo;.</p><h4 id=examples-2>Examples
+<a class=anchor href=#examples-2>#</a></h4><p>In the “hat” plot, the covariate is held at its mean, producing a smooth trend line of mean native graminoid relative cover over time.
+<img src=06-hat-park-mean-annual-summary-hdi95.png alt=hat-park-mean></p><p>In the “pred” plot, the covariate is time-varying, showing the influence over changing levels of water deficit during the sampling period. Notice there still appears to be an overall declining trend.
+<img src=07-pred-park-mean-plot-hdi95.png alt=pred-park-mean></p><h3 id=site--site-level-inference>site/ | site-level inference
 <a class=anchor href=#site--site-level-inference>#</a></h3><p>Under construction</p><h3 id=strata--stratum-level-inference>strata/ | stratum-level inference
 <a class=anchor href=#strata--stratum-level-inference>#</a></h3><p>Under construction</p><h3 id=trend--trend>trend/ | trend
 <a class=anchor href=#trend--trend>#</a></h3><p>Under construction</p><h2 id=references>References
@@ -152,6 +79,6 @@ File Description coef/ Model coefficients me/ Marginal effects park/ Park-level 
 (<span itemprop=datePublished>2015</span>).
  <span itemprop=name><i>Bayesian models</i></span>.
  
-<span itemprop=publisher itemtype=http://schema.org/Organization itemscope><span itemprop=name>Princeton University Press</span></span>.</span></dd></div></dl></section></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div><a class="flex align-center" href=https://github.com/lzachmann/models-for-missing-data/commit/f59265cbb26fe049ac8e876fbbd3ff3b29f3eec4 title='Last modified by Max Taniguchi-King | Jun 26, 2026' target=_blank rel=noopener><img src=/M4MD-forecast-docs-dev/svg/calendar.svg class=book-icon alt=Calendar>
-<span>Jun 26, 2026</span></a></div><div><a class="flex align-center" href=https://github.com/lzachmann/models-for-missing-data/edit/main/docs/website/content/docs/1-guide/c-outputs/output-dir/03-inference/_index.md target=_blank rel=noopener><img src=/M4MD-forecast-docs-dev/svg/edit.svg class=book-icon alt=Edit>
+<span itemprop=publisher itemtype=http://schema.org/Organization itemscope><span itemprop=name>Princeton University Press</span></span>.</span></dd></div></dl></section></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div><a class="flex align-center" href=https://github.com/lzachmann/models-for-missing-data/commit/982461d7fc488d4db92eed97d21387caee4f2d0a title='Last modified by Borgman | Jul 9, 2026' target=_blank rel=noopener><img src=/M4MD-forecast-docs-dev/svg/calendar.svg class=book-icon alt=Calendar>
+<span>Jul 9, 2026</span></a></div><div><a class="flex align-center" href=https://github.com/lzachmann/models-for-missing-data/edit/main/docs/website/content/docs/1-guide/c-outputs/output-dir/03-inference/_index.md target=_blank rel=noopener><img src=/M4MD-forecast-docs-dev/svg/edit.svg class=book-icon alt=Edit>
 <span>Edit this page</span></a></div></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#overview>Overview</a></li><li><a href=#subdirectories>Subdirectories</a><ul><li><a href=#coef--model-coefficients>coef/ | model coefficients</a></li><li><a href=#me--marginal-effects>me/ | marginal effects</a></li><li><a href=#park--park-level-inference>park/ | park-level inference</a></li><li><a href=#site--site-level-inference>site/ | site-level inference</a></li><li><a href=#strata--stratum-level-inference>strata/ | stratum-level inference</a></li><li><a href=#trend--trend>trend/ | trend</a></li></ul></li><li><a href=#references>References</a></li></ul></nav></div></aside></main></body></html>
