@@ -46,13 +46,13 @@ In this figure, the blue plots show the actual data (y) and the gray plots show 
 ![y-rep-by-unit](02-y-rep-by-unit code-id-9-draws.png)
 
 This figure is a variation of the previous figure where you can see how well the replicate data matches the actual data. In both strata, the simulated data appears to have lower variance than the actual data (which will also be revealed in the last figure in this section). 
-![y-rep-by-stratum](03-y-tep-by-stratum id-binline.png)
+![y-rep-by-stratum](03-y-rep-by-stratum id-binline.png)
 
 The vertical line showing the value of the test statistic is in the middle of the distribution for both the hill stratum (left) and valley stratum (right). This suggests the model is accurately estimating the mean.
-![y-rep-by-stratum-stats](04-y-rep-by-stratum id-binline-stats.png)
+![y-rep-by-stratum-stats](04-y-rep-by-stratum id-binline-stats)
 
 In this example, the test statistic for mean is very close to 0.5 indicating the model’s simulated data is accurately capturing the mean. However, the test statistic for the variance is 0. This means the model is likely overfitted and lacking the variability present in the observed data, indicating a different likelihood may be needed.
-![y-rep-by-unit-stats](05-y-rep-by-unit code id-stats.png)
+![y-rep-by-unit-stats](05-y-rep-by-unit code id-stats)
 
 ### variography/ | spatial autocorrelation
  

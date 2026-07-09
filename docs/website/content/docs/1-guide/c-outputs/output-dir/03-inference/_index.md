@@ -12,7 +12,7 @@ bibFile: content/posts/bib.json
 Tabular and graphical summaries of Markov chain Monte Carlo (MCMC) draws from the posterior distribution of the parameters of a Bayesian model. The asterisk corresponds to the coefficients. 
 If the configuration file specifies `time effect: disabled`, only the `coef` (coefficient) folder is produced.
 If the configuration file specifies `drivers: true`, an additional `me` (marginal effects) folder is produced.
-If the pipeline specifies `save_forecast_inputs`, an additional `forecast` folder is produced.
+If the pipeline specifies `save_forecast_inputs`, an additional `04-forecast` folder is produced. See [Fitting for Forecasting]({{< ref "/docs/5-forecasting/guide/fitting-a-model">}}) for details.
 
 | __File__ | __Description__ |
 |:---|:---|
@@ -41,7 +41,7 @@ In the example below, the posterior distribution of the fixed effect (coefficien
 ![addition-coef-estimates](01-additional-coef-estimates.png)
 
 The example below shows the median (point) and 95% credible intervals (whiskers) for random effects. You can see how the estimate for the intercept ({{< katex >}}\beta_{0}{{< /katex >}}) varies by each site within each strata (hills and valley), where some are positive and some are negative. This particular model did not allow the time-slope terms ({{< katex >}}\beta_{1}{{< /katex >}}) to vary by site, so the coefficients for slope are fixed for each site in a stratum. If the model were `b0-b1` (varying intercept and slopes), you would also see the variation of the time-slope term by site.
-![beta-coef-estimates]!(02-beta-coef-estimates-untransformed.png)
+![beta-coef-estimates](02-beta-coef-estimates-untransformed.png)
 
 The mean ({{< katex >}}\mu{{< /katex >}}) and variance ({{< katex >}}\sigma{{< /katex >}}) of the hyper-distribution of random intercepts term for each strata.
 ![hypers-histogram](03-hypers-hist.png)
@@ -75,7 +75,7 @@ In the file names below, the first asterisk corresponds to either `hat` or `pred
 | *-park-mean-plot-hdi95.jpg | Graphical representations of the RDS file. In the figures, the semi-transparent thin lines are draws from the posterior distribution of the park-level mean; the thick, solid dark line is the median of the mean and the thick, dashed lines correspond to the 95% HDIs at each timestep. |
 | *-park-mean-plot-objects-hdi95.rds| The data required to reproduce the plot. |
 
-Depending on the analysis, several other files may appear, including: '\*-site-means-(\<stratum-id\>).png', and 'pred-site-means-df.csv'. 
+Depending on the analysis, several other files may appear, including: `\*-site-means-(\<stratum-id\>).png`, and `pred-site-means-df.csv`. 
 
 #### Examples
 In the “hat” plot, the covariate is held at its mean, producing a smooth trend line of mean native graminoid relative cover over time. 
@@ -84,15 +84,58 @@ In the “hat” plot, the covariate is held at its mean, producing a smooth tre
 In the “pred” plot, the covariate is time-varying, showing the influence over changing levels of water deficit during the sampling period. Notice there still appears to be an overall declining trend.
 ![pred-park-mean](07-pred-park-mean-plot-hdi95.png)
 
-
 ### site/ | site-level inference
-Under construction
+Site-level mean of the response over time. Subfolders for all possible sites (“all”) and sampled sites (“sampled”). Unless you have provided covariates for all sites, inference with covariates (the ‘pred’ files) will be limited to sampled sites. 
+
+In the file names below, the first asterisk corresponds to either 'hat' or 'pred', as described under Park-level inference. 
+
+| __File__ | __Description__ | 
+|:---|:---| 
+| *-site-in-stratum-means.csv | Annual estimates of status of the response (mean, standard deviation, lower and upper credible intervals) for each site-in-stratum.  Especially useful in creating custom plots.| 
+| *-site-in-stratum-means.png | Graphical representations of the RDS file showing the site-level mean (black lines) and the median of site-level means (blue line) for each stratum over time. |  
+| *-site-in-stratum-means.rds| The data required to reproduce the plot.| 
+| *-site-means-(stratumX).png | Estimates of site-level means for each sampled site. The black line represents the mean, the blue band 95% credible intervals, and the dots values for each sampling event. There should be a separate file for each stratum. | 
+
+#### Examples
+These plots show the site-level means (black lines) for each site in the hills stratum (left) and valley stratum (right), while holding the covariate at its mean. The blue line is the median of the site-level means. There appears to be a larger decline in native graminoid cover in the hill sites than the valley sites. The spacing between the lines reflects the variation among sites. (The intercept, but not the slope, was permitted to vary among sites in this model.) 
+![hat site in stratum means](08-hat-site-in-stratum-means.png)
+
+These plots show the site-level means individually, with observed data overlaid (dots). This model allowed the intercept, but not the slope, to vary among sites. 
+![hat site means](09-hat-site-means-(valley).png)
+
+These plots allow the covariate to vary over time, as illustrated in the variation in the response over time, reflecting changes in water deficit year-to-year.
+![pred site in stratum](10-pred-site-in-stratum-means.png)
 
 ### strata/ | stratum-level inference
-Under construction
+Strata-level mean of the response over time. Subfolders for all possible sites (“all”) and sampled sites (“sampled”). Unless you have provided covariates for all sites, inference with covariates (the ‘pred’ files) will be limited to sampled sites. 
+
+In the file names below, the first asterisk corresponds to either 'hat' or 'pred', as described under Park-level inference. 
+
+| __File__ | __Description__ | 
+|:---|:---|
+| *-stratum-means-contrasts.png | Plot showing the difference in stratum-level response over time.| 
+| *-stratum-means-contrasts.rds | The data required to reproduce the contrast plot.| 
+| *-stratum-means.csv | Annual estimates of status of the response (mean, standard deviation, lower and upper credible intervals) for each stratum.  Especially useful in creating custom plots.| 
+| *-stratum-means.png | Graphical representations of the RDS file showing the stratum-level mean over time. In the figures, the semi-transparent thin lines are draws from the posterior distribution of the stratum-level mean; the thick, solid dark line is the median of the mean and the thick, dashed lines correspond to the 95% HDIs at each timestep.| 
+| *-stratum-means.rds | The data required to reproduce the stratum-means plot. | 
+| *-stratum-means-no-cis.png | A variation of the stratum-means plot with no dashed lines showing the credible intervals. | 
+| *-stratum-means-with-data.png | A variation of the stratum-means plot showing gray points representing actual data, thick dashed lines for the credible intervals, and thin dashed lines representing the credible intervals for a new, unsampled site (which are usually wider). | 
+| *-stratum-means-with-data-no-cis.png | A variation of the stratum-means plot showing actual data and no credible interval. 
+| *-stratum-new-obs.png | A variation of the stratum-means plot showing both the credible intervals for sampled sites (thick dashed lines) and for a new, unsampled observation (thin dashed lines).
 
 ### trend/ | trend
-Under construction
+Trend estimates of the response. Subfolders for all possible sites (“all”) and sampled sites (“sampled”).
+
+| __File__ | __Description__ | 
+|:---|:---|
+|---|---| 
+| trend-park-avg-annual-change-plot.jpg | Plot showing the estimates of the median trend at the park and strata level. The x-axis is the change in the response per year. Prob It_0 is the probability that the median is < 0. | 
+| trend-park-avg-annual-change-posteriors.csv |Posterior draws of the average change per year with the  quantile value. | 
+| trend-park-avg-annual-change-quantiles.csv | Mean change per year at the park and strata level. | 
+
+#### Examples
+This plot suggests a negative trend in average annual native graminoid relative cover. It is most negative in the hills stratum.
+![trend](11-trend-park-avg-annual-change-plot.jpg)
 
 ## References
 
