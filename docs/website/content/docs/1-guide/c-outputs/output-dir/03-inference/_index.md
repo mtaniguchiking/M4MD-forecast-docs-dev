@@ -60,7 +60,8 @@ Marginal effects folder includes any marginal effects specified in the config fi
 This example shows the relationship between the covariate (mean.deficit) and the response (native graminoid relative cover), while holding time constant. There appears to be a slightly positive slope. Refer to the coef output (additional-coef-estimates-Beta-untransformed.png) to see how the posterior distribution relates to 0 to determine whether there is a significant trend.
 ![me-fe](04-me-fe_mean.deficit-band.png)
 
-The spaghetti plot shows the same information as the previous plot, just with lines for the posterior draws (darker shading indicates a higher concentration of lines) and dashed lines showing the 95% credible intervals. 
+The spaghetti plot shows the same information as the previous plot, just with lines for the posterior draws (darker shading indicates a higher concentration of lines) and dashed lines showing the 95% credible intervals.
+
 ![me-fe-spaghetti](05-me-fe_mean.deficit.spaghetti.png)
 
 ### park/ | park-level inference
