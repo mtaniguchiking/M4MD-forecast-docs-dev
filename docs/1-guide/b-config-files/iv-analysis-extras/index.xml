@@ -17,7 +17,7 @@
  Finite population correction
  &lt;a class="anchor" href="#finite-population-correction"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
-&lt;p&gt;When the size of the sample collected is a significant proportion of the overall population, then we must use a finite population correction, a topic we introduce briefly in &lt;a href="https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/posts/sampling-and-populations/"&gt;another post&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;When the size of the sample collected is a significant proportion of the overall population, then we must use a finite population correction (FPC), a topic we introduce briefly in &lt;a href="https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/posts/sampling-and-populations/"&gt;another post&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id="syntax"&gt;
  Syntax
  &lt;a class="anchor" href="#syntax"&gt;#&lt;/a&gt;
@@ -32,7 +32,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="usage"&gt;
  Usage
  &lt;a class="anchor" href="#usage"&gt;#&lt;/a&gt;
-&lt;/h2&gt;</description></item><item><title>Marginal effects</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iv-analysis-extras/marginal-effects/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iv-analysis-extras/marginal-effects/</guid><description>&lt;h1 id="marginal-effects"&gt;
+&lt;/h2&gt;
+&lt;p&gt;To toggle FPC, use the &lt;code&gt;finite population correction&lt;/code&gt; key.&lt;/p&gt;</description></item><item><title>Marginal effects</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iv-analysis-extras/marginal-effects/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iv-analysis-extras/marginal-effects/</guid><description>&lt;h1 id="marginal-effects"&gt;
  Marginal effects
  &lt;a class="anchor" href="#marginal-effects"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
