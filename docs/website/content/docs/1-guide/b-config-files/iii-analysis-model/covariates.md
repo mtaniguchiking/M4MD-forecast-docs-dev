@@ -67,9 +67,11 @@ By default, dummy coding is applied to categorical variables. For categorical va
 ### Reference level
 Unless otherwise specified, the reference level will be set using R's default handling for factors. That is, the reference level will be the the first level of the variable when the factors are sorted in ascending alphabetical order. The user can specify the reference level by using the optional parenthetical declaration. For example, when specifying `Botanist (JA)`, the reference level becomes the botanist with initials `JA`.  
 
+If the covariate is a nuisance variable, you may also want to "fix" the variable at a specific value for the inference outputs. You can change the way `pred`-type means are evaluated using the `trend conditions` block, described [here]({{< ref "/docs/1-guide/b-config-files/iv-analysis-extras/conditions.md" >}}). See the [object types]({{< ref "/docs/1-guide/c-outputs/object-types/_index.md" >}}) entry for a more thorough introduction to this topic.
+
 ### Sum-to-zero effect (deflections)
 The optional parenthetical declaration can also be used to implement sum-to-zero effect coding, which we call deflections. When deflections are specified, the coefficients for each level of the categorical variable sum to zero rather than setting one level of the categorical variable as the reference level. For example, if you are interested in inference for management zones (or other zones that were not used in stratification), you specify `MgmtZone (deflections)`. So, rather than comparing each level of `MgmtZone` to a reference level, the `MgmtZone (deflections)` specification compares each level of `MgmtZone` to the grand mean.
 
-If you specify `(deflections)`, you must include the effect coding in the covariates data file. See [Covariates Data]({{< ref "/docs/1-guide/a-data/ii-x-info.md" >}}) for details. 
+If you specify `(deflections)`, you must include the effect coding in the covariates data file. See [Covariates Data]({{< ref "/docs/1-guide/a-data/ii-x-info.md" >}}) for how to code deflections in your covariate file. 
 
 The `(deflections)` specification will produce a [zone inference folder]({{< ref "/docs/1-guide/c-outputs/output-dir/03-inference/_index.md" >}}) in the output directory. By default the model returns only the first {{< katex >}}k-1{{< /katex >}} coefficients, but the {{< katex >}}k^{\mathrm{th}}{{< /katex >}} coefficient can be computed as a derived quantity. See [this StackExchange post](https://stats.stackexchange.com/a/163148) for more on this calculation. 
