@@ -1,6 +1,6 @@
 ---
 title: Conditions
-weight: 1
+weight: 3
 ---
 
 # Conditions

@@ -1,6 +1,6 @@
 ---
 title: Non-centered parameterization
-weight: 6
+weight: 8
 bibFile: content/posts/bib.json
 ---
 

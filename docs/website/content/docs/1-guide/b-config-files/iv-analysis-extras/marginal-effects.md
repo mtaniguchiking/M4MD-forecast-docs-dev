@@ -1,6 +1,6 @@
 ---
 title: Marginal effects
-weight: 3
+weight: 1
 ---
 
 # Marginal effects
