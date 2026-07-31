@@ -142,7 +142,7 @@ This plot suggests a negative trend in average annual native graminoid relative 
 
 ### zone/ | zone
 Zone-level mean of the response over time if deflections / sum-to-zero effects are specified for a categorical covariate (e.g., `MgmtZone (deflections)`). In the file names below, the first asterisk corresponds to either 'hat' or 'pred', as described under Park-level inference. 
-See [Management Zones]({{< ref "/docs/1-guide/b-config-files/iv-analysis-extra/zones.md" >}}) for more information.
+See [Management Zones]({{< ref "/docs/1-guide/b-config-files/iv-analysis-extras/zones.md" >}}) for more information.
 
 | __File__ | __Description__ |
 |:---|:---|
