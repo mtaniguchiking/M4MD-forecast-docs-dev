@@ -38,6 +38,7 @@ If the pipeline specifies `save_forecast_inputs`, an additional `04-forecast` fo
 
 #### Examples
 In the example below, the posterior distribution of the fixed effect (coefficient) is mostly above 0, indicating a positive relationship between the coefficient (mean.deficit) and the response (native graminoid cover). This figure will only appear in the output if you include a covariate in the model.
+
 ![addition-coef-estimates](01-additional-coef-estimates.png)
 
 The example below shows the median (point) and 95% credible intervals (whiskers) for random effects. You can see how the estimate for the intercept ({{< katex >}}\beta_{0}{{< /katex >}}) varies by each site within each strata (hills and valley), where some are positive and some are negative. This particular model did not allow the time-slope terms ({{< katex >}}\beta_{1}{{< /katex >}}) to vary by site, so the coefficients for slope are fixed for each site in a stratum. If the model were `b0-b1` (varying intercept and slopes), you would also see the variation of the time-slope term by site.
@@ -83,6 +84,7 @@ In the “hat” plot, the covariate is held at its mean, producing a smooth tre
 ![hat-park-mean](06-hat-park-mean-annual-summary-hdi95.png)
 
 In the “pred” plot, the covariate is time-varying, showing the influence over changing levels of water deficit during the sampling period. Notice there still appears to be an overall declining trend.
+
 ![pred-park-mean](07-pred-park-mean-plot-hdi95.png)
 
 ### site/ | site-level inference
@@ -137,6 +139,17 @@ Trend estimates of the response. Subfolders for all possible sites (“all”) a
 #### Examples
 This plot suggests a negative trend in average annual native graminoid relative cover. It is most negative in the hills stratum.
 ![trend](11-trend-park-avg-annual-change-plot.jpg)
+
+### zone/ | zone
+Zone-level mean of the response over time if deflections / sum-to-zero effects are specified for a categorical covariate (e.g., `MgmtZone (deflections)`). In the file names below, the first asterisk corresponds to either 'hat' or 'pred', as described under Park-level inference. 
+See [Management Zones]({{< ref "/docs/1-guide/b-config-files/iv-analysis-extra/zone.md" >}}) for more information.
+
+| __File__ | __Description__ |
+|:---|:---|
+| *-jags-zone-means.rds | The data required to reproduce the plot.|
+| *-zone-means.csv | Annual estimates of status of the response (mean, lower and upper credible intervals) for each zone.  Especially useful in creating custom plots. |
+| *-zone-means.png| Graphical representation of the RDS file showing the zone-level mean over time (black line) and the 95% credible interval (blue envelope). |
+
 
 ## References
 
