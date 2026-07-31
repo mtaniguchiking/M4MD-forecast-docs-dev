@@ -41,6 +41,6 @@ The original contributing team includes Luke Zachmann, Tom Hobbs, Erin Borgman, 
 
 ## Recommended citation
 
-The work described in these pages is based on Zachmann et al. 2020:
+The work described in these pages is based on Zachmann et al. 2022 {{< cite "-zachmann2022bayesian" >}}:
 
 {{< bibliography cited >}}
