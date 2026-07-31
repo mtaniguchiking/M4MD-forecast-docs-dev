@@ -49,4 +49,4 @@ It's worth pointing out a few things. First, we see two different types of varia
 
 ## From data to model
 
-We'll see how to include covariates in models using the XX and YY blocks of the analysis config files in other sections of this guide. 
+We'll see how to include covariates in models using the [Data]({{< ref "/docs/1-guide/b-config-files/ii-analysis-data/covariate-info.md" >}}) and [Model]({{< ref "/docs/1-guide/b-config-files/iii-analysis-model/covariates.md" >}}) blocks of the analysis config files in other sections of this guide. 
