@@ -58,33 +58,12 @@
  Covariates
  &lt;a class="anchor" href="#covariates"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
-&lt;p&gt;The predictors to use for modeling the mean of the response variable.&lt;/p&gt;
+&lt;p&gt;The predictors to use for modeling the mean of the response variable. Covaraites can be continuous (e.g., climatic water deficit) or categorical (e.g., soil texture class). Standardization is applied to continuous covariates automatically before fitting, so the estimated coefficients are on the standardized scale.&lt;/p&gt;
 &lt;h2 id="syntax"&gt;
  Syntax
  &lt;a class="anchor" href="#syntax"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-yml" data-lang="yml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;additional covariates&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; - &lt;span style="color:#ae81ff"&gt;Botanist (JA)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; - &lt;span style="color:#ae81ff"&gt;Botanist (JA), deficit.pregr&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="usage"&gt;
- Usage
- &lt;a class="anchor" href="#usage"&gt;#&lt;/a&gt;
-&lt;/h2&gt;
-&lt;p&gt;For categorical variables (e.g., &lt;code&gt;Botanist&lt;/code&gt;), the optional parenthetical declaration can do one of two things.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;It sets the reference level for dummy-coded variables. In the case of &lt;code&gt;Botanist (JA)&lt;/code&gt;, the reference level becomes the botanist with initials &lt;code&gt;JA&lt;/code&gt;. If not specified, the reference level will be set using R&amp;rsquo;s default handling for factors (using the first level of the factor sorted in ascending alphabetical o.rder as the reference level)&lt;/li&gt;
-&lt;li&gt;It can also be used to implement sum-to-zero effect coding, which we call deflections. For instance &lt;code&gt;MgmtZone (deflections)&lt;/code&gt;. In the case of deflections, the coefficients for each level of the categorical variable sum to zero. By default the model returns only the first 
-&lt;link rel="stylesheet" href="https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/katex/katex.min.css" /&gt;
-&lt;script defer src="https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/katex/katex.min.js"&gt;&lt;/script&gt;
-&lt;script defer src="https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/katex/auto-render.min.js" onload="renderMathInElement(document.body);"&gt;&lt;/script&gt;&lt;span&gt;
- \(k-1\)
-&lt;/span&gt;
- coefficients, but the &lt;span&gt;
- \(k^{\mathrm{th}}\)
-&lt;/span&gt;
- coefficient can be computed as a derived quantity. See &lt;a href="https://stats.stackexchange.com/a/163148"&gt;this StackExchange post&lt;/a&gt; for more on this calculation.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;See &lt;a href="https://stats.oarc.ucla.edu/spss/faq/coding-systems-for-categorical-variables-in-regression-analysis"&gt;this resource&lt;/a&gt; for additional background on dummy vs effect coding.&lt;/p&gt;</description></item><item><title>Initial values</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iii-analysis-model/inits/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iii-analysis-model/inits/</guid><description>&lt;h1 id="initial-values"&gt;
+&lt;p&gt;By default, each covariate enters the model linearly. Additive terms can be specified using “comma” notation. So a &lt;code&gt;TextureClass, deficit.pregr&lt;/code&gt; specification would include soil texture and deficit as linear covariates.&lt;/p&gt;</description></item><item><title>Initial values</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iii-analysis-model/inits/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iii-analysis-model/inits/</guid><description>&lt;h1 id="initial-values"&gt;
  Initial values
  &lt;a class="anchor" href="#initial-values"&gt;#&lt;/a&gt;
 &lt;/h1&gt;

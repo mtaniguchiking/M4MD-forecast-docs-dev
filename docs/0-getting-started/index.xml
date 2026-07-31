@@ -1,4 +1,22 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Getting started on Models for missing data</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/</link><description>Recent content in Getting started on Models for missing data</description><generator>Hugo</generator><language>en-us</language><atom:link href="https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/index.xml" rel="self" type="application/rss+xml"/><item><title>Repository cloning</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/installation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/installation/</guid><description>&lt;h1 id="cloning-the-repository"&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Getting started on Models for missing data</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/</link><description>Recent content in Getting started on Models for missing data</description><generator>Hugo</generator><language>en-us</language><atom:link href="https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/index.xml" rel="self" type="application/rss+xml"/><item><title>Overview</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/overview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/overview/</guid><description>&lt;h1 id="overview"&gt;
+ Overview
+ &lt;a class="anchor" href="#overview"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;h2 id="are-these-models-appropriate-for-my-data"&gt;
+ Are these models appropriate for my data?
+ &lt;a class="anchor" href="#are-these-models-appropriate-for-my-data"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;If one or more of following characteristics apply to your dataset, these models may be an appropriate tool to assist in status and trend analyses:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Longitudinal data (e.g., annual data collected over many years)&lt;/li&gt;
+&lt;li&gt;Hierarchical data (e.g., transects or plots within sites, sites within strata, and strata within parks)&lt;/li&gt;
+&lt;li&gt;Complex survey designs (e.g., rotating panels with data missing by design, unequal probability of including sites in the sampling design)&lt;/li&gt;
+&lt;li&gt;The presence of “nuisance” variables that may influence detection, (e.g., botanist experience, timing of spring green-up)&lt;/li&gt;
+&lt;li&gt;Any of the following data types: counts (e.g., richness, density), ordinal (e.g., cover classes, soil stability), hits/total (e.g., point intercept), presence/absence (e.g., frequency), censored or truncated (e.g., canopy gaps)&lt;/li&gt;
+&lt;li&gt;Covariates that could explain variation in the data (e.g., climate, topography, fire, grazing)&lt;/li&gt;
+&lt;li&gt;A desire to forecast expected condition into the future&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Depending on the complexity of the design, Bayesian hierarchical modeling is not always necessary, and it does have trade-offs. It requires more statistical expertise and substantially longer computation times. However, it can solve several of the problems inherent in the complex sampling designs for long-term natural resource monitoring in parks.&lt;/p&gt;</description></item><item><title>Repository cloning</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/installation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/installation/</guid><description>&lt;h1 id="cloning-the-repository"&gt;
  Cloning the repository
  &lt;a class="anchor" href="#cloning-the-repository"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
