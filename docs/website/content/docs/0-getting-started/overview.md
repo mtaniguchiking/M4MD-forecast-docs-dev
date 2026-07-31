@@ -23,5 +23,5 @@ Depending on the complexity of the design, Bayesian hierarchical modeling is not
 
 ## Is there a plain language version of the statistics paper?
 
-Yes. The [Mind the Gap: Modeling Missing Data for Complex Survey Designs]((https://www.nps.gov/articles/000/mind-the-gap-modeling-missing-data-for-complex-survey-designs.htm)) web article summarizes the [Zachmann et al. 2020]((https://link.springer.com/article/10.1007/s13253-021-00473-z)) paper.
+Yes. The [Mind the Gap: Modeling Missing Data for Complex Survey Designs](https://www.nps.gov/articles/000/mind-the-gap-modeling-missing-data-for-complex-survey-designs.htm) web article summarizes the [Zachmann et al. 2020](https://link.springer.com/article/10.1007/s13253-021-00473-z) paper.
 
