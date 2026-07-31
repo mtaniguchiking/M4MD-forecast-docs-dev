@@ -31,7 +31,6 @@ Description of the forecasting extension. The forecasting pipeline takes in a fi
 ### [Posts]({{< ref "/posts/_index.md" >}})
 Blog-style posts containing more general content, including pieces on the missing data problem, proof-of-concept simulations, and example analyses.
 <--->
-{{< /columns >}}
 ### [FAQ]({{< ref "/docs/3-faq/_index.md" >}})
 Your frequently asked question, answered!
 {{< /columns >}}
