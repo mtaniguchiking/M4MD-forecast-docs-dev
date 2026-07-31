@@ -1,19 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Welcome on Models for missing data</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/</link><description>Recent content in Welcome on Models for missing data</description><generator>Hugo</generator><language>en-us</language><atom:link href="https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/index.xml" rel="self" type="application/rss+xml"/><item><title>Conditions</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iv-analysis-extras/conditions/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iv-analysis-extras/conditions/</guid><description>&lt;h1 id="conditions"&gt;
- Conditions
- &lt;a class="anchor" href="#conditions"&gt;#&lt;/a&gt;
-&lt;/h1&gt;
-&lt;p&gt;Modify the default behavior of &lt;code&gt;pred&lt;/code&gt;-type means.&lt;/p&gt;
-&lt;h2 id="syntax"&gt;
- Syntax
- &lt;a class="anchor" href="#syntax"&gt;#&lt;/a&gt;
-&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-yml" data-lang="yml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;trend conditions&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;Botanist&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;JA&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="usage"&gt;
- Usage
- &lt;a class="anchor" href="#usage"&gt;#&lt;/a&gt;
-&lt;/h2&gt;
-&lt;p&gt;See the &lt;a href="https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/c-outputs/object-types/"&gt;object types&lt;/a&gt; entry for a more thorough introduction to this topic.&lt;/p&gt;</description></item><item><title>Exploratory data analysis</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/2-best-practices/exploratory-analysis/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/2-best-practices/exploratory-analysis/</guid><description>&lt;h1 id="exploratory-data-analysis"&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Welcome on Models for missing data</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/</link><description>Recent content in Welcome on Models for missing data</description><generator>Hugo</generator><language>en-us</language><atom:link href="https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/index.xml" rel="self" type="application/rss+xml"/><item><title>Exploratory data analysis</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/2-best-practices/exploratory-analysis/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/2-best-practices/exploratory-analysis/</guid><description>&lt;h1 id="exploratory-data-analysis"&gt;
  Exploratory data analysis
  &lt;a class="anchor" href="#exploratory-data-analysis"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
@@ -52,7 +37,21 @@
  Usage
  &lt;a class="anchor" href="#usage"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;In some cases &amp;ndash; a model for soil stability observations &amp;ndash; there is only one plausible, implemented likelihood function (&lt;code&gt;ordinal-latent-normal&lt;/code&gt;). In other cases &amp;ndash; species richness &amp;ndash; there might be several available options (&lt;code&gt;poisson&lt;/code&gt;, &lt;code&gt;negative-binomial&lt;/code&gt;, and their zero-inflated counterparts). In cases where you specify multiple likelihoods, the model API will create a separate analysis for each, and the relative performance of each can be evaluated using model diagnostics, posterior predictive checks, and information criteria.&lt;/p&gt;</description></item><item><title>Model builder</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/4-internals/model-builder/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/4-internals/model-builder/</guid><description>&lt;h1 id="model-builder"&gt;
+&lt;p&gt;In some cases &amp;ndash; a model for soil stability observations &amp;ndash; there is only one plausible, implemented likelihood function (&lt;code&gt;ordinal-latent-normal&lt;/code&gt;). In other cases &amp;ndash; species richness &amp;ndash; there might be several available options (&lt;code&gt;poisson&lt;/code&gt;, &lt;code&gt;negative-binomial&lt;/code&gt;, and their zero-inflated counterparts). In cases where you specify multiple likelihoods, the model API will create a separate analysis for each, and the relative performance of each can be evaluated using model diagnostics, posterior predictive checks, and information criteria.&lt;/p&gt;</description></item><item><title>Marginal effects</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iv-analysis-extras/marginal-effects/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iv-analysis-extras/marginal-effects/</guid><description>&lt;h1 id="marginal-effects"&gt;
+ Marginal effects
+ &lt;a class="anchor" href="#marginal-effects"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;Summaries of the association between a change in a regressor and a change in the response variable.&lt;/p&gt;
+&lt;h2 id="syntax"&gt;
+ Syntax
+ &lt;a class="anchor" href="#syntax"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-yml" data-lang="yml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;drivers&lt;/span&gt;: &lt;span style="color:#66d9ef"&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="usage"&gt;
+ Usage
+ &lt;a class="anchor" href="#usage"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;When &lt;code&gt;drivers: true&lt;/code&gt;, the model API creates additional JAGS objects, which are used to evaluate the marginal effects of explanatory variables in the model. By default, it shows the effect of each variable over its empirical range, holding all other variables at zero (the mean of scaled continuous variables or the reference level of categorical variables).&lt;/p&gt;</description></item><item><title>Model builder</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/4-internals/model-builder/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/4-internals/model-builder/</guid><description>&lt;h1 id="model-builder"&gt;
  Model builder
  &lt;a class="anchor" href="#model-builder"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
@@ -79,7 +78,7 @@ optional output directory as such:&lt;/p&gt;</description></item><item><title>No
 &lt;ul&gt;
 &lt;li&gt;Longitudinal data (e.g., annual data collected over many years)&lt;/li&gt;
 &lt;li&gt;Hierarchical data (e.g., transects or plots within sites, sites within strata, and strata within parks)&lt;/li&gt;
-&lt;li&gt;Complex survey designs (e.g., rotating panels with data missing by design, unequal probability of including sites in the sampling design)&lt;/li&gt;
+&lt;li&gt;Complex survey designs (e.g., stratification, rotating panels with data missing by design, unequal probability of including sites in the sampling design)&lt;/li&gt;
 &lt;li&gt;The presence of “nuisance” variables that may influence detection, (e.g., botanist experience, timing of spring green-up)&lt;/li&gt;
 &lt;li&gt;Any of the following data types: counts (e.g., richness, density), ordinal (e.g., cover classes, soil stability), hits/total (e.g., point intercept), presence/absence (e.g., frequency), censored or truncated (e.g., canopy gaps)&lt;/li&gt;
 &lt;li&gt;Covariates that could explain variation in the data (e.g., climate, topography, fire, grazing)&lt;/li&gt;
@@ -134,11 +133,7 @@ optional output directory as such:&lt;/p&gt;</description></item><item><title>No
  &lt;/tr&gt;
  &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id="format"&gt;
- Format
- &lt;a class="anchor" href="#format"&gt;#&lt;/a&gt;
-&lt;/h2&gt;
-&lt;p&gt;The response data are stored as flat files. The key characteristic of a flat file is that each row represents a single observation, while the columns describe values associated with the observation and the design features described above. These files are typically text files with no special word processing or markup. The file can be CSV, XLS, XLSX, GZ, or RDS. For ease of use, readability, and other reasons, we generally recommend CSV.&lt;/p&gt;</description></item><item><title>Response info</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/ii-analysis-data/response-info/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/ii-analysis-data/response-info/</guid><description>&lt;h1 id="response-information"&gt;
+&lt;p&gt;The model assumes that your response data will include each of the four design elements above. So, if one of those elements are not present in your design (e.g. stratification), you still must include a column for it in your data (e.g., stratum column populated with park code). Similarly, if you only have a single observational use (e.g., transect) within each sampling unit, you still must include a column for it (e.g., transect column populated with 1).&lt;/p&gt;</description></item><item><title>Response info</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/ii-analysis-data/response-info/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/ii-analysis-data/response-info/</guid><description>&lt;h1 id="response-information"&gt;
  Response information
  &lt;a class="anchor" href="#response-information"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
@@ -159,27 +154,7 @@ optional output directory as such:&lt;/p&gt;</description></item><item><title>No
  Covariate data
  &lt;a class="anchor" href="#covariate-data"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
-&lt;p&gt;Covariates are variables that are expected to change with the response variable &amp;ndash; they &lt;em&gt;covary&lt;/em&gt; in some way with the observations we seek to model. The definition of covariates varies widely online and in the literature. For our purposes, we use the term &lt;em&gt;covariate&lt;/em&gt; to describe any variable (whether continuous or discrete) that might influence the mean of the response variable we are interested in. In many cases their effects are of direct interest in the analysis (weather or terrain, for instance). In other cases, a covariate might be &amp;ldquo;nuisance variable&amp;rdquo; &amp;ndash; a fact or feature that is of no particular interest in itself, but nonetheless might be necessary to build a proper model and develop robust inference. Examples of nuisances include sudden changes in protocol or observers.&lt;/p&gt;</description></item><item><title>Disentangling concepts of status, trend, and trajectory</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/posts/trend-vs-trajectory/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/posts/trend-vs-trajectory/</guid><description>&lt;p&gt;The terms status and trend are ubiquitous in resource monitoring and management settings. To be useful and robust, however, they require precise (mathematical) definitions. It has been my experience that misunderstanding these terms can lead to misapplication of model predictions and to researchers and managers drawing the wrong conclusions from the data. In this post we show how relatively simple, even intuitive, definitions for each of these terms clarifies their intent, and improves the insights provided by models of monitoring data.&lt;/p&gt;</description></item><item><title>Finite population correction</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iv-analysis-extras/finite-pop/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iv-analysis-extras/finite-pop/</guid><description>&lt;h1 id="finite-population-correction"&gt;
- Finite population correction
- &lt;a class="anchor" href="#finite-population-correction"&gt;#&lt;/a&gt;
-&lt;/h1&gt;
-&lt;p&gt;When the size of the sample collected is a significant proportion of the overall population, then we must use a finite population correction (FPC), a topic we introduce briefly in &lt;a href="https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/posts/sampling-and-populations/"&gt;another post&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id="syntax"&gt;
- Syntax
- &lt;a class="anchor" href="#syntax"&gt;#&lt;/a&gt;
-&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-yml" data-lang="yml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;finite population correction&lt;/span&gt;: &lt;span style="color:#66d9ef"&gt;true&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;finite population info&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;file&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;assets/uplands-data/ROMN/LIBI_SampledUnsampled_Ratio.csv&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;columns with the number of sampled and unsampled sites&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; - &lt;span style="color:#e6db74"&gt;&amp;#39;# sampled sites&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; - &lt;span style="color:#e6db74"&gt;&amp;#39;# unsampled sites&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;covariate info includes unsampled sites&lt;/span&gt;: &lt;span style="color:#66d9ef"&gt;true&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="usage"&gt;
- Usage
- &lt;a class="anchor" href="#usage"&gt;#&lt;/a&gt;
-&lt;/h2&gt;
-&lt;p&gt;To toggle FPC, use the &lt;code&gt;finite population correction&lt;/code&gt; key.&lt;/p&gt;</description></item><item><title>Input Data</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/guide/input-data/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/guide/input-data/</guid><description>&lt;h1 id="forecast-input-data"&gt;
+&lt;p&gt;Covariates are variables that are expected to change with the response variable &amp;ndash; they &lt;em&gt;covary&lt;/em&gt; in some way with the observations we seek to model. The definition of covariates varies widely online and in the literature. For our purposes, we use the term &lt;em&gt;covariate&lt;/em&gt; to describe any variable (whether continuous or discrete) that might influence the mean of the response variable we are interested in. In many cases their effects are of direct interest in the analysis (weather or terrain, for instance). In other cases, a covariate might be &amp;ldquo;nuisance variable&amp;rdquo; &amp;ndash; a fact or feature that is of no particular interest in itself, but nonetheless might be necessary to build a proper model and develop robust inference. Examples of nuisances include sudden changes in protocol or observers.&lt;/p&gt;</description></item><item><title>Disentangling concepts of status, trend, and trajectory</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/posts/trend-vs-trajectory/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/posts/trend-vs-trajectory/</guid><description>&lt;p&gt;The terms status and trend are ubiquitous in resource monitoring and management settings. To be useful and robust, however, they require precise (mathematical) definitions. It has been my experience that misunderstanding these terms can lead to misapplication of model predictions and to researchers and managers drawing the wrong conclusions from the data. In this post we show how relatively simple, even intuitive, definitions for each of these terms clarifies their intent, and improves the insights provided by models of monitoring data.&lt;/p&gt;</description></item><item><title>Input Data</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/guide/input-data/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/guide/input-data/</guid><description>&lt;h1 id="forecast-input-data"&gt;
  Forecast Input data
  &lt;a class="anchor" href="#forecast-input-data"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
@@ -228,7 +203,38 @@ optional output directory as such:&lt;/p&gt;</description></item><item><title>No
  NPS I&amp;amp;M staff or partner
  &lt;a class="anchor" href="#nps-im-staff-or-partner"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;The latest version of the scripts have migrated to the &lt;a href="https://github.com/NPS-SWNC/M4MD"&gt;National Park Service&amp;rsquo;s Southwestern Network Collaboration GitHub account&lt;/a&gt;. The models for missing data scripts are in a private repository that will become public at a later date. If you are a National Park Service Inventory and Monitoring staff member of partner, please send an email to &lt;a href="mailto:cheryl_mcintyre@nps.gov"&gt;Cheryl McIntyre&lt;/a&gt; to request access and include your GitHub username (ideally associated with a NPS email).&lt;/p&gt;</description></item><item><title>Config files</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/guide/config-files/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/guide/config-files/</guid><description>&lt;h1 id="config-files"&gt;
+&lt;p&gt;The latest version of the scripts have migrated to the &lt;a href="https://github.com/NPS-SWNC/M4MD"&gt;National Park Service&amp;rsquo;s Southwestern Network Collaboration GitHub account&lt;/a&gt;. The models for missing data scripts are in a private repository that will become public at a later date. If you are a National Park Service Inventory and Monitoring staff member of partner, please send an email to &lt;a href="mailto:cheryl_mcintyre@nps.gov"&gt;Cheryl McIntyre&lt;/a&gt; to request access and include your GitHub username (ideally associated with a NPS email).&lt;/p&gt;</description></item><item><title>Zones</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iv-analysis-extras/zones/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iv-analysis-extras/zones/</guid><description>&lt;h1 id="zones"&gt;
+ Zones
+ &lt;a class="anchor" href="#zones"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;Estimate trend by management zones or other post hoc areas in addition to strata, useful for understanding patterns in park areas with different management or treatments (e.g., grazing, prescribed fire, etc.).&lt;/p&gt;
+&lt;h2 id="syntax"&gt;
+ Syntax
+ &lt;a class="anchor" href="#syntax"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-yml" data-lang="yml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;Additional covariates&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;-	&lt;span style="color:#ae81ff"&gt;Deficit, MgmtZone (deflections)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;See [covariates] (https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/a-data/ii-x-info/) for how to code deflections in your covariate file.&lt;/p&gt;
+&lt;h2 id="usage"&gt;
+ Usage
+ &lt;a class="anchor" href="#usage"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;The inference consists of a mean and credible interval across strata (i.e., at the park scale) for each of the management zones. There is no reference level: each management treatment has its own intercept or intercept and time slope. The model uses sum-to-zero effect coding (Kruschke 2015), which we call deflections, to estimate how much a specific zone deviates from an overall population baseline. See this write-up for a description of the math: &lt;a href="zone/Predications_for_management_areas.pdf"&gt;open document&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Conditions</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iv-analysis-extras/conditions/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iv-analysis-extras/conditions/</guid><description>&lt;h1 id="conditions"&gt;
+ Conditions
+ &lt;a class="anchor" href="#conditions"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;Modify the default behavior of &lt;code&gt;pred&lt;/code&gt;-type means.&lt;/p&gt;
+&lt;h2 id="syntax"&gt;
+ Syntax
+ &lt;a class="anchor" href="#syntax"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-yml" data-lang="yml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;trend conditions&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;Botanist&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;JA&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="usage"&gt;
+ Usage
+ &lt;a class="anchor" href="#usage"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;See the &lt;a href="https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/c-outputs/object-types/"&gt;object types&lt;/a&gt; entry for a more thorough introduction to this topic.&lt;/p&gt;</description></item><item><title>Config files</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/guide/config-files/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/guide/config-files/</guid><description>&lt;h1 id="config-files"&gt;
  Config files
  &lt;a class="anchor" href="#config-files"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
@@ -281,21 +287,7 @@ optional output directory as such:&lt;/p&gt;</description></item><item><title>No
  &lt;a class="anchor" href="#group-level-effects"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
 &lt;p&gt;The basic motivation for random group-level effects is that sites matter. They are an essential feature of the sampling design. Having no such random effects would imply that sites don&amp;rsquo;t matter and observations can be pooled (as if they were collected from a completely random sample).&lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-&lt;p&gt;Group-level effects incorporate differences among sites (that may be impossible to model with covariates) to inform park-level trends. They allow each site to have its intercept (and potentially, its slope) drawn from a common / underlying distribution of intercepts (and slopes). We make inference at the park scale using the parameters of the distribution from which the individual site intercepts and slopes are drawn.&lt;/p&gt;</description></item><item><title>Marginal effects</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iv-analysis-extras/marginal-effects/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iv-analysis-extras/marginal-effects/</guid><description>&lt;h1 id="marginal-effects"&gt;
- Marginal effects
- &lt;a class="anchor" href="#marginal-effects"&gt;#&lt;/a&gt;
-&lt;/h1&gt;
-&lt;p&gt;Summaries of the association between a change in a regressor and a change in the response variable.&lt;/p&gt;
-&lt;h2 id="syntax"&gt;
- Syntax
- &lt;a class="anchor" href="#syntax"&gt;#&lt;/a&gt;
-&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-yml" data-lang="yml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;drivers&lt;/span&gt;: &lt;span style="color:#66d9ef"&gt;true&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="usage"&gt;
- Usage
- &lt;a class="anchor" href="#usage"&gt;#&lt;/a&gt;
-&lt;/h2&gt;
-&lt;p&gt;When &lt;code&gt;drivers: true&lt;/code&gt;, the model API creates additional JAGS objects, which are used to evaluate the marginal effects of explanatory variables in the model. By default, it shows the effect of each variable over its empirical range, holding all other variables at zero (the mean of scaled continuous variables or the reference level of categorical variables).&lt;/p&gt;</description></item><item><title>Model checking</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/2-best-practices/model-checking/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/2-best-practices/model-checking/</guid><description>&lt;h1 id="model-checking-and-evaluation"&gt;
+&lt;p&gt;Group-level effects incorporate differences among sites (that may be impossible to model with covariates) to inform park-level trends. They allow each site to have its intercept (and potentially, its slope) drawn from a common / underlying distribution of intercepts (and slopes). We make inference at the park scale using the parameters of the distribution from which the individual site intercepts and slopes are drawn.&lt;/p&gt;</description></item><item><title>Model checking</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/2-best-practices/model-checking/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/2-best-practices/model-checking/</guid><description>&lt;h1 id="model-checking-and-evaluation"&gt;
  Model checking and evaluation
  &lt;a class="anchor" href="#model-checking-and-evaluation"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
@@ -314,7 +306,27 @@ optional output directory as such:&lt;/p&gt;</description></item><item><title>No
  &lt;a class="anchor" href="#software-requirements"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
 &lt;p&gt;The requirements include R (v4.X.X) and RStudio (if you&amp;rsquo;d like to work with &lt;strong&gt;models-for-missing-data&lt;/strong&gt; interactively), and JAGS (v4.3.0). Git and Git Bash (for Windows users) are convenient if you&amp;rsquo;d like to stay up to date with the latest changes.&lt;/p&gt;
-&lt;p&gt;If you are working on a National Park Service computer, there are a few additional requirements and suggestions. You can install most of the required software yourself from the NPS Company Portal but not JAGS. Installing JAGS requires a Bison Support System (BSS) ticket.&lt;/p&gt;</description></item><item><title>Unequal inclusion probabilities</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/posts/unequal-inclusion-probability/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/posts/unequal-inclusion-probability/</guid><description>&lt;p&gt;The Sonoran Desert is among the most extreme environments on Earth. Sampling in these remote, rugged landscapes requires a different approach. When the Park Service established monitoring in Organ Pipe Cactus National Monument they used an approach to select sites based on the cost of travel to sites on the broader landscape, visiting less &amp;ldquo;costly&amp;rdquo; sites with higher probability than more costly sites. The cost surface that defined the probability of inclusion of sites was developed using terrain data, and a tool that estimates the time to travel to any arbitrary location on the landscape.&lt;/p&gt;</description></item><item><title>Folder structure</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/folder-structure/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/folder-structure/</guid><description>&lt;h1 id="folder-structure"&gt;
+&lt;p&gt;If you are working on a National Park Service computer, there are a few additional requirements and suggestions. You can install most of the required software yourself from the NPS Company Portal but not JAGS. Installing JAGS requires a Bison Support System (BSS) ticket.&lt;/p&gt;</description></item><item><title>Unequal inclusion probabilities</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/posts/unequal-inclusion-probability/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/posts/unequal-inclusion-probability/</guid><description>&lt;p&gt;The Sonoran Desert is among the most extreme environments on Earth. Sampling in these remote, rugged landscapes requires a different approach. When the Park Service established monitoring in Organ Pipe Cactus National Monument they used an approach to select sites based on the cost of travel to sites on the broader landscape, visiting less &amp;ldquo;costly&amp;rdquo; sites with higher probability than more costly sites. The cost surface that defined the probability of inclusion of sites was developed using terrain data, and a tool that estimates the time to travel to any arbitrary location on the landscape.&lt;/p&gt;</description></item><item><title>Finite population correction</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iv-analysis-extras/finite-pop/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iv-analysis-extras/finite-pop/</guid><description>&lt;h1 id="finite-population-correction"&gt;
+ Finite population correction
+ &lt;a class="anchor" href="#finite-population-correction"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;When the size of the sample collected is a significant proportion of the overall population, then we must use a finite population correction (FPC), a topic we introduce briefly in &lt;a href="https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/posts/sampling-and-populations/"&gt;another post&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="syntax"&gt;
+ Syntax
+ &lt;a class="anchor" href="#syntax"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-yml" data-lang="yml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;finite population correction&lt;/span&gt;: &lt;span style="color:#66d9ef"&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;finite population info&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;file&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;assets/uplands-data/ROMN/LIBI_SampledUnsampled_Ratio.csv&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;columns with the number of sampled and unsampled sites&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; - &lt;span style="color:#e6db74"&gt;&amp;#39;# sampled sites&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; - &lt;span style="color:#e6db74"&gt;&amp;#39;# unsampled sites&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;covariate info includes unsampled sites&lt;/span&gt;: &lt;span style="color:#66d9ef"&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="usage"&gt;
+ Usage
+ &lt;a class="anchor" href="#usage"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;To toggle FPC, use the &lt;code&gt;finite population correction&lt;/code&gt; key.&lt;/p&gt;</description></item><item><title>Folder structure</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/folder-structure/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/folder-structure/</guid><description>&lt;h1 id="folder-structure"&gt;
  Folder structure
  &lt;a class="anchor" href="#folder-structure"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
@@ -386,19 +398,7 @@ optional output directory as such:&lt;/p&gt;</description></item><item><title>No
  Summary CSVs
  &lt;a class="anchor" href="#summary-csvs"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;Summary CSVs are written at each spatial level you specified in &lt;code&gt;summary levels&lt;/code&gt;. The filename pattern is &lt;code&gt;{output prefix}-{level}-summaries.csv&lt;/code&gt; (e.g. &lt;code&gt;forecast-site-summaries.csv&lt;/code&gt;).&lt;/p&gt;</description></item><item><title>Posterior predictive checks</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iv-analysis-extras/ppc-facets/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iv-analysis-extras/ppc-facets/</guid><description>&lt;h1 id="posterior-predictive-checks"&gt;
- Posterior predictive checks
- &lt;a class="anchor" href="#posterior-predictive-checks"&gt;#&lt;/a&gt;
-&lt;/h1&gt;
-&lt;p&gt;By default, the posterior predictive checks produced by the model API include &lt;code&gt;stratum_id&lt;/code&gt; and &lt;code&gt;unit_code&lt;/code&gt;. We include these elements by default because they correspond directly to subscripts in the model. You can specify additional variables for post-hoc model checking via &lt;code&gt;ppc facets&lt;/code&gt;.
-Performing posterios predictive checks is an essential step in modeling process. These checks essentially allow you to evaluate whether your model
-can generate new data that are similar to your observed data. The posterior predictive check process involves generating many new data sets from
-your model from what is called the posterior predictive distribution, and comparing charateristics (e.g. the mean and/or variance of the data set)
-of those simulated data sets those same characteristics of data used for model fitting. If you have a very good model that fits your data well,
-then in the case of the mean, you should expect the true mean of your data set to fall right around the 50th percentile of the distribution of
-means from the simulated datasets (the same goes for variance or other quantites). A posterior predictive check identifies this quantile (which
-is often referred to as a Bayesian p value). A Bayesian p value that is very close to 0 or 1 (a rule of thumb that is often used is greater than
-0.8 or less than 0.2) may suggest a poor model fit.&lt;/p&gt;</description></item><item><title>Sampling and populations</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/posts/sampling-and-populations/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/posts/sampling-and-populations/</guid><description>&lt;p&gt;We sample for a very practical reason. It&amp;rsquo;s usually impossible to get information on the whole population, so we use a sample to make inferences about the population. In our case, the population is typically all sites in a stratum or all sites &amp;ndash; in all strata &amp;ndash; at the scale of an entire park. Typically, the inference we seek entails three questions.&lt;/p&gt;
+&lt;p&gt;Summary CSVs are written at each spatial level you specified in &lt;code&gt;summary levels&lt;/code&gt;. The filename pattern is &lt;code&gt;{output prefix}-{level}-summaries.csv&lt;/code&gt; (e.g. &lt;code&gt;forecast-site-summaries.csv&lt;/code&gt;).&lt;/p&gt;</description></item><item><title>Sampling and populations</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/posts/sampling-and-populations/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/posts/sampling-and-populations/</guid><description>&lt;p&gt;We sample for a very practical reason. It&amp;rsquo;s usually impossible to get information on the whole population, so we use a sample to make inferences about the population. In our case, the population is typically all sites in a stratum or all sites &amp;ndash; in all strata &amp;ndash; at the scale of an entire park. Typically, the inference we seek entails three questions.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;What&amp;rsquo;s the best estimate of the population mean?&lt;/li&gt;
 &lt;/ol&gt;
@@ -483,14 +483,23 @@ is often referred to as a Bayesian p value). A Bayesian p value that is very clo
  &lt;/tr&gt;
  &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;Sources 1 and 3 are &lt;em&gt;epistemic&lt;/em&gt;, meaning they reflect what we don&amp;rsquo;t know. They shrink with more data and/or better models. Source 2 is &lt;em&gt;aleatoric&lt;/em&gt;, meaning it reflects how the world itself varies.&lt;/p&gt;</description></item><item><title>Quickstart</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/quickstart/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/quickstart/</guid><description>&lt;h1 id="quickstart"&gt;
+&lt;p&gt;Sources 1 and 3 are &lt;em&gt;epistemic&lt;/em&gt;, meaning they reflect what we don&amp;rsquo;t know. They shrink with more data and/or better models. Source 2 is &lt;em&gt;aleatoric&lt;/em&gt;, meaning it reflects how the world itself varies.&lt;/p&gt;</description></item><item><title>Posterior predictive checks</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iv-analysis-extras/ppc-facets/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iv-analysis-extras/ppc-facets/</guid><description>&lt;h1 id="posterior-predictive-checks"&gt;
+ Posterior predictive checks
+ &lt;a class="anchor" href="#posterior-predictive-checks"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;By default, the posterior predictive checks produced by the model API include &lt;code&gt;stratum_id&lt;/code&gt; and &lt;code&gt;unit_code&lt;/code&gt;. We include these elements by default because they correspond directly to subscripts in the model. You can specify additional variables for post-hoc model checking via &lt;code&gt;ppc facets&lt;/code&gt;.
+Performing posterios predictive checks is an essential step in modeling process. These checks essentially allow you to evaluate whether your model
+can generate new data that are similar to your observed data. The posterior predictive check process involves generating many new data sets from
+your model from what is called the posterior predictive distribution, and comparing charateristics (e.g. the mean and/or variance of the data set)
+of those simulated data sets those same characteristics of data used for model fitting. If you have a very good model that fits your data well,
+then in the case of the mean, you should expect the true mean of your data set to fall right around the 50th percentile of the distribution of
+means from the simulated datasets (the same goes for variance or other quantites). A posterior predictive check identifies this quantile (which
+is often referred to as a Bayesian p value). A Bayesian p value that is very close to 0 or 1 (a rule of thumb that is often used is greater than
+0.8 or less than 0.2) may suggest a poor model fit.&lt;/p&gt;</description></item><item><title>Quickstart</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/quickstart/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/quickstart/</guid><description>&lt;h1 id="quickstart"&gt;
  Quickstart
  &lt;a class="anchor" href="#quickstart"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
-&lt;p&gt;Assuming you&amp;rsquo;ve got the &lt;strong&gt;models-for-missing-data&lt;/strong&gt; project code (see &lt;a href="https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/installation/"&gt;Cloning the repository&lt;/a&gt;) and have all of the dependencies (see &lt;a href="https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/requirements/"&gt;Software requirements&lt;/a&gt;), the last remaining pieces you&amp;rsquo;ll need to begin running models are the data and analysis config files. We&amp;rsquo;ve included examples of each in the &amp;ldquo;assets/&amp;rdquo; directory. See the guide for more information about each of these components of the &lt;strong&gt;models-for-missing-data&lt;/strong&gt; workflow. You can find an example of the data &lt;a href="https://raw.githubusercontent.com/lzachmann/models-for-missing-data/main/assets/_data/count-data.csv"&gt;here&lt;/a&gt;, and an analysis config file for these data &lt;a href="https://raw.githubusercontent.com/lzachmann/models-for-missing-data/main/assets/_config/M4MD/ELDO/counts.yml"&gt;here&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Exposure / offset</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iv-analysis-extras/exposure/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iv-analysis-extras/exposure/</guid><description>&lt;h1 id="exposure--offset"&gt;
- Exposure / offset
- &lt;a class="anchor" href="#exposure--offset"&gt;#&lt;/a&gt;
-&lt;/h1&gt;</description></item><item><title>Initial values</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iii-analysis-model/inits/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iii-analysis-model/inits/</guid><description>&lt;h1 id="initial-values"&gt;
+&lt;p&gt;Assuming you&amp;rsquo;ve got the &lt;strong&gt;models-for-missing-data&lt;/strong&gt; project code (see &lt;a href="https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/installation/"&gt;Cloning the repository&lt;/a&gt;) and have all of the dependencies (see &lt;a href="https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/0-getting-started/requirements/"&gt;Software requirements&lt;/a&gt;), the last remaining pieces you&amp;rsquo;ll need to begin running models are the data and analysis config files. We&amp;rsquo;ve included examples of each in the &amp;ldquo;assets/&amp;rdquo; directory. See the guide for more information about each of these components of the &lt;strong&gt;models-for-missing-data&lt;/strong&gt; workflow. You can find an example of the data &lt;a href="https://raw.githubusercontent.com/lzachmann/models-for-missing-data/main/assets/_data/count-data.csv"&gt;here&lt;/a&gt;, and an analysis config file for these data &lt;a href="https://raw.githubusercontent.com/lzachmann/models-for-missing-data/main/assets/_config/M4MD/ELDO/counts.yml"&gt;here&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Initial values</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iii-analysis-model/inits/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iii-analysis-model/inits/</guid><description>&lt;h1 id="initial-values"&gt;
  Initial values
  &lt;a class="anchor" href="#initial-values"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
@@ -506,7 +515,10 @@ is often referred to as a Bayesian p value). A Bayesian p value that is very clo
  Checking for updates within RStudio
  &lt;a class="anchor" href="#checking-for-updates-within-rstudio"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;For many National Park Service users, getting the latest updates and pushing changes is easiest within RStudio. All members of NPS-SWNC/M4MD can get the latest updates. You must have write privileges to push your changes to the repo. Please send an email to &lt;a href="mailto:cheryl_mcintyre@nps.gov"&gt;Cheryl McIntyre&lt;/a&gt; to request write access. To sync changes, begin by opening the M4MD RStudio Project File.&lt;/p&gt;</description></item><item><title>Stratum-varying fixed effects</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/posts/stratum-varying-fixed-effects/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/posts/stratum-varying-fixed-effects/</guid><description>&lt;p&gt;Assume we have three strata, 
+&lt;p&gt;For many National Park Service users, getting the latest updates and pushing changes is easiest within RStudio. All members of NPS-SWNC/M4MD can get the latest updates. You must have write privileges to push your changes to the repo. Please send an email to &lt;a href="mailto:cheryl_mcintyre@nps.gov"&gt;Cheryl McIntyre&lt;/a&gt; to request write access. To sync changes, begin by opening the M4MD RStudio Project File.&lt;/p&gt;</description></item><item><title>Exposure / offset</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iv-analysis-extras/exposure/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iv-analysis-extras/exposure/</guid><description>&lt;h1 id="exposure--offset"&gt;
+ Exposure / offset
+ &lt;a class="anchor" href="#exposure--offset"&gt;#&lt;/a&gt;
+&lt;/h1&gt;</description></item><item><title>Stratum-varying fixed effects</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/posts/stratum-varying-fixed-effects/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/posts/stratum-varying-fixed-effects/</guid><description>&lt;p&gt;Assume we have three strata, 
 &lt;link rel="stylesheet" href="https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/katex/katex.min.css" /&gt;
 &lt;script defer src="https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/katex/katex.min.js"&gt;&lt;/script&gt;
 &lt;script defer src="https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/katex/auto-render.min.js" onload="renderMathInElement(document.body);"&gt;&lt;/script&gt;&lt;span&gt;
@@ -546,22 +558,7 @@ is often referred to as a Bayesian p value). A Bayesian p value that is very clo
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# lm(y~x1*x2)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a6e22e"&gt;model.matrix&lt;/span&gt;(&lt;span style="color:#f92672"&gt;~&lt;/span&gt;x1&lt;span style="color:#f92672"&gt;*&lt;/span&gt;x2, &lt;span style="color:#a6e22e"&gt;tibble&lt;/span&gt;(x1 &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;runif&lt;/span&gt;(&lt;span style="color:#ae81ff"&gt;5&lt;/span&gt;), x2 &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;runif&lt;/span&gt;(&lt;span style="color:#ae81ff"&gt;5&lt;/span&gt;)))
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Disable time</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iv-analysis-extras/time-disabled/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iv-analysis-extras/time-disabled/</guid><description>&lt;h1 id="disable-time-as-a-fixed-effect"&gt;
- Disable time as a fixed effect
- &lt;a class="anchor" href="#disable-time-as-a-fixed-effect"&gt;#&lt;/a&gt;
-&lt;/h1&gt;
-&lt;p&gt;Disable time as a fixed effect (remove time slope) so models are driven by covariates only. If you are fitting a model for forecasting, you must carefully consider whether or not to include a time term.&lt;/p&gt;
-&lt;h2 id="syntax"&gt;
- Syntax
- &lt;a class="anchor" href="#syntax"&gt;#&lt;/a&gt;
-&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-yml" data-lang="yml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;time effect&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;disabled&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Note that having time effect followed by anything will also disable the linear time term.&lt;/p&gt;
-&lt;h2 id="usage"&gt;
- Usage
- &lt;a class="anchor" href="#usage"&gt;#&lt;/a&gt;
-&lt;/h2&gt;
-&lt;p&gt;See the &lt;a href="https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/guide/fitting-a-model/"&gt;Fitting for forecasting&lt;/a&gt; entry for a more thorough introduction to this topic.&lt;/p&gt;</description></item><item><title>The offset term</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/posts/offsets/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/posts/offsets/</guid><description>&lt;p&gt;Counts of things naturally scale with the length or duration of observation, the area sampled, and sampling intensity 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>The offset term</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/posts/offsets/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/posts/offsets/</guid><description>&lt;p&gt;Counts of things naturally scale with the length or duration of observation, the area sampled, and sampling intensity 
 
 
 
@@ -599,4 +596,19 @@ is often referred to as a Bayesian p value). A Bayesian p value that is very clo
 
 &lt;/span&gt;&lt;/span&gt;)&lt;/span&gt;
 . For instance, the longer the river stretch we survey, the more fish we&amp;rsquo;ll tend to find.&lt;/p&gt;
-&lt;p&gt;Offset terms are used to model rates &amp;ndash; e.g., counts per unit area or time. In the context of the model, the offset term transforms the response variable from a rate to a count.&lt;/p&gt;</description></item><item><title/><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/menu/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/menu/</guid><description/></item></channel></rss>
+&lt;p&gt;Offset terms are used to model rates &amp;ndash; e.g., counts per unit area or time. In the context of the model, the offset term transforms the response variable from a rate to a count.&lt;/p&gt;</description></item><item><title>Disable time</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iv-analysis-extras/time-disabled/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iv-analysis-extras/time-disabled/</guid><description>&lt;h1 id="disable-time-as-a-fixed-effect"&gt;
+ Disable time as a fixed effect
+ &lt;a class="anchor" href="#disable-time-as-a-fixed-effect"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;Disable time as a fixed effect (remove time slope) so models are driven by covariates only. If you are fitting a model for forecasting, you must carefully consider whether or not to include a time term.&lt;/p&gt;
+&lt;h2 id="syntax"&gt;
+ Syntax
+ &lt;a class="anchor" href="#syntax"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-yml" data-lang="yml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;time effect&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;disabled&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Note that having time effect followed by anything will also disable the linear time term.&lt;/p&gt;
+&lt;h2 id="usage"&gt;
+ Usage
+ &lt;a class="anchor" href="#usage"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;See the &lt;a href="https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/5-forecasting/guide/fitting-a-model/"&gt;Fitting for forecasting&lt;/a&gt; entry for a more thorough introduction to this topic.&lt;/p&gt;</description></item><item><title/><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/menu/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/menu/</guid><description/></item></channel></rss>

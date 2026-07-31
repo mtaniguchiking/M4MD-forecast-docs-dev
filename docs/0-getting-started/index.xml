@@ -10,7 +10,7 @@
 &lt;ul&gt;
 &lt;li&gt;Longitudinal data (e.g., annual data collected over many years)&lt;/li&gt;
 &lt;li&gt;Hierarchical data (e.g., transects or plots within sites, sites within strata, and strata within parks)&lt;/li&gt;
-&lt;li&gt;Complex survey designs (e.g., rotating panels with data missing by design, unequal probability of including sites in the sampling design)&lt;/li&gt;
+&lt;li&gt;Complex survey designs (e.g., stratification, rotating panels with data missing by design, unequal probability of including sites in the sampling design)&lt;/li&gt;
 &lt;li&gt;The presence of “nuisance” variables that may influence detection, (e.g., botanist experience, timing of spring green-up)&lt;/li&gt;
 &lt;li&gt;Any of the following data types: counts (e.g., richness, density), ordinal (e.g., cover classes, soil stability), hits/total (e.g., point intercept), presence/absence (e.g., frequency), censored or truncated (e.g., canopy gaps)&lt;/li&gt;
 &lt;li&gt;Covariates that could explain variation in the data (e.g., climate, topography, fire, grazing)&lt;/li&gt;

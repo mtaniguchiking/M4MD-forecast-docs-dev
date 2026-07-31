@@ -1,4 +1,34 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Analysis / extras on Models for missing data</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iv-analysis-extras/</link><description>Recent content in Analysis / extras on Models for missing data</description><generator>Hugo</generator><language>en-us</language><atom:link href="https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iv-analysis-extras/index.xml" rel="self" type="application/rss+xml"/><item><title>Conditions</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iv-analysis-extras/conditions/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iv-analysis-extras/conditions/</guid><description>&lt;h1 id="conditions"&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Analysis / extras on Models for missing data</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iv-analysis-extras/</link><description>Recent content in Analysis / extras on Models for missing data</description><generator>Hugo</generator><language>en-us</language><atom:link href="https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iv-analysis-extras/index.xml" rel="self" type="application/rss+xml"/><item><title>Marginal effects</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iv-analysis-extras/marginal-effects/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iv-analysis-extras/marginal-effects/</guid><description>&lt;h1 id="marginal-effects"&gt;
+ Marginal effects
+ &lt;a class="anchor" href="#marginal-effects"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;Summaries of the association between a change in a regressor and a change in the response variable.&lt;/p&gt;
+&lt;h2 id="syntax"&gt;
+ Syntax
+ &lt;a class="anchor" href="#syntax"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-yml" data-lang="yml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;drivers&lt;/span&gt;: &lt;span style="color:#66d9ef"&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="usage"&gt;
+ Usage
+ &lt;a class="anchor" href="#usage"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;When &lt;code&gt;drivers: true&lt;/code&gt;, the model API creates additional JAGS objects, which are used to evaluate the marginal effects of explanatory variables in the model. By default, it shows the effect of each variable over its empirical range, holding all other variables at zero (the mean of scaled continuous variables or the reference level of categorical variables).&lt;/p&gt;</description></item><item><title>Zones</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iv-analysis-extras/zones/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iv-analysis-extras/zones/</guid><description>&lt;h1 id="zones"&gt;
+ Zones
+ &lt;a class="anchor" href="#zones"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;Estimate trend by management zones or other post hoc areas in addition to strata, useful for understanding patterns in park areas with different management or treatments (e.g., grazing, prescribed fire, etc.).&lt;/p&gt;
+&lt;h2 id="syntax"&gt;
+ Syntax
+ &lt;a class="anchor" href="#syntax"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-yml" data-lang="yml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;Additional covariates&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;-	&lt;span style="color:#ae81ff"&gt;Deficit, MgmtZone (deflections)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;See [covariates] (https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/a-data/ii-x-info/) for how to code deflections in your covariate file.&lt;/p&gt;
+&lt;h2 id="usage"&gt;
+ Usage
+ &lt;a class="anchor" href="#usage"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;The inference consists of a mean and credible interval across strata (i.e., at the park scale) for each of the management zones. There is no reference level: each management treatment has its own intercept or intercept and time slope. The model uses sum-to-zero effect coding (Kruschke 2015), which we call deflections, to estimate how much a specific zone deviates from an overall population baseline. See this write-up for a description of the math: &lt;a href="zone/Predications_for_management_areas.pdf"&gt;open document&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Conditions</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iv-analysis-extras/conditions/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iv-analysis-extras/conditions/</guid><description>&lt;h1 id="conditions"&gt;
  Conditions
  &lt;a class="anchor" href="#conditions"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
@@ -33,21 +63,7 @@
  Usage
  &lt;a class="anchor" href="#usage"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;To toggle FPC, use the &lt;code&gt;finite population correction&lt;/code&gt; key.&lt;/p&gt;</description></item><item><title>Marginal effects</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iv-analysis-extras/marginal-effects/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iv-analysis-extras/marginal-effects/</guid><description>&lt;h1 id="marginal-effects"&gt;
- Marginal effects
- &lt;a class="anchor" href="#marginal-effects"&gt;#&lt;/a&gt;
-&lt;/h1&gt;
-&lt;p&gt;Summaries of the association between a change in a regressor and a change in the response variable.&lt;/p&gt;
-&lt;h2 id="syntax"&gt;
- Syntax
- &lt;a class="anchor" href="#syntax"&gt;#&lt;/a&gt;
-&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-yml" data-lang="yml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;drivers&lt;/span&gt;: &lt;span style="color:#66d9ef"&gt;true&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="usage"&gt;
- Usage
- &lt;a class="anchor" href="#usage"&gt;#&lt;/a&gt;
-&lt;/h2&gt;
-&lt;p&gt;When &lt;code&gt;drivers: true&lt;/code&gt;, the model API creates additional JAGS objects, which are used to evaluate the marginal effects of explanatory variables in the model. By default, it shows the effect of each variable over its empirical range, holding all other variables at zero (the mean of scaled continuous variables or the reference level of categorical variables).&lt;/p&gt;</description></item><item><title>Posterior predictive checks</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iv-analysis-extras/ppc-facets/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iv-analysis-extras/ppc-facets/</guid><description>&lt;h1 id="posterior-predictive-checks"&gt;
+&lt;p&gt;To toggle FPC, use the &lt;code&gt;finite population correction&lt;/code&gt; key.&lt;/p&gt;</description></item><item><title>Posterior predictive checks</title><link>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iv-analysis-extras/ppc-facets/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mtaniguchiking.github.io/M4MD-forecast-docs-dev/docs/1-guide/b-config-files/iv-analysis-extras/ppc-facets/</guid><description>&lt;h1 id="posterior-predictive-checks"&gt;
  Posterior predictive checks
  &lt;a class="anchor" href="#posterior-predictive-checks"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
