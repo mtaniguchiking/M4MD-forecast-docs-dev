@@ -13,6 +13,8 @@ The response data include the observations we are trying to model, as well as co
 |   stratification   |   stratum   |
 |   date / event times   |   `MM/DD/YYYY`, `YYYY`   |
 
+The model assumes that your response data will include each of the four design elements above. So, if one of those elements are not present in your design (e.g. stratification), you still must include a column for it in your data (e.g., stratum column populated with park code). Similarly, if you only have a single observational use (e.g., transect) within each sampling unit, you still must include a column for it (e.g., transect column populated with 1).
+
 ## Format
 The response data are stored as flat files. The key characteristic of a flat file is that each row represents a single observation, while the columns describe values associated with the observation and the design features described above. These files are typically text files with no special word processing or markup. The file can be CSV, XLS, XLSX, GZ, or RDS. For ease of use, readability, and other reasons, we generally recommend CSV.
 
