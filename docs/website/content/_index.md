@@ -41,6 +41,9 @@ The original contributing team includes Luke Zachmann, Tom Hobbs, Erin Borgman, 
 
 ## Recommended citation
 
-The work described in these pages is based on Zachmann et al. 2022 {{< cite "-zachmann2022bayesian" >}}:
+The work described in these pages is based on:
 
-{{< bibliography cited >}}
+__Zachmann, Borgman, Witwicki, Swan, McIntyre & Hobbs (2022)__
+  
+Zachmann, L., Borgman, E., Witwicki, D., Swan, M., McIntyre, C. & Hobbs, N. (2022). Bayesian models for analysis of inventory and monitoring data with non-ignorable missingness. _Journal of Agricultural, Biological and Environmental Statistics, 27(1)_. 125–148.
+
