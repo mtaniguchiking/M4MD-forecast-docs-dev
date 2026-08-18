@@ -1,6 +1,6 @@
 ---
 title: Repository cloning
-weight: 1
+weight: 2
 bookToc: true
 ---
 

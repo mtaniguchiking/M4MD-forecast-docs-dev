@@ -1,6 +1,6 @@
 ---
 title: Sync changes
-weight: 5
+weight: 6
 bookToc: true
 ---
 

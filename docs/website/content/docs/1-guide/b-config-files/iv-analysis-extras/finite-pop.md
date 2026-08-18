@@ -1,6 +1,6 @@
 ---
 title: Finite population correction
-weight: 2
+weight: 4
 ---
 
 # Finite population correction

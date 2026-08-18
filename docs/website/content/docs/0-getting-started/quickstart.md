@@ -1,6 +1,6 @@
 ---
 title: Quickstart
-weight: 4
+weight: 5
 bookToc: true
 ---
 
@@ -14,7 +14,7 @@ There are two basic ways to call __models-for-missing-data__ for analyses: inter
 
 ### Graphical user interface (RStudio)
 
-Start RStudio and set your working directory to the project directory. Open the template "analysis-pipeline.R", which lives in "model-api/". If you'd like to make changes to "analysis-pipeline.R", or begin running models with your own data, create a copy of "analysis-pipeline.R" by appending "local" or your initials as a suffix. E.g., "analysis-pipeline-local.R".
+Open the M4MD RStudion project file (M4MD.Rproj), which will open RStudio and set your working directory to the project directory. Open the template "analysis-pipeline.R", which lives in "model-api/". If you'd like to make changes to "analysis-pipeline.R", or begin running models with your own data, create a copy of "analysis-pipeline.R" by appending "local", your network, or your initials as a suffix (e.g., "analysis-pipeline-romn.R").
 
 ### Command line interface (CLI)
 

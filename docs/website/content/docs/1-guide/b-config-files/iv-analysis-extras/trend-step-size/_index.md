@@ -1,6 +1,6 @@
 ---
 title: Trend step size
-weight: 5
+weight: 6
 ---
 
 # Trend step size
