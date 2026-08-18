@@ -35,7 +35,8 @@ Throughout this page, terms are referred to via two names: their **paper symbols
 | Time trend coefficient | $\alpha_{1jk}$ (site-level) or $\alpha_{1k}$ (stratum-level) | `B1[j,k]` or `B1[k]` in the draws CSV |
 | Covariate row for $(j,k,t)$ | $w_{jkt}$ | row of `fe_*` columns, ordered to match `Beta` |
 | Fixed-effect coefficients | $\beta$ (or $\beta_k$) | `Beta[m]` or `Beta.hat[m]` |
-| Dispersion parameter | $\sigma^2_{jk}$ (or $\sigma^2_k$) | `sigma[k]` |
+| Dispersion parameter (stratum-level) | $\sigma^2_k$ | `sigma[k]` |
+| Dispersion parameter (site-level) | $\sigma^2_{jk}$ | `sigma.ss[j,k]` — **not supported by the forecast pipeline** (see below) |
 | Inverse link function | $g(\cdot)$ | `inv_link(·)` / `get_inverse_link_function()` |
 | Response distribution (moment-matched) | $h(\mu, \sigma^2)$ | per-family sampler in `sample_predictive()` |
 | Linear predictor | argument of $g$ (paper has no symbol for it) | `eta` |
@@ -94,7 +95,9 @@ The regression coefficients on the covariate row $w_{jkt}$. The paper describes 
 
 Given the mean $\mu_{jkt}$ and a dispersion parameter, observations are drawn from a distribution $h$ chosen to match the support of $y$ (Beta on $(0,1)$, Poisson/Negative-Binomial on $\mathbb{N}_0$, Lognormal on $(0, \infty)$, etc). The pipeline uses moment matching, meaning each distribution's native parameters are chosen so its mean and dispersion match the supplied values.
 
-The dispersion parameter is stratum-specific in this model (e.g. $\sigma^2_k$, not $\sigma^2_{jk}$). Dispersion is used during a forecast at **Step 4**, when we sample posterior predictive draws.
+Dispersion is used during a forecast at **Step 4**, when we sample posterior predictive draws. The forecast pipeline reads dispersion **only** at the stratum level, as $\sigma^2_k$ (`sigma[k]`).
+
+**Limitation — site-level dispersion.** Several model-zoo likelihoods write dispersion as a site-by-stratum quantity $\sigma^2_{jk}$ (`sigma.ss[j,k]` in the JAGS code). These are *not* interchangeable with $\sigma^2_k$, and the two must not be treated as alternative notation for the same thing. In the shipped zoo models `sigma.ss[j,k]` is a deterministic copy of `sigma[k]` and is not monitored, so it does not appear in the posterior draws the pipeline consumes. A model that gave each site its own dispersion — one where `sigma.ss[j,k]` is genuinely site-varying — therefore cannot be forecast correctly as written: Step 4 would silently fall back to the stratum-level value. Forecasting such a model requires monitoring the site-level parameter and extending the Step 4 samplers to index it by $(j,k)$.
 
 ---
 
@@ -193,12 +196,14 @@ For each $(m, j, k, t)$ tuple, draw one realization $\hat y_{jkt}^{(m)}$ from th
 | Family | Dispersion param. | Predictive sampler |
 |---|---|---|
 | Beta | $\sigma_k^{(m)}$ | $\phi = \mu(1-\mu)/\sigma^2 - 1$; $\hat y \sim \text{Beta}(\mu\phi,\,(1-\mu)\phi)$ |
-| Binomial | $\sigma_k^{(m)}$ (logit-scale SD) | $\eta_{\text{new}} \sim \mathcal{N}(\text{logit}(\mu),\,\sigma^2)$; $\hat y = \text{logit}^{-1}(\eta_{\text{new}})$ |
+| Binomial | — | $\hat y \sim \text{Binomial}(N,\,\mu)$ |
 | Poisson | — | $\hat y \sim \text{Poisson}(\mu)$ |
 | Negative-Binomial | $\sigma_k^{(m)}$ | $\kappa = \mu^2 / \max(\sigma^2 - \mu,\, 10^{-12})$; $\hat y \sim \text{NegBin}(\text{size} = \kappa,\,\mu)$ |
 | NegBin-simple | $\kappa_k^{(m)}$ | $\hat y \sim \text{NegBin}(\text{size} = \kappa,\,\mu)$ |
 | Lognormal | $\sigma_k^{(m)}$ | $\text{CV}^2 = (\sigma/\mu)^2$; $s_{\log} = \sqrt{\log(1 + \text{CV}^2)}$; $m_{\log} = \log\mu - s_{\log}^2/2$; $\hat y \sim \text{Lognormal}(m_{\log},\,s_{\log})$ |
 | Generalized Poisson | $\delta_k^{(m)}$ | $\lambda = (1 - \delta)\mu$; inverse-CDF sampling from the GP PMF |
+
+Like Poisson, the Binomial family carries no stratum-level dispersion parameter: the fitted model estimates only $p$ (via $\mu$), and all observation-scale variability is the binomial variance $N\mu(1-\mu)$ implied by the mean. The number of trials $N$ is a fit-time constant recorded in `meta$n_trials`, not a quantity the model learns or projects; forecasts hold it fixed at its fit-time value for every future year. Where extra-binomial variability is needed, the beta-binomial member of the model zoo supplies it through a conjugate beta mixing distribution on $p$, and that family — not Binomial — is the one that carries a $\sigma_k^{(m)}$.
 
 At the end of Step 4, every $(m, j, k, t)$ tuple has two associated quantities:
 
